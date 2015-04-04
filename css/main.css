@@ -2511,6 +2511,17 @@ h2.title {
   color: #FE980F;
 }
 
+/*Non-template CSS*/
+.ok {
+	background: #cfc;	
+}
 
+.info {
+	background: #ffc;	
+}
+
+.error {
+	background: #fcc;	
+}
 
 
