@@ -1,0 +1,35 @@
+isbn: 9780553391886
+title: Last One Home
+publisher: Random House Publishing Group
+price: $26.00
+pages: 336
+description: Debbie Macomber, author of the Blossom Street and Cedar Cove series, delivers an inspiring new stand-alone novel about the enduring bond between sisters, the power of forgiveness, and a second chance at love.
+image: 
+inStock: 
+format: hardcover
+author: Debbie Macomber
+genre: fiction, romance
+
+isbn: 9781847493699
+title: Pride and Prejudice
+publisher: Alma Books
+price: $7.95
+pages: 340
+description: In telling the story of Mr. and Mrs. Bennett and their five daughters, Jane Austen creates a miniature of her world, where social grace and the nuances of behavior predominate in the making of a great love story. At the turn of eighteenth-century England, spirited Elizabeth Bennet copes with the suit of the snobbish Mr. Darcy while trying to sort out the romantic entanglements of two of her sisters, sweet and beautiful Jane and scatterbrained Lydia.
+image: 
+inStock: 
+format: paperback
+author: Jane Austen
+genre: fiction, romance
+
+isbn: 
+title: 
+publisher: 
+price: 
+pages: 
+description: 
+image: 
+inStock: 
+format: 
+author: 
+genre: 

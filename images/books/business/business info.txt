@@ -1,0 +1,11 @@
+isbn: 
+title: 
+publisher: 
+price: 
+pages: 
+description: 
+image: 
+inStock: 
+format: 
+author: 
+genre: 

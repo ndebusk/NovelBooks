@@ -1,0 +1,120 @@
+isbn: 9781476710457
+title: The Children's Crusade: A Novel
+publisher: Scribner
+price: $26.99
+pages: 448
+description: From the New York Times bestselling, award-winning author of The Dive From Clausen’s Pier, a sweeping, masterful new novel that explores the secrets and desires, the remnant wounds and saving graces of one California family, over the course of five decades
+image: 
+inStock: 
+format: hardcover
+author: Ann Packer
+genre: fiction
+
+isbn: 9780062409850
+title: Go Set a Watchman
+publisher: HarperCollins Publishers
+price: $27.99
+pages: 288
+description: Originally written in the mid-1950s, Go Set a Watchman was the novel Harper Lee first submitted to her publishers before To Kill a Mockingbird. Assumed to have been lost, the manuscript was discovered in late 2014. Go Set a Watchman features many of the characters from To Kill a Mockingbird some twenty years later.
+image: 
+inStock: 
+format: hardcover
+author: Harper Lee
+genre: fiction
+
+isbn: 9780062355881
+title: A Reunion of Ghosts
+publisher: HarperCollins Publishers
+price: $26.99
+pages: 400
+description: Three wickedly funny sisters. One family's extraordinary legacy. A single suicide note that spans a century ... Meet the Alter sisters: Lady, Vee, and Delph. These three mordantly witty, complex women share their family's apartment on Manhattan's Upper West Side. They love each other fiercely, but being an Alter isn't easy. Bad luck is in their genes, passed down through the generations. Yet no matter what curves life throws at these siblings—and it's hurled plenty—they always have a wisecrack, and one another.
+image: 
+inStock: 
+format: hardcover
+author: Judith Claire Mitchell
+genre: fiction
+
+isbn: 9780312577223
+title: The Nightingale
+publisher: St. Martin's Press
+price: $27.99
+pages: 448
+description: In love we find out who we want to be. In war we find out who we are. FRANCE, 1939 In the quiet village of Carriveau, Vianne Mauriac says goodbye to her husband, Antoine, as he heads for the Front. She doesn't believe that the Nazis will invade France...but invade they do, in droves of marching soldiers, in caravans of trucks and tanks, in planes that fill the skies and drop bombs upon the innocent. When a German captain requisitions Vianne's home, she and her daughter must live with the enemy or lose everything. Without food or money or hope, as danger escalates all around them, she is forced to make one impossible choice after another to keep her family alive.
+image: 
+inStock: 
+format: hardcover
+author: Kristin Hannah
+genre: fiction
+
+isbn: 9781476746586
+title: All the Light We Cannot See
+publisher: Scribner
+price: $27.00
+pages: 544
+description: NATIONAL BOOK AWARD FINALIST
+From the highly acclaimed, multiple award-winning Anthony Doerr, the beautiful, stunningly ambitious instant New York Times bestseller about a blind French girl and a German boy whose paths collide in occupied France as both try to survive the devastation of World War II.
+image: 
+inStock: 
+format: hardcover
+author: Anthony Doerr
+genre: fiction
+
+isbn: 9780385523233
+title: At the Water's Edge
+publisher: Random House Publishing Group
+price: $28.00
+pages: 368
+description: In this thrilling new novel from the author of Water for Elephants, Sara Gruen again demonstrates her talent for creating spellbinding period pieces. At the Water’s Edge is a gripping and poignant love story about a privileged young woman’s awakening as she experiences the devastation of World War II in a tiny village in the Scottish Highlands.
+image: 
+inStock: 
+format: hardcover
+author: Sara Gruen
+genre: fiction
+
+isbn: 9780778318033
+title: Never Too Late
+publisher: Harlequin
+price: $14.95
+pages: 336
+description: #1 New York Times bestselling author Robyn Carr examines the lives of three sisters as they step beyond the roles of wife, mother, daughter and discover the importance of being a woman first.
+image: 
+inStock: 
+format: paperback
+author: Robyn Carr
+genre: fiction
+
+isbn: 9780307271037
+title: The Buried Giant
+publisher: Knopf Doubleday Publishing Group
+price: $26.95
+pages: 336
+description: From the author of Never Let Me Go and the Booker Prize-winning The Remains of the Day. Sometimes savage, sometimes mysterious, always intensely moving, Kazuo Ishiguro’s first novel in a decade tells a luminous story about the act of forgetting and the power of memory, a resonant tale of love, vengeance, and war.
+image: 
+inStock: 
+format: hardcover
+author: Kazuo Ishiguro
+genre: fiction
+
+isbn: 9780061122415
+title: The Alchemist
+publisher: HarperCollins Publishers
+price: $14.99
+pages: 208
+description: The Alchemist is the magical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure as extravagant as any ever found. From his home in Spain he journeys to the markets of Tangiers and across the Egyptian desert to a fateful encounter with the alchemist. The story of the treasures Santiago finds along the way teaches us, as only a few stories have done, about the essential wisdom of listening to our hearts, learning to read the omens strewn along life's path, and, above all, following our dreams.
+image: 
+inStock: 
+format: paperback
+author: Paulo Coelho
+genre: fiction
+
+isbn: 9780316055444
+title: The Goldfinch
+publisher: Little, Brown and Company
+price: $20.00
+pages: 784
+description: Theo Decker, a 13-year-old New Yorker, miraculously survives an accident that kills his mother. Abandoned by his father, Theo is taken in by the family of a wealthy friend. Bewildered by his strange new home on Park Avenue, disturbed by schoolmates who don't know how to talk to him, and tormented above all by his longing for his mother, he clings to the one thing that reminds him of her: a small, mysteriously captivating painting that ultimately draws Theo into the underworld of art. As an adult, Theo moves silkily between the drawing rooms of the rich and the dusty labyrinth of an antiques store where he works. He is alienated and in love—and at the center of a narrowing, ever more dangerous circle.
+image: 
+inStock: 
+format: paperback
+author: Donna Tartt
+genre: fiction
