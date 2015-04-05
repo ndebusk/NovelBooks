@@ -1419,7 +1419,7 @@ h2.title {
 #form {
   display: block;
   margin-bottom: 185px;
-  margin-top: 185px;
+  margin-top: 90px;
   overflow: hidden;
 }
 
@@ -1431,7 +1431,11 @@ h2.title {
 
 }
 
-.login-form h2, .signup-form h2 {
+.item-entry {
+    
+}
+
+.login-form h2, .signup-form h2, .item-entry h2 {
   color: #696763;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
@@ -1439,8 +1443,8 @@ h2.title {
   margin-bottom: 30px;
 }
 
-
-.login-form form input, .signup-form form input {
+/*Added .item-entry form input to this, 4/3 */
+.login-form form input, .signup-form form input, .item-entry form input {
   background: #F0F0E9;
   border: medium none;
   color: #696763;
@@ -1455,11 +1459,11 @@ h2.title {
   width: 100%;
 }
 
-.login-form form span{
+.login-form form span, .item-entry form span{
   line-height: 25px;
 }
 
-.login-form form span input {
+.login-form form span input, .item-entry form span input{
   width: 15px;
   float: left;
   height: 15px;
@@ -1469,8 +1473,8 @@ h2.title {
 .login-form form button {
   margin-top: 23px;
 }
-
-.login-form form button, .signup-form form button {
+/*Added .item-entry button input to this, 4/3*/
+.login-form form button, .signup-form form button, .item-entry form button {
   background: #70DBDB;
   border: medium none;
   border-radius: 0;

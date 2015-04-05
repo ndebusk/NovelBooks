@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Manage Items | Novel Books</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+</head><!--/head-->
+
+<body>
+<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="#"><i class="fa fa-phone"></i> +1 800 NOVEL BOOKS</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> info@novelbooks.com</a></li>
+							</ul>
+						</div>
+					</div>
+                    <div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="https://www.facebook.com/NovelBooksInc"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://www.twitter.com/novelbooksinc"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="https://plus.google.com/u/0/105467634270706580986/posts"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="images/home/bookslogo.png" alt="" /></a>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="login.html" class="active"><i class="fa fa-lock"></i> Login</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="index.html">Home</a></li>
+								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="shop.html">Products</a></li>
+										<li><a href="product-details.html">Product Details</a></li> 
+										<li><a href="checkout.html">Checkout</a></li> 
+										<li><a href="cart.html">Cart</a></li> 
+										<li><a href="login.html" class="active">Login</a></li> 
+                                    </ul>
+                                </li> 
+								<li><a href="contact-us.html">Contact Us</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<input type="text" placeholder="Search"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+	
+	<section id="form"><!--form-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8">
+					<div class="item-entry"><!--item entry form-->
+						<h2>New book details</h2>
+						<form action="#">
+							<!--Edits on 4/2 sdyer. Added ids to new user boxes
+                            to support validation javascript-->
+							<input id="isbn" type="text" name="isbn" placeholder="ISBN"/>
+							<input id="booktitle" type="text" name="booktitle" placeholder="Title"/>
+                            <input id="price" type="text" name="price" placeholder="Price"/>
+                            <input id="publisher" type="text" name="publisher" placeholder="Publisher Name"/>
+                            <input id="price" type="text" name="price" placeholder="Price"/>
+                            <input id="pagenum" type="text" name="number of pages" placeholder="Number of Pages"/>
+                            <input id="bookdesc" type="text" name="description" placeholder="Description"/>
+                            <input id="bookimg" type="text" name="image" placeholder="Image (path to image file)"/>	
+                            <span>
+								<input type="checkbox" class="checkbox"> 
+								Check box if book is in stock now
+							</span>                            
+							<button id="newUserSubmit" type="submit" class="btn btn-default">Save to book database</button>
+						</form>
+					</div><!--/login form-->
+				</div>				
+			</div>
+		</div>
+	</section><!--/form-->
+	
+	<footer id="footer"><!--Footer-->		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2015 Novel Books Inc. All rights reserved.</p>
+				</div>
+			</div>
+		</div>	
+	</footer><!--/Footer-->
+	
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>    
+</body>
+</html>
