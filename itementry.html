@@ -117,7 +117,19 @@
                             <input id="pagenum" type="text" name="number of pages" placeholder="Number of Pages"/>
                             <input id="bookdesc" type="text" name="description" placeholder="Description"/>
                             <input id="bookimg" type="text" name="image" placeholder="Image (path to image file)"/>	
-                            <span>
+                            <input type="text" name="author[]" placeholder="Author" />
+                            <button class="expanderbutton" type="button" class="btn btn-default">Add another author</button>
+                            <input type="text" name="genre[]" placeholder="Book genre"/>
+                            <button class="expanderbutton" type="button" class="btn btn-default">Add another genre</button>
+                             <span id="formatspan">
+                                Check box for each available book format <br/>
+								eBook <input type="checkbox" name="format[]" value="eBook" /><br/>
+                                paperback <input type="checkbox" name="format[]" value="paperback" /><br/>
+                                hardcover <input type="checkbox" name="format[]" value="hardcover" /><br/>                                
+							</span>                             
+                            
+                            
+                            <span id="#stockspan">
 								<input type="checkbox" class="checkbox"> 
 								Check box if book is in stock now
 							</span>                            
@@ -144,5 +156,6 @@
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>    
+    <script src="js/itementry.js"></script>  
 </body>
 </html>
