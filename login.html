@@ -122,11 +122,12 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="signup-form"><!--sign up form-->
-						<h2>New User Signup!</h2>
+						<h2>New User Signup!</h2> 
 						<form action="/cgi-bin/newuser.py" method="post">
 							<!--Edits on 4/2 sdyer. Added ids to new user boxes
                             to support validation javascript-->
-							<input id="newUser" type="text" name="username" placeholder="Username"/>
+                            <input id="newName" type="text" name="realname" placeholder="Your name"/>
+							<input id="newUser" type="text" name="username" placeholder="Desired screen name"/>                            
 							<input id="newEmail" type="text" name="email" placeholder="Email Address"/>
 							<input id="newPassword" type="password" name="password" placeholder="Password"/>
 							<button id="newUserSubmit" type="submit" class="btn btn-default">Signup</button>

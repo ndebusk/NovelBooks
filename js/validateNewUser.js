@@ -79,6 +79,14 @@ var validateField = function(fieldElem, infoMessage, validateFn) {
     allowed, but I decided that this is in line with what
     constitutes a valid username anywhere I've seen.
 */
+var validateRealName= function (text) {    
+    var re = /^[\w\- ]+$/;
+    return re.test(text);
+    //Username should only be alphabetical or numeric
+    //password should be @least 8 chars long
+    //email address should contain a @ character
+};
+
 var validateUsername = function (text) {    
     var re = /^\w+$/;
     return re.test(text);
@@ -115,6 +123,11 @@ $(document).ready(function () {
     $("#newUser").focus(function () {
         validateField($(this), "Alphanumeric characters only", 
                       validateUsername);
+    });
+    
+    $("#newName").focus(function () {
+        validateField($(this), "Alphanumeric characters, spaces, hyphens only", 
+                      validateRealName);
     });
     
      $("#newEmail").focus(function () {
