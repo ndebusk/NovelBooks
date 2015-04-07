@@ -1,18 +1,28 @@
 #!/Applications/MAMP/Library/bin/python2.7
-#Please note: must be placed in cgi-bin to work.
-import mysql.connector
-import cgi
-    
-print "Content-Type: text/html"
-print 
+print ("Content-Type: text/html\n\n")
+
+import mysql.connector, cgi
+
 print "<html>\
-<head><title>New Item Entry</title></head><body>"
+<head><title>Add Book</title></head><body>"
 print "<p>Test</p>"
 
 form = cgi.FieldStorage()
-username = form.getvalue("username")
-email = form.getvalue("email")
-password = form.getvalue("password")
+
+isbn = form.getvalue("isbn")
+title = form.getvalue("booktitle")
+publisher = form.getvalue("publisher")
+price = form.getvalue("price")
+pages = form.getvalue("pagenum")
+description = form.getvalue("description")
+image = form.getvalue("bookimage")
+inStock = form.getvalue("inStock")
+
+authors = form.getlist("author")
+genres = form.getlist("genre")
+formats = form.getlist("format")
+
+
 #Sets my config for accessing the database. MAMP gave two different
 #ways for accessing the database, but I seemed to have trouble
 #connecting without using the UNIX socket.
@@ -29,14 +39,33 @@ cnx = mysql.connector.connect(**config)
 cursor = cnx.cursor()
 
 #I build the query string in two lines because it's such a long string.
-#TODO: adding a non-static userID number, adding a non-static customer Name
-queryString = "INSERT INTO `user`(`userID`, `username`, `password`, `name`, `email`, `customer_flag`, `admin_flag`) VALUES "
-valueString = "('1','" + str(username) + "','" + str(password) + "','John Doe','" + str(email) +"','1','0')"
-queryString += valueString
-cursor.execute(queryString)
+queryStringBook = "INSERT INTO `book`(`isbn`, `title`, `publisher`, `price`, `pages`, `description`, `image`, `inStock`) VALUES "
+valueStringBook = "('" + str(isbn) + "','" + str(title) + "','" + str(publisher) + "','" + str(price) + "','" + str(pages) + "','" + str(description) + "','" + str(image) + "','" + str(inStock) + "')"
+queryStringBook += valueStringBook
+cursor.execute(queryStringBook)
+
+#print to check if authors are captured from form...
+for author in authors:
+    print ("<p>%s</p>" % author)
+
+for author in authors:
+    print "<p>hello</p>"
+    queryStringAuthor = "INSERT INTO `author`(`author`, `isbn`) VALUES "
+    valueStringAuthor = "('" + str(author) + "','" + str(isbn) + "')"
+    queryStringAuthor += valueStringAuthor
+    cursor.execute(queryStringAuthor)
+
+for genre in genres:
+    queryStringGenre = "INSERT INTO `genre`(`genre`, `isbn`) VALUES "
+    valueStringGenre = "('" + str(genre) + "','" + str(isbn) + "')"
+    queryStringGenre += valueStringGenre
+    cursor.execute(queryStringGenre)
+    
+for formatType in formats:
+    queryStringFormat = "INSERT INTO `format`(`format`, `isbn`) VALUES "
+    valueStringFormat = "('" + str(formatType) + "','" + str(isbn) + "')"
+    queryStringFormat += valueStringFormat
+    cursor.execute(queryStringFormat)
+    
 cnx.commit()
 cnx.close();
-
-
-
-    

@@ -1,13 +1,10 @@
 #!/Applications/MAMP/Library/bin/python2.7
-#Please note: must be placed in cgi-bin to work.
-import mysql.connector
-import cgi
+print ("Content-Type: text/html\n\n")
 
-    
-print "Content-Type: text/html"
-print 
+import mysql.connector, cgi
+
 print "<html>\
-<head><title>New User Entry</title></head><body>"
+<head><title>Login</title></head><body>"
 print "<p>Test</p>"
 
 form = cgi.FieldStorage()
