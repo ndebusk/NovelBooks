@@ -108,7 +108,7 @@ var validateEmail = function(text) {
 */
 var validatePassword = function(passwordString) {
     
-    return (passwordString.length >8);
+    return (passwordString.length >= 8);
     
 };
 
