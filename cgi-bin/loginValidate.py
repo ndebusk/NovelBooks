@@ -3,10 +3,6 @@ print ("Content-Type: text/html\n\n")
 
 import mysql.connector, cgi
 
-print "<html>\
-<head><title>Login</title></head><body>"
-print "<p>Test</p>"
-
 form = cgi.FieldStorage()
 username = form.getvalue("username")
 password = form.getvalue("password")
@@ -33,13 +29,13 @@ cursor.execute(queryString)
 flag = 1
 for row in cursor:
     if username == row[0] and password == row[1]:
-        print "<p>Valid Login</p>"
+        print 0
         flag = 0
         break
     else:
         continue
 if flag:
-    print "<p>Invalid Login</p>"
+    print 1
     
 cnx.commit()
 cnx.close();
