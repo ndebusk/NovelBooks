@@ -30,6 +30,7 @@ function validate() {
     // Request to python
     sendReq("/cgi-bin/loginValidate.py?username=" + username + "&password=" + password, function processResponse(response) {
         // enable user nav tabs
+        
         if (response == 0) {
             document.getElementById("navbar").innerHTML = "<ul class='nav navbar-nav'><li><a href='itementry.html'><i class='fa fa-shield'></i> Admin</a></li><li><a href='#'><i class='fa fa-user'></i> Account</a></li><li><a href='checkout.html'><i class='fa fa-crosshairs'></i> Checkout</a></li><li><a href='cart.html'><i class='fa fa-shopping-cart'></i> Cart</a></li><li><a href='#' class='active'><i class='fa fa-lock'></i> Logout</a></li></ul>";
             
