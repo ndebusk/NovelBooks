@@ -47,7 +47,7 @@ cursor = cnx.cursor()
 
 #I build the query string in two lines because it's such a long string.
 queryStringBook = "INSERT INTO `book`(`isbn`, `title`, `publisher`, `price`, `pages`, `description`, `image`, `inStock`) VALUES "
-valueStringBook = "('" + str(isbn) + "','" + str(title) + "','" + str(publisher) + "','" + str(price) + "','" + str(pages) + "','" + str(description) + "','" + str(image) + "','" + str(inStock) + "')"
+valueStringBook = "('" + str(isbn) + "','" + str(title).replace("'", "''") + "','" + str(publisher).replace("'", "''") + "','" + str(price) + "','" + str(pages) + "','" + str(description).replace("'", "''") + "','" + str(image) + "','" + str(inStock) + "')"
 queryStringBook += valueStringBook
 cursor.execute(queryStringBook)
 

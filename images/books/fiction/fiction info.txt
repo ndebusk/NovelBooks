@@ -3,7 +3,7 @@ title: The Children's Crusade: A Novel
 publisher: Scribner
 price: $26.99
 pages: 448
-description: From the New York Times bestselling, award-winning author of The Dive From Clausen’s Pier, a sweeping, masterful new novel that explores the secrets and desires, the remnant wounds and saving graces of one California family, over the course of five decades
+description: From the New York Times bestselling, award-winning author of The Dive From Clausen’s Pier, a sweeping, masterful new novel that explores the secrets and desires, the remnant wounds and saving graces of one California family, over the course of five decades.
 image: 
 inStock: 
 format: hardcover
