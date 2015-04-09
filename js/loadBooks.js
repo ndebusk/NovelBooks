@@ -18,7 +18,6 @@ function sendReq(url, callbackFunction) {
 
     xmlhttp.open("POST", url, true);
     xmlhttp.send();
-    return xmlhttp.responseText;
 }
 
 function load() {
@@ -26,7 +25,6 @@ function load() {
     
     // Request to python
     sendReq("/cgi-bin/loadBooks.py?", function processResponse(response) {
-        alert(response);
         document.getElementById("allproducts").innerHTML = response;
     });
 }
