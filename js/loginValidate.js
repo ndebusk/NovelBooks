@@ -24,8 +24,7 @@ function sendReq(url, callbackFunction) {
 function validate() {
     "use strict";
     // Get username and year value from form
-    var username = $("#username").val();
-    var password = $("#password").val();
+    var username = $("#username").val(), password = $("#password").val();
     
     // Request to python
     sendReq("/cgi-bin/loginValidate.py?username=" + username + "&password=" + password, function processResponse(response) {

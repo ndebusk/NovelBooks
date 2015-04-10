@@ -21,14 +21,6 @@ inStock = form.getvalue("inStock")
 authors = form.getlist("author[]")
 genres = form.getlist("genre[]")
 formats = form.getlist("format[]")
-
-#print to check if authors are captured from form...
-for author in authors:
-    print ("<p>%s</p>" % author)
-for genre in genres:
-    print ("<p>%s</p>" % genre)
-for format in formats:
-    print ("<p>%s</p>" % format)
     
 #Sets my config for accessing the database. MAMP gave two different
 #ways for accessing the database, but I seemed to have trouble
@@ -52,7 +44,6 @@ queryStringBook += valueStringBook
 cursor.execute(queryStringBook)
 
 for author in authors:
-    print "<p>hello</p>"
     queryStringAuthor = "INSERT INTO `author`(`author`, `isbn`) VALUES "
     valueStringAuthor = "('" + str(author) + "','" + str(isbn) + "')"
     queryStringAuthor += valueStringAuthor
