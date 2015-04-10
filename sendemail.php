@@ -1,22 +1,28 @@
 <?php
-	header('Content-type: application/json');
-	$status = array(
-		'type'=>'success',
-		'message'=>'Thank you for contacting us. We will get back to you as soon as a representative can address your issue.'
-	);
 
-    $name       = @trim(stripslashes($_POST['name'])); 
-    $email      = @trim(stripslashes($_POST['email'])); 
-    $subject    = @trim(stripslashes($_POST['subject'])); 
-    $message    = @trim(stripslashes($_POST['message'])); 
+if (isset($_POST['email'])){
+    echo "testing"
+}
+require("phpmailer/class.phpmailer.php");
+$mail = new PHPMailer();
 
-    $email_from = $email;
-    $email_to = 'novelbooksinc@gmail.com';//replace with your email
+$mail->name = $_POST['name']; 
+$mail->email = $_POST['email']; 
+$mail->subject = $_POST['subject']; 
+$mail->message = $_POST['message']; 
 
-    $body = 'Name: ' . $name . "\n\n" . 'Email: ' . $email . "\n\n" . 'Subject: ' . $subject . "\n\n" . 'Message: ' . $message;
+$mail->email_from = $email;
+$mail->email_to = 'novelbooksinc@gmail.com';
 
-    $success = @mail($email_to, $subject, $body, 'From: <'.$email_from.'>');
+$mail->body = 'Name: ' . $name . "\n\n" . 'Email: ' . $email . "\n\n" . 'Subject: ' . $subject . "\n\n" . 'Message: ' . $message;
 
-    echo json_encode($status);
-    die;
+$mail->Host = "ssl://smtp.gmail.com"; // GMail
+    $mail->Port = 465;
+    $mail->IsSMTP(); // use SMTP
+    $mail->SMTPAuth = true; // turn on SMTP authentication
+    $mail->From = $mail->Username;
+    if(!$mail->Send())
+        echo "Mailer Error: " . $mail->ErrorInfo;
+    else
+        echo "Message has been sent";
 ?>
