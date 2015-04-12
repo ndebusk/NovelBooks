@@ -1,7 +1,5 @@
 #!/Applications/MAMP/Library/bin/python2.7
 
-
-
 import mysql.connector
 import cgi
 import Cookie
