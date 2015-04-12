@@ -29,9 +29,5 @@ function load(isbn) {
     });
 }
 
-window.onload = function () {
-    "use strict";
-
-    var isbn = "9780062409850";
-    load(isbn);
-};
+var isbn = "9780062409850";
+load(isbn);

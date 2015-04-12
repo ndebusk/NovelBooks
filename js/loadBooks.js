@@ -29,8 +29,4 @@ function load() {
     });
 }
 
-window.onload = function () {
-    "use strict";
-    // Set onClick for input button
-    load();
-};
+load();
