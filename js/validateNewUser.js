@@ -1,6 +1,41 @@
-var email;
-var username;
-var testclicking;
+var empty = 0;
+function sendReq(url, callbackFunction) {
+    "use strict";
+    var xmlhttp, ActiveXObject;
+    if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+            if (callbackFunction) { callbackFunction(xmlhttp.responseText); }
+        }
+    };
+
+    xmlhttp.open("POST", url, true);
+    xmlhttp.send();
+}
+
+function checkUnique() {
+    "use strict";
+    
+    var username = $("#newUser").val(), password = $("#newPassword").val(), email = $("#newEmail").val(), realname = $("#newName").val();
+    
+    // Request to python if no empty fields
+    if(empty) {
+        sendReq("/cgi-bin/newuser.py?username=" + username + "&email=" + email + "&realname=" + realname + "&password=" + password, function processResponse(response) {
+
+            document.getElementById("errorUser").innerHTML = response;
+        });
+    }
+    else {
+        document.getElementById("errorUser").innerHTML = "You have an empty field. All fields required.";
+    }
+}
 
 var validateField = function(fieldElem, infoMessage, validateFn) {
 	//The span message that will be inserted.    
@@ -17,8 +52,7 @@ var validateField = function(fieldElem, infoMessage, validateFn) {
     */
     if (fieldElem.val() === undefined || fieldElem.val().length === 0) {
         fieldElem.next().hide();
-    } 
-        
+    }      
     /*
         Once the user starts to edit the field,
         I show the info span. To handle the case
@@ -35,7 +69,6 @@ var validateField = function(fieldElem, infoMessage, validateFn) {
             fieldElem.next().show();   
         }
     });
-    
     /*
         Adjusts the span based on whether input
         was correct or not. Here is where I 
@@ -81,6 +114,9 @@ var validateField = function(fieldElem, infoMessage, validateFn) {
 */
 var validateRealName= function (text) {    
     var re = /^[\w\- ]+$/;
+    if(text){
+        empty = 1;
+    }
     return re.test(text);
     //Username should only be alphabetical or numeric
     //password should be @least 8 chars long
@@ -89,6 +125,9 @@ var validateRealName= function (text) {
 
 var validateUsername = function (text) {    
     var re = /^\w+$/;
+    if(text){
+        empty = 1;
+    }
     return re.test(text);
     //Username should only be alphabetical or numeric
     //password should be @least 8 chars long
@@ -100,6 +139,9 @@ var validateUsername = function (text) {
 */
 var validateEmail = function(text) {    
     var re = /@/;
+    if(text){
+        empty = 1;
+    }
     return re.test(text);
 };
 
@@ -107,14 +149,14 @@ var validateEmail = function(text) {
     Tests on the length of the password string.    
 */
 var validatePassword = function(passwordString) {
-    
+    if(passwordString){
+        empty = 1;
+    }
     return (passwordString.length >= 8);
     
 };
 
-
-$(document).ready(function () {    
-    
+window.onload = function () {
     $("#newPassword").focus(function () {
         validateField($(this), "Must be 8 characters or more", 
                       validatePassword);
@@ -133,5 +175,7 @@ $(document).ready(function () {
      $("#newEmail").focus(function () {
         validateField($(this), "Must contain an @ character", 
                       validateEmail);
-    });    
-});
+    });
+    
+    $("#newUserSubmit").click(function () { checkUnique(); })
+};
