@@ -571,6 +571,12 @@ ul.sub-menu {
 	  background: #70DBDB;
 }
 
+.carousel-inner {
+    height: 450px;
+    margin-top: 50px;
+}
+
+
 .item {
   padding-left: 100px;
 }
@@ -583,14 +589,18 @@ ul.sub-menu {
 }
 
 .slideImage {
-  margin-left: 0px;
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+
 }
 
 .item h1 {
   color: #B4B1AB;
   font-family: abel;
   font-size: 48px;
-  margin-top: 115px;
+  margin-top: 80px;
 }
 
 .item h1 span {
@@ -1167,7 +1177,7 @@ h2.title {
   height: 500px;
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 
 }
 
@@ -2530,5 +2540,4 @@ h2.title {
 .error {
 	background: #fcc;	
 }
-
 
