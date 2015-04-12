@@ -86,9 +86,16 @@
 						</div>
 					</div>
 					<div class="col-sm-3">
-						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
-						</div>
+                        <p>Search by:</p>
+                        <form action="/cgi-bin/itemsearch.py" method="post"> 
+                            <select class="searchMethod" id="methodSelect" name="type"> 
+                                <option value="title" >Title</option>
+                                <option value="author" >Author Name</option>
+                                <option value="isbn" >ISBN</option></select>						
+						  <div class="search_box pull-right">
+                              <input id="booksearch" type="text" name="term" placeholder="Search"/>
+                          </div>
+                      </form>
 					</div>
 				</div>
 			</div>

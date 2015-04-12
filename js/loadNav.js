@@ -47,7 +47,8 @@ function validate() {
     });
 }
 
-window.onload = function () {  
+window.onload = function () {
+
     //Validates the user's cookies
     validate();
 };
