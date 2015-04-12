@@ -3,7 +3,7 @@ title: The Children's Crusade: A Novel
 publisher: Scribner
 price: $26.99
 pages: 448
-description: From the New York Times bestselling, award-winning author of The Dive From Clausenís Pier, a sweeping, masterful new novel that explores the secrets and desires, the remnant wounds and saving graces of one California family, over the course of five decades.
+description: From the New York Times bestselling, award-winning author of The Dive From Clausen’s Pier, a sweeping, masterful new novel that explores the secrets and desires, the remnant wounds and saving graces of one California family, over the course of five decades.
 image: 
 inStock: 
 format: hardcover
@@ -27,7 +27,7 @@ title: A Reunion of Ghosts
 publisher: HarperCollins Publishers
 price: $26.99
 pages: 400
-description: Three wickedly funny sisters. One family's extraordinary legacy. A single suicide note that spans a century ... Meet the Alter sisters: Lady, Vee, and Delph. These three mordantly witty, complex women share their family's apartment on Manhattan's Upper West Side. They love each other fiercely, but being an Alter isn't easy. Bad luck is in their genes, passed down through the generations. Yet no matter what curves life throws at these siblingsóand it's hurled plentyóthey always have a wisecrack, and one another.
+description: Three wickedly funny sisters. One family's extraordinary legacy. A single suicide note that spans a century ... Meet the Alter sisters: Lady, Vee, and Delph. These three mordantly witty, complex women share their family's apartment on Manhattan's Upper West Side. They love each other fiercely, but being an Alter isn't easy. Bad luck is in their genes, passed down through the generations. Yet no matter what curves life throws at these siblings and it's hurled plenty they always have a wisecrack, and one another.
 image: 
 inStock: 
 format: hardcover
@@ -64,7 +64,7 @@ title: At the Water's Edge
 publisher: Random House Publishing Group
 price: $28.00
 pages: 368
-description: In this thrilling new novel from the author of Water for Elephants, Sara Gruen again demonstrates her talent for creating spellbinding period pieces. At the Waterís Edge is a gripping and poignant love story about a privileged young womanís awakening as she experiences the devastation of World War II in a tiny village in the Scottish Highlands.
+description: In this thrilling new novel from the author of Water for Elephants, Sara Gruen again demonstrates her talent for creating spellbinding period pieces. At the Water’s Edge is a gripping and poignant love story about a privileged young woman’s awakening as she experiences the devastation of World War II in a tiny village in the Scottish Highlands.
 image: 
 inStock: 
 format: hardcover
@@ -88,7 +88,7 @@ title: The Buried Giant
 publisher: Knopf Doubleday Publishing Group
 price: $26.95
 pages: 336
-description: From the author of Never Let Me Go and the Booker Prize-winning The Remains of the Day. Sometimes savage, sometimes mysterious, always intensely moving, Kazuo Ishiguroís first novel in a decade tells a luminous story about the act of forgetting and the power of memory, a resonant tale of love, vengeance, and war.
+description: From the author of Never Let Me Go and the Booker Prize-winning The Remains of the Day. Sometimes savage, sometimes mysterious, always intensely moving, Kazuo Ishiguro's first novel in a decade tells a luminous story about the act of forgetting and the power of memory, a resonant tale of love, vengeance, and war.
 image: 
 inStock: 
 format: hardcover
@@ -112,7 +112,7 @@ title: The Goldfinch
 publisher: Little, Brown and Company
 price: $20.00
 pages: 784
-description: Theo Decker, a 13-year-old New Yorker, miraculously survives an accident that kills his mother. Abandoned by his father, Theo is taken in by the family of a wealthy friend. Bewildered by his strange new home on Park Avenue, disturbed by schoolmates who don't know how to talk to him, and tormented above all by his longing for his mother, he clings to the one thing that reminds him of her: a small, mysteriously captivating painting that ultimately draws Theo into the underworld of art. As an adult, Theo moves silkily between the drawing rooms of the rich and the dusty labyrinth of an antiques store where he works. He is alienated and in loveóand at the center of a narrowing, ever more dangerous circle.
+description: Theo Decker, a 13-year-old New Yorker, miraculously survives an accident that kills his mother. Abandoned by his father, Theo is taken in by the family of a wealthy friend. Bewildered by his strange new home on Park Avenue, disturbed by schoolmates who don't know how to talk to him, and tormented above all by his longing for his mother, he clings to the one thing that reminds him of her: a small, mysteriously captivating painting that ultimately draws Theo into the underworld of art. As an adult, Theo moves silkily between the drawing rooms of the rich and the dusty labyrinth of an antiques store where he works. He is alienated and in love and at the center of a narrowing, ever more dangerous circle.
 image: 
 inStock: 
 format: paperback
