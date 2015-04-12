@@ -36,7 +36,7 @@ function validate() {
             // change to home screen on successful login attempt
             // window.location = 'index.html';
         } else if (response == 1) { //The needed cookie wasn't found
-            //alert("It didn't work!");
+            alert("It didn't work!");
             //Do nothing
         }
     });
