@@ -46,9 +46,21 @@ function validate() {
         }
     });
 }
+/*For the customerinfo.html page. The script returns html to load the custinfo section*/
+function loadCustomerInfo() {    
+    sendReq("/cgi-bin/loadCustomer.py", function processResponse(response) {
+       $("#custinfo").append(response); 
+        
+    });
+}
 
 window.onload = function () {
-
+    var custinfo = $("custinfo")
+    if ($(custinfo).length) {
+        loadCustomerInfo();
+    }
+ 
+    loadCustomerInfo();
     //Validates the user's cookies
     validate();
 };
