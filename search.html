@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Contact | Novel Books</title>
+    <title>Shop | Novel Books</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -74,13 +74,13 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="index.html">Home</a></li>
-								<li class="dropdown"><a href="shop.html">Shop<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="shop.html" class="active">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
-										<li><a href="product-details.html">Product Details</a></li>
+                                        <li><a href="shop.html" class="active">Products</a></li>
+										<li><a href="product-details.html">Product Details</a></li> 
                                     </ul>
                                 </li> 
-								<li><a href="contact-us.html" class="active">Contact Us</a></li>
+								<li><a href="contact-us.html">Contact Us</a></li>
 							</ul>
 						</div>
 					</div>
@@ -101,66 +101,57 @@
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->
-	 
-	 <div id="contact-page" class="container">
-    	<div class="bg">    	
-    		<div class="row">  	
-	    		<div class="col-sm-8">
-	    			<div class="contact-form">
-	    				<h2 class="title text-center">Contact Us</h2>
-	    				<div class="status alert alert-success" style="display: none"></div>
-				    	<form id="main-contact-form" class="contact-form row" name="contact-form" action="sendemail.php" method="post">
-				            <div class="form-group col-md-6">
-				                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
-				            </div>
-				            <div class="form-group col-md-6">
-				                <input type="email" name="email" class="form-control" required="required" placeholder="Email">
-				            </div>
-				            <div class="form-group col-md-12">
-				                <input type="text" name="subject" class="form-control" required="required" placeholder="Subject">
-				            </div>
-				            <div class="form-group col-md-12">
-				                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your Message Here"></textarea>
-				            </div>                        
-				            <div class="form-group col-md-12">
-				                <input type="submit" name="submit" class="btn btn-primary pull-right" value="Submit">
-				            </div>
-				        </form>
-	    			</div>
-	    		</div>
-	    		<div class="col-sm-4">
-	    			<div class="contact-info">
-	    				<h2 class="title text-center">Information</h2>
-	    				<address>
-	    					<p>Novel Books Inc.</p>
-							<p>800 West Campbell Road</p>
-                            <p>Richardson, TX 75080</p>
-							<p>Mobile: +1 800 NOVEL BOOKS</p>
-							<p>Fax: 1-987-654-3210</p>
-							<p>Email: info@novelbooks.com</p>
-	    				</address>
-	    				<div class="social-networks">
-	    					<h2 class="title text-center">Social Networking</h2>
-							<ul>
-								<li>
-									<a href="https://www.facebook.com/NovelBooksInc"><i class="fa fa-facebook"></i></a>
-								</li>
-								<li>
-									<a href="https://www.twitter.com/novelbooksinc"><i class="fa fa-twitter"></i></a>
-								</li>
-								<li>
-									<a href="https://plus.google.com/u/0/105467634270706580986/posts"><i class="fa fa-google-plus"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-youtube"></i></a>
-								</li>
-							</ul>
-	    				</div>
-	    			</div>
-    			</div>    			
-	    	</div>  
-    	</div>	
-    </div><!--/#contact-page-->
+	
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="left-sidebar">
+						<div class="brands_products"><!--genres_products-->
+							<h2>Genre</h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									<li><a href="#"> <span class="pull-right"></span>Art</a></li>
+									<li><a href="#"> <span class="pull-right"></span>Biography &amp; Memoirs</a></li>
+									<li><a href="#"> <span class="pull-right"></span>Business</a></li>
+									<li><a href="#"> <span class="pull-right"></span>Cooking</a></li>
+									<li><a href="#"> <span class="pull-right"></span>Fiction &amp; Literature</a></li>
+									<li><a href="#"> <span class="pull-right"></span>Health &amp; Wellness</a></li>
+									<li><a href="#"> <span class="pull-right"></span>History</a></li>
+                                    <li><a href="#"> <span class="pull-right"></span>Hobbies &amp; Crafts</a></li>
+                                    <li><a href="#"> <span class="pull-right"></span>Mystery &amp; Suspense</a></li>
+                                    <li><a href="#"> <span class="pull-right"></span>Politics &amp; Social Sciences</a></li>
+                                    <li><a href="#"> <span class="pull-right"></span>Religion &amp; Inspiration</a></li>
+                                    <li><a href="#"> <span class="pull-right"></span>Romance</a></li>
+                                    <li><a href="#"> <span class="pull-right"></span>Science Fiction &amp; Fantasy</a></li>
+                                    <li><a href="#"> <span class="pull-right"></span>Self-Help</a></li>
+                                    <li><a href="#"> <span class="pull-right"></span>Technology</a></li>
+                                    <li><a href="#"> <span class="pull-right"></span>Travel</a></li>
+                                </ul>
+							</div>
+						</div><!--/genres_products-->
+						
+						<div class="brands_products"><!--formats_products-->
+							<h2>Format</h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									<li><a href="#"> <span class="pull-right"></span>eBook</a></li>
+									<li><a href="#"> <span class="pull-right"></span>Hardcover</a></li>
+									<li><a href="#"> <span class="pull-right"></span>Paperback</a></li>
+                                </ul>
+							</div>
+						</div><!--/formats_products-->						
+					</div>
+				</div>
+				
+				<div class="col-sm-9 padding-right">
+					<div id = "searchproducts" class="features_items"><!--features_items-->
+						
+					</div><!--features_items-->
+				</div>
+			</div>
+		</div>
+	</section>
 	
 	<footer id="footer"><!--Footer-->		
 		<div class="footer-bottom">
@@ -173,11 +164,11 @@
 	</footer><!--/Footer-->
   
     <script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/itemsearch.js"></script>
     <script src="js/loadNav.js"></script>
-
 </body>
 </html>

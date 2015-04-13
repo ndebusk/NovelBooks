@@ -28,11 +28,11 @@ cursor.execute(queryStringBook)
 print '<h2 class="title text-center">Products</h2>'
 for row in cursor:
     print '<div class="col-sm-4"><div class="product-image-wrapper"><div class="single-products"><div class="productinfo text-center">'
-    print '<img data-a="%s"' % row[3]
-    print 'src="%s" alt="" />' % row[2]
+    print '<img src="%s" alt="" />' % row[2]
     print '<h2>%s</h2>' % row[0]
     print '<p>%s</p>' %  row[1]
-    print '<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a></div></div></div></div>'
+    print '<a href="#" class="btn btn-default add-to-cart" data-a="%s">' % row[3]
+    print '<i class="fa fa-bars"></i>View Details</a></div></div></div></div>'
     
 cnx.commit()
 cnx.close();

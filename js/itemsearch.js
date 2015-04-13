@@ -1,4 +1,3 @@
-var $;
 function sendReq(url, callbackFunction) {
     "use strict";
     var xmlhttp, ActiveXObject;
@@ -20,12 +19,25 @@ function sendReq(url, callbackFunction) {
     xmlhttp.send();
 }
 
+
 function load() {
-    "use strict";
+    "use strict";    
+    
+    var parts = window.location.search.substr(1).split("&");
+    var $_GET = {};
+    for (var i = 0; i < parts.length; i++) {
+        var temp = parts[i].split("=");
+        $_GET[decodeURIComponent(temp[0])] = decodeURIComponent(temp[1]);
+    }
+
+    //alert($_GET['type']);
+    //alert($_GET['booksearch']);
+    
+    var type = $_GET['type'], term = $_GET['booksearch'];
     
     // Request to python
-    sendReq("/cgi-bin/itemsearch.py?type=all&term=all", function processResponse(response) {
-        document.getElementById("allproducts").innerHTML = response;
+    sendReq("/cgi-bin/itemsearch.py?type=" + type + "&term=" + term, function processResponse(response) {
+        document.getElementById("searchproducts").innerHTML = response;
     });
 }
 
