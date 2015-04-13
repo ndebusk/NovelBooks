@@ -16,15 +16,15 @@ print ("Content-Type: text/html\n\n")
 
 form = cgi.FieldStorage()
 
-#realname = form.getvalue("name")
-#email = form.getvalue("email")
-#newpassword = form.getvalue("newpassword")
-#oldpassword = form.getvalue("password")
+realname = form.getvalue("name")
+email = form.getvalue("email")
+newpassword = form.getvalue("newpassword")
+oldpassword = form.getvalue("password")
+#Keeps the password for being overwritten if the user does not put anything in
+#that field
+if (newpassword == None):    
+    newpassword = oldpassword
 
-realname = "Sean Dyer"
-email = "sean_dyer@ymail.com"
-newpassword = "testpassword"
-oldpassword = "password"
 
 #Sets my config for accessing the database. MAMP gave two different
 #ways for accessing the database, but I seemed to have trouble
@@ -41,7 +41,7 @@ config = {
 cnx = mysql.connector.connect(**config)
 cursor = cnx.cursor()
 #need to add the password check here
-queryStringUser = "SELECT userID FROM user WHERE username='" + str(user) + "'"
+queryStringUser = "SELECT userID FROM user WHERE username='" + str(user) + "' AND password='" + str(oldpassword) + "'"
 cursor.execute(queryStringUser)
 userNum = -1
 for row in cursor:
@@ -49,8 +49,7 @@ for row in cursor:
 ##I build the query string in two lines because it's such a long string.
 if (userNum != -1):
     queryStringUpdate = "UPDATE user SET name='" + str(realname) + "', " + "password='" + str(newpassword) + "', " + "email='" + str(email) + "' WHERE userID='" + str(userNum) + "';"
-    cursor.execute(queryStringUpdate)
-    print "<p>" + queryStringUpdate + "</p>"
-
+    cursor.execute(queryStringUpdate)    
+print userNum
 cnx.commit()
 cnx.close();
