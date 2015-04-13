@@ -9,9 +9,7 @@ import urllib2
 if os.environ.has_key("HTTP_COOKIE"):
     C= Cookie.SimpleCookie(os.environ.get("HTTP_COOKIE",""))
 
-user = C['userID'].value
-user = "sean"
-
+isbn = "0756404746"
 print ("Content-Type: text/html\n\n")
 
 #Sets my config for accessing the database. MAMP gave two different
