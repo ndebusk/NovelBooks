@@ -10,7 +10,7 @@ if os.environ.has_key("HTTP_COOKIE"):
     C= Cookie.SimpleCookie(os.environ.get("HTTP_COOKIE",""))
 
 user = C['userID'].value
-
+user = "sean"
 
 print ("Content-Type: text/html\n\n")
 
