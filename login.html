@@ -120,15 +120,16 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="signup-form"><!--sign up form-->
-						<h2>New User Signup!</h2> 
-						<form action="/cgi-bin/newuser.py" method="post">
+						<h2>New User Signup!</h2>
+                        <div id="errorUser"></div>
+						<form>
 							<!--Edits on 4/2 sdyer. Added ids to new user boxes
                             to support validation javascript-->
-                            <input id="newName" type="text" name="realname" placeholder="Your Name"/>
-							<input id="newUser" type="text" name="username" placeholder="Desired Username"/>
-							<input id="newEmail" type="text" name="email" placeholder="Email Address"/>
-							<input id="newPassword" type="password" name="password" placeholder="Password"/>
-							<button id="newUserSubmit" type="submit" class="btn btn-default">Signup</button>
+                            <input id="newName" type="text" name="newName" placeholder="Your Name"/>
+							<input id="newUser" type="text" name="newUser" placeholder="Desired Username"/>
+							<input id="newEmail" type="text" name="newEmail" placeholder="Email Address"/>
+							<input id="newPassword" type="password" name="newPassword" placeholder="Password"/>
+							<button id="newUserSubmit" type="button" class="btn btn-default">Signup</button>
 						</form>
 					</div><!--/sign up form-->
 				</div>
@@ -150,9 +151,8 @@
     <script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/validateNewUser.js"></script>
     <script src="js/jquery-1.11.2.js"></script>
     <script src="js/loginValidate.js"></script>
+    <script src="js/validateNewUser.js"></script>
 </body>
 </html>

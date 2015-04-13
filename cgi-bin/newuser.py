@@ -3,11 +3,8 @@ print ("Content-Type: text/html\n\n")
 
 import mysql.connector, cgi
 
-print "<html>\
-<head><title>Login</title></head><body>"
-print "<p>Test</p>"
-
 form = cgi.FieldStorage()
+
 realname = form.getvalue("realname")
 username = form.getvalue("username")
 email = form.getvalue("email")
@@ -26,12 +23,31 @@ config = {
 #Creates the connection and cursor.
 cnx = mysql.connector.connect(**config)
 cursor = cnx.cursor()
+cnx2 = mysql.connector.connect(**config)
+cursor2 = cnx2.cursor()
+
+queryStringTest = "SELECT username, email FROM user"
+cursor2.execute(queryStringTest);
+flag = 0
+
+for user in cursor2:
+    if user[0] == username:
+        flag = 1
+        print "Username is already taken, please select a new one."
+    elif user[1] == email:
+        flag = 1
+        print "Email is already linked to an account, please use a different email."
 
 #I build the query string in two lines because it's such a long string.
 #TODO: adding a non-static userID number, adding a non-static customer Name
-queryString = "INSERT INTO `user`(`username`, `password`, `name`, `email`, `customer_flag`, `admin_flag`) VALUES "
-valueString = "('" + str(username) + "','" + str(password) + "','" + str(realname) +"','" + str(email) +"','1','0')"
-queryString += valueString
-cursor.execute(queryString)
+if flag == 0:
+    queryString = "INSERT INTO `user`(`username`, `password`, `name`, `email`, `customer_flag`, `admin_flag`) VALUES "
+    valueString = "('" + str(username) + "','" + str(password) + "','" + str(realname) +"','" + str(email) +"','1','0')"
+    queryString += valueString
+    cursor.execute(queryString)
+    print "Account Created. Please login now."
+
 cnx.commit()
-cnx.close();
+cnx2.commit()
+cnx.close()
+cnx2.close();
