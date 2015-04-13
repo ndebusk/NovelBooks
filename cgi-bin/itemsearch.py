@@ -43,8 +43,7 @@ for row in cursor:
     print '<img src="%s" alt="" />' % row[2]
     print '<h2>%s</h2>' % row[0]
     print '<p>%s</p>' %  row[1]
-    print '<a href="#" class="btn btn-default add-to-cart" data-a="%s">' % row[3]
-    print '<i class="fa fa-bars"></i>View Details</a></div></div></div></div>'
-
+    print '<form action="product-details.html" method="get"><input id="isbn" type="hidden" name="isbn" value="%s"/>' % row[3]
+    print '<button id="search" type="submit" class="btn btn-default add-to-cart"><i class="fa fa-bars"></i>Details</button></form></div></div></div></div>'
 cnx.commit()
 cnx.close();
