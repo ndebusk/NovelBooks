@@ -2599,7 +2599,12 @@ h2.title {
    border-radius: 5px;
 }
 
-#search {
+#gosearch {
     height: 30px;
     width: 50px;
+}
+
+#custinfo {
+    margin-bottom: 100px;
+    margin-top: 50px;
 }

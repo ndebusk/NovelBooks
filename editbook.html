@@ -62,7 +62,7 @@
 		<div class="header-bottom"><!--header-bottom-->
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-9">
+					<div class="col-sm-3">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 								<span class="sr-only">Toggle navigation</span>
@@ -73,25 +73,33 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.html" class="active">Home</a></li>
-								<li><a href="shop.html" class="active">Shop</a></li> 
+								<li><a href="index.html">Home</a></li>
+								<li><a href="shop.html">Shop</a></li> 
 								<li><a href="contact-us.html">Contact Us</a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-3">
-                        <p>Search by:</p>
+					<!--search-bar-->
+					<div class="col-sm-7 pull-right">
                         <form action="search.html" method="get"> 
-                            <select class="searchMethod" id="methodSelect" name="type"> 
-                                <option value="title" >Title</option>
-                                <option value="author" >Author Name</option>
-                                <option value="isbn" >ISBN</option></select>						
-						  <div class="search_box pull-right">
-                              <input id="booksearch" type="text" name="booksearch" placeholder="Search"/>
-                              <button id="search" type="submit" class="btn btn-default cart">GO</button>
-                          </div>
-                      </form>
+                             <div class="shop-menu pull-right">
+                                 <ul id="navbar" class="nav navbar-nav">
+                                    <li>
+                                        <div class="styled-select blue semi-square">
+                                            <select class="search" id="methodSelect" name="type"> 
+                                                <option value="title" >Title</option>
+                                                <option value="author" >Author Name</option>
+                                                <option value="isbn" >ISBN</option>
+                                            </select>
+                                        </div>
+                                     </li>
+                                     <li><input id="booksearch" type="text" name="booksearch" placeholder="Search"/></li>
+                                     <li><button id="gosearch" type="submit" class="btn btn-default cart">GO</button></li>
+                                 </ul>
+                            </div>
+                        </form>    
 					</div>
+                    <!--search-end-->
 				</div>
 			</div>
 		</div><!--/header-bottom-->

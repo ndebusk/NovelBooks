@@ -34,7 +34,7 @@ queryStringBook = "SELECT username, name, email FROM user WHERE username='" + st
 cursor.execute(queryStringBook)
 
 for row in cursor:
-    print '<h2 class="title text-center">User Info for user ' + str(row[0]) + ':</h2>'
+    print '<h2 class="title text-center">User Info: ' + str(row[0]) + '</h2>'
     print '<div class="row">'
     print '<div class="col-sm-8">'
     print '<div class="item-entry">'
