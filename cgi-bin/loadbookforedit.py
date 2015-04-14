@@ -45,14 +45,14 @@ if (flag == 0):
         print '<p><form action="/cgi-bin/updateBook.py" method="post"></p>'
         print '<p><input id="newtitle" type="text" name="newtitle" placeholder="' + str(row[0]) + '"/></p>'
         print '<p><input id="newpublisher" type="text" name="newpublisher" placeholder="' + str(row[1]) + '"/></p>'
-        print '<p><input id="newprice" type="text" name="newpric" placeholder="' + str(row[2]) + '"/></p>'
+        print '<p><input id="newprice" type="text" name="newprice" placeholder="' + str(row[2]) + '"/></p>'
         print '<p><input id="newpages" type="text" name="newpages" placeholder="' + str(row[3]) + '"/></p>'
         print '<p><input id="newdesc" type="text" name="newdesc" placeholder="' + str(row[4]) + '"/></p>'
         print '<p><input id="newimage" type="text" name="newimage" placeholder="' + str(row[5]) + '"/></p>'    
-    #    print '<span id="stockspan">'
+        print '<span id="stockspan">'
         print '<input type="checkbox" name="inStock" class="checkbox" value="' + str(row[6]) + '">'
         print 'Check if book is now in stock.</br>'
-    #    print '</span>'
+        print '</span>'
 
     cursor.execute(queryStringAuthor)
     for row in cursor:
