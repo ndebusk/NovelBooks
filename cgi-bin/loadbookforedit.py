@@ -28,23 +28,24 @@ cnx = mysql.connector.connect(**config)
 cursor = cnx.cursor()
 
 #I build the query string in two lines because it's such a long string.
-queryStringBook = "SELECT username, name, email FROM user WHERE username='" + str(user) + "'"
+queryStringBook = "SELECT title, publisher, price, pages, description, image, instock FROM book WHERE isbn='" + str(isbn) + "'"
+queryStringAuthor = "SELECT author FROM author WHERE isbn='" + str(isbn) + "'"
+queryStringGenre = "SELECT genre FROM genre WHERE isbn='" + str(isbn) + "'"
+queryStringFormat = "SELECT format FROM format WHERE isbn='" + str(isbn) + "'"
+
 cursor.execute(queryStringBook)
 
 for row in cursor:
-    print '<h2 class="title text-center">User Info for user ' + str(row[0]) + ':</h2>'
-    print '<div class="row">'
-    print '<div class="col-sm-8">'
-    print '<div class="item-entry">'
-    print '<p>Click on a box to edit that value.</p>'
-    print '<p><form action="/cgi-bin/updateCustomer.py" method="post"></p>'
-    print '<p><input id="newpassword" type="password" name="newpassword" placeholder="Enter new password"/></p>'
-    print '<p><input id="name" type="text" name="name" value="' + str(row[1]) + '"/></p>'
-    print '<p><input id="email" type="text" name="email" value="' + str(row[2]) + '"/></p>'    
-print '<input id="password" type="password" name="password" placeholder="Enter your current password to confirm new changes"/></p>'    
-print '<button id="updateUserSubmit" type="button" class="btn btn-default">Save User Changes</button></p>'
-print '</form>'
-print '</div></div></div>'
+    print "<p>" + row[0] + "</p>"    
+cursor.execute(queryStringAuthor)
+for row in cursor:
+    print "<p>" + row[0] + "</p>"
+cursor.execute(queryStringGenre)
+for row in cursor:
+    print "<p>" + row[0] + "</p>"
+cursor.execute(queryStringFormat)
+for row in cursor:
+    print "<p>" + row[0] + "</p>"
 
 cnx.commit()
 cnx.close();

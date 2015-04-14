@@ -147,7 +147,7 @@ function validate() {
             //alert("Success!");
             document.getElementById("navbar").innerHTML = "<ul class='nav navbar-nav'>" + 
                 "<li><a href='itementry.html'><i class='fa fa-shield'></i> Admin</a></li>" + 
-                "<li><a href='account.html'><i class='fa fa-user'></i> Account</a></li>" + 
+                "<li><a href='customerinfo.html'><i class='fa fa-user'></i> Account</a></li>" + 
                 "<li><a href='checkout.html'><i class='fa fa-crosshairs'></i> Checkout</a></li>" + 
                 "<li><a href='cart.html'><i class='fa fa-shopping-cart'></i> Cart</a></li>" + 
                 "<li><a href='#' class='active'><i class='fa fa-lock'></i> Logout</a></li></ul>";
@@ -158,7 +158,7 @@ function validate() {
             //alert("It didn't work!");
             //Do nothing
             document.getElementById("navbar").innerHTML = "<ul class='nav navbar-nav'>" + 
-                "<li><a href='account.html'><i class='fa fa-user'></i> Account</a></li>" + 
+                "<li><a href='customerinfo.html'><i class='fa fa-user'></i> Account</a></li>" + 
                 "<li><a href='checkout.html'><i class='fa fa-crosshairs'></i> Checkout</a></li>" + 
                 "<li><a href='cart.html'><i class='fa fa-shopping-cart'></i> Cart</a></li>" + 
                 "<li><a href='#' class='active'><i class='fa fa-lock'></i> Logout</a></li></ul>";
