@@ -12,6 +12,9 @@ flag = 1
 if (C.has_key("access") and C["access"].value == "admin"):
     flag = 0
 isbn = "0756404746"
+form = cgi.FieldStorage()
+
+isbn = form.getvalue("isbn")
 print ("Content-Type: text/html\n\n")
 
 #Sets my config for accessing the database. MAMP gave two different
@@ -36,7 +39,9 @@ if (flag == 0):
     queryStringFormat = "SELECT format FROM format WHERE isbn='" + str(isbn) + "'"
 
     cursor.execute(queryStringBook)
+    
     for row in cursor:
+        #found = 1
         print '<h2 class="title text-center">Edit Book Info</h2>'
         print '<div class="row">'
         print '<div class="col-sm-8">'
@@ -54,15 +59,15 @@ if (flag == 0):
         print '<input id="instock" type="checkbox" name="inStock" class="checkbox" value="' + str(row[6]) + '">'
         print 'Check if book is now in stock.</br>'
         print '</span>'
-
+    
     cursor.execute(queryStringAuthor)
     for row in cursor:
-        print '<input type="text" name="author[]" placeholder="' + row[0] + '" />'
+        print '<input type="text" name="author[]" value="' + row[0] + '" />'
     print '<button class="expanderbutton" type="button" class="btn btn-default">Add Another Author</button></br>'
 
     cursor.execute(queryStringGenre)
     for row in cursor:
-        print '<input type="text" name="genre[]" placeholder="' + row[0] + '"/>'
+        print '<input type="text" name="genre[]" value="' + row[0] + '"/>'
     print '<button class="expanderbutton" type="button" class="btn btn-default">Add Another Genre</button></br>'
 
     cursor.execute(queryStringFormat)
@@ -74,7 +79,8 @@ if (flag == 0):
         print row[0] + '<input type="checkbox" name="format[]" value="' + row[0] + '" /><br/>'
 
     print '</span>'
-    print '<button id="updateBookSubmit" type="submit" class="btn btn-default">Save Book Changes</button>'
+    print '<button id="updateBookSubmit" type="button" class="btn btn-default">Save Book Changes</button>'
+    print '<button id="deleteBookSubmit" type="button" class="btn btn-default">Delete Book From Database</button>'
     print '</form>'
     print '</div></div></div>'
     cnx.commit()

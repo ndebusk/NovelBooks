@@ -189,46 +189,6 @@ function loadCustomerInfo() {
         
     });
 }
-
-/*For the customerinfo.html page. The script returns html to load the custinfo section*/
-function loadBookInfo() {    
-    sendReq("/cgi-bin/loadbookforedit.py", function processResponse(response) {
-       $("#bookinfo").append(response); 
-        if ($("#updateBookSubmit").length) {       
-        $("#updateBookSubmit").click(function() {            
-           submitBookInfo();    
-        });
-/*        $("#newpassword").focus(function () {
-        validateField($(this), "Must be 8 characters or more", 
-                      validatePassword);
-        });            
-        $("#name").focus(function () {
-            validateField($(this), "Alphanumeric characters, spaces, hyphens only", 
-                          validateRealName);
-        });
-         $("#email").focus(function () {
-            validateField($(this), "Must contain an @ character", 
-                          validateEmail);
-        });*/
-    }
-        
-    });
-}
-function submitBookInfo() {  
-
-   data = $("#booksubmit").serialize();
-    sendReq("/cgi-bin/updateCustomer.py?" + data, function processResponse(response) {
-       //$("#custinfo").append(response); 
-       if (response == -1) {
-           $("#custinfo").append("<p>Sorry, wrong password.</p>");
-       } else {          
-          $("#custinfo").empty();           
-          loadCustomerInfo();
-           $("#custinfo").append("<p>Sucess! Information updated.</p>");          
-       }
-        
-    });
-}
 function submitCustomerInfo() {  
     data = $("#customerform").serialize();
     
@@ -245,13 +205,82 @@ function submitCustomerInfo() {
     });
 }
 
+/*For the customerinfo.html page. The script returns html to load the custinfo section*/
+function loadBookInfo(isbn) {     
+    $("#bookinfo").empty();
+    sendReq("/cgi-bin/loadbookforedit.py?isbn=" + isbn, function processResponse(response) {
+        if (response == -1) {
+            $("#bookinfo").empty();
+           $("#bookinfo").append("<p>Sorry, item not found.</p>");
+       } else {          
+            $("#bookinfo").append(response); 
+            if ($("#updateBookSubmit").length) {       
+                $("#updateBookSubmit").click(function() {            
+                   submitBookInfo();    
+            });
+            }
+            if ($("#deleteBookSubmit").length) {
+                $("#deleteBookSubmit").click(function() {
+                    deleteBookInfo();   
+                });
+            }     
+       }
+       
+/*        $("#newpassword").focus(function () {
+        validateField($(this), "Must be 8 characters or more", 
+                      validatePassword);
+        });            
+        $("#name").focus(function () {
+            validateField($(this), "Alphanumeric characters, spaces, hyphens only", 
+                          validateRealName);
+        });
+         $("#email").focus(function () {
+            validateField($(this), "Must contain an @ character", 
+                          validateEmail);
+        });*/
+            
+    });
+}
+function submitBookInfo() {  
+
+   data = $("#booksubmit").serialize();
+    
+    sendReq("/cgi-bin/updatebook.py?" + data + "&mode=update", function processResponse(response) {
+       $("#bookinfo").append(response); 
+       if (response == -1) {
+           $("#bookinfo").append("<p>Sorry, wrong password.</p>");
+       } else {          
+          $("#bookinfo").empty();           
+          loadBookInfo();
+           $("#bookinfo").append("<p>Sucess! Information updated.</p>");          
+       }        
+    });
+}
+function deleteBookInfo() {  
+   data = $("#booksubmit").serialize();
+    
+    sendReq("/cgi-bin/updatebook.py?" + data, function processResponse(response) {
+       $("#bookinfo").append(response); 
+       if (response == -1) {
+           $("#bookinfo").append("<p>Sorry, wrong password.</p>");
+       } else {          
+          $("#bookinfo").empty();           
+          
+           $("#bookinfo").append("<p>Sucess! Book deleted.</p>");          
+       }        
+    });
+}
+
 window.onload = function () {
     
     if ($("#custinfo").length) {
         loadCustomerInfo();
     }
     if ($("#bookinfo").length) {
-        loadBookInfo();
+        //loadBookInfo();
+        $("#goedit").click(function() {            
+            loadBookInfo($("#editsearch").val());   
+        });
     }
     
     //Validates the user's cookies

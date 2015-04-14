@@ -28,7 +28,8 @@ inStock = form.getvalue("inStock")
 authors = form.getlist("author[]")
 genres = form.getlist("genre[]")
 formats = form.getlist("format[]")
-print "<p>" + str(isbn) + "</p>"
+mode = form.getvalue("mode")
+
 #Keeps the password for being overwritten if the user does not put anything in
 #that field
 
@@ -47,40 +48,43 @@ config = {
 cnx = mysql.connector.connect(**config)
 cursor = cnx.cursor()
 
-deleteString = "DELETE FROM 'author' WHERE isbn=0756404746"
-print deleteString
+deleteString = "DELETE FROM author WHERE isbn='" + str(isbn) + "'"
 cursor.execute(deleteString)
 cnx.commit()
-print "<p>" + str(isbn) + "</p>"
-#deleteString = "DELETE FROM genre WHERE isbn='" + str(isbn) + "'"
-#cursor.execute(deleteString)
-#cnx.commit()
-#deleteString = "DELETE FROM format WHERE isbn='" + str(isbn) + "'"
-#cursor.execute(deleteString)
-#cnx.commit()
-#deleteString = "DELETE FROM book WHERE isbn='" + str(isbn) + "'"
-##I build the query string in two lines because it's such a long string.
-#queryStringBook = "INSERT INTO `book`(`isbn`, `title`, `publisher`, `price`, `pages`, `description`, `image`, `inStock`) VALUES "
-#valueStringBook = "('" + str(isbn) + "','" + str(title).replace("'", "''") + "','" + str(publisher).replace("'", "''") + "','" + str(price) + "','" + str(pages) + "','" + str(description).replace("'", "''") + "','" + str(image) + "','" + str(inStock) + "')"
-#queryStringBook += valueStringBook
-#cursor.execute(queryStringBook)
 
-#for author in authors:
-#    queryStringAuthor = "INSERT INTO `author`(`author`, `isbn`) VALUES "
-#    valueStringAuthor = "('" + str(author) + "','" + str(isbn) + "')"
-#    queryStringAuthor += valueStringAuthor
-#    cursor.execute(queryStringAuthor)
-#
-#for genre in genres:
-#    queryStringGenre = "INSERT INTO `genre`(`genre`, `isbn`) VALUES "
-#    valueStringGenre = "('" + str(genre) + "','" + str(isbn) + "')"
-#    queryStringGenre += valueStringGenre
-#    cursor.execute(queryStringGenre)
-#    
-#for formatType in formats:
-#    queryStringFormat = "INSERT INTO `format`(`format`, `isbn`) VALUES "
-#    valueStringFormat = "('" + str(formatType) + "','" + str(isbn) + "')"
-#    queryStringFormat += valueStringFormat
-#    cursor.execute(queryStringFormat)
-#cnx.commit()
+deleteString = "DELETE FROM genre WHERE isbn='" + str(isbn) + "'"
+cursor.execute(deleteString)
+cnx.commit()
+deleteString = "DELETE FROM format WHERE isbn='" + str(isbn) + "'"
+cursor.execute(deleteString)
+cnx.commit()
+deleteString = "DELETE FROM book WHERE isbn='" + str(isbn) + "'"
+cursor.execute(deleteString)
+cnx.commit()
+##I build the query string in two lines because it's such a long string.
+if (mode == "update"):
+    print "<p>Test</p>"
+    queryStringBook = "INSERT INTO `book`(`isbn`, `title`, `publisher`, `price`, `pages`, `description`, `image`, `inStock`) VALUES "
+    valueStringBook = "('" + str(isbn) + "','" + str(title).replace("'", "''") + "','" + str(publisher).replace("'", "''") + "','" + str(price) + "','" + str(pages) + "','" + str(description).replace("'", "''") + "','" + str(image) + "','" + str(inStock) + "')"
+    queryStringBook += valueStringBook
+    cursor.execute(queryStringBook)
+
+    for author in authors:
+        queryStringAuthor = "INSERT INTO `author`(`author`, `isbn`) VALUES "
+        valueStringAuthor = "('" + str(author) + "','" + str(isbn) + "')"
+        queryStringAuthor += valueStringAuthor
+        cursor.execute(queryStringAuthor)
+    
+    for genre in genres:
+        queryStringGenre = "INSERT INTO `genre`(`genre`, `isbn`) VALUES "
+        valueStringGenre = "('" + str(genre) + "','" + str(isbn) + "')"
+        queryStringGenre += valueStringGenre
+        cursor.execute(queryStringGenre)
+        
+    for formatType in formats:
+        queryStringFormat = "INSERT INTO `format`(`format`, `isbn`) VALUES "
+        valueStringFormat = "('" + str(formatType) + "','" + str(isbn) + "')"
+        queryStringFormat += valueStringFormat
+        cursor.execute(queryStringFormat)
+cnx.commit()
 cnx.close();
