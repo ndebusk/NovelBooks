@@ -194,11 +194,11 @@ function loadCustomerInfo() {
 function loadBookInfo() {    
     sendReq("/cgi-bin/loadbookforedit.py", function processResponse(response) {
        $("#bookinfo").append(response); 
-        /*if ($("#updateUserSubmit").length) {       
-        $("#updateUserSubmit").click(function() {
-           submitCustomerInfo();    
+        if ($("#updateBookSubmit").length) {       
+        $("#updateBookSubmit").click(function() {            
+           submitBookInfo();    
         });
-        $("#newpassword").focus(function () {
+/*        $("#newpassword").focus(function () {
         validateField($(this), "Must be 8 characters or more", 
                       validatePassword);
         });            
@@ -209,20 +209,31 @@ function loadBookInfo() {
          $("#email").focus(function () {
             validateField($(this), "Must contain an @ character", 
                           validateEmail);
-        });
-    }*/
+        });*/
+    }
+        
+    });
+}
+function submitBookInfo() {  
+
+   data = $("#booksubmit").serialize();
+    sendReq("/cgi-bin/updateCustomer.py?" + data, function processResponse(response) {
+       //$("#custinfo").append(response); 
+       if (response == -1) {
+           $("#custinfo").append("<p>Sorry, wrong password.</p>");
+       } else {          
+          $("#custinfo").empty();           
+          loadCustomerInfo();
+           $("#custinfo").append("<p>Sucess! Information updated.</p>");          
+       }
         
     });
 }
 function submitCustomerInfo() {  
-
-    var newpassword = $("#newpassword").val();
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var password = $("#password");
-    var username = $("#username").val(), password = $("#password").val();
-    sendReq("/cgi-bin/updateCustomer.py?newpassword=" + newpassword + "&name=" + name + "&email=" + email + "&password=" + password, function processResponse(response) {
-       //$("#custinfo").append(response); 
+    data = $("#customerform").serialize();
+    
+    sendReq("/cgi-bin/updateCustomer.py?" + data, function processResponse(response) {
+       $("#custinfo").append(response); 
        if (response == -1) {
            $("#custinfo").append("<p>Sorry, wrong password.</p>");
        } else {          

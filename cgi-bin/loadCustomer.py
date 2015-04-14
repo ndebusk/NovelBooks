@@ -39,7 +39,7 @@ for row in cursor:
     print '<div class="col-sm-8">'
     print '<div class="item-entry">'
     print '<p>Click on a box to edit that value.</p>'
-    print '<p><form action="/cgi-bin/updateCustomer.py" method="post"></p>'
+    print '<p><form id="customerform" action="/cgi-bin/updateCustomer.py" method="post"></p>'
     print '<p><input id="newpassword" type="password" name="newpassword" placeholder="Enter new password"/></p>'
     print '<p><input id="name" type="text" name="name" value="' + str(row[1]) + '"/></p>'
     print '<p><input id="email" type="text" name="email" value="' + str(row[2]) + '"/></p>'    
