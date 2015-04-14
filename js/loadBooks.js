@@ -22,9 +22,10 @@ function sendReq(url, callbackFunction) {
 
 function load() {
     "use strict";
-    
+    var genre = $("#term").val(), filter = $("#type").val();
+
     // Request to python
-    sendReq("/cgi-bin/itemsearch.py?type=all&term=all", function processResponse(response) {
+    sendReq("/cgi-bin/itemsearch.py?type=" + filter + "&term=" + genre, function processResponse(response) {
         document.getElementById("allproducts").innerHTML = response;
     });
 }

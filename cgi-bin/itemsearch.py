@@ -30,14 +30,18 @@ cursor = cnx.cursor()
 #elif (str(type) == "isbn"):
 #    #
 #else:
+
 if searchtype == "all":
     queryStringBook = "SELECT title, author, image, book.isbn FROM book, author WHERE book.isbn = author.isbn"
+    cursor.execute(queryStringBook)
+elif searchtype == "genre":
+    queryStringBook = "SELECT title, author, image, book.isbn FROM book, author, genre WHERE book.isbn = author.isbn AND book.isbn = genre.isbn AND genre.genre = '" + searchterm + "'"
     cursor.execute(queryStringBook)
 else:
     queryStringBook = "SELECT title, author, image, book.isbn FROM book, author WHERE(" + searchtype + " LIKE '%" + str(searchterm) + "%') AND (book.isbn = author.isbn)"
     cursor.execute(queryStringBook)
 
-print '<h2 class="title text-center">Products</h2>'
+print '<h2 class="title text-center">%s</h2>' % searchterm
 for row in cursor:
     print '<div class="col-sm-4"><div class="product-image-wrapper"><div class="single-products"><div class="productinfo text-center">'
     print '<img src="%s" alt="" />' % row[2]
