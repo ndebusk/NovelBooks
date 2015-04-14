@@ -190,6 +190,30 @@ function loadCustomerInfo() {
     });
 }
 
+/*For the customerinfo.html page. The script returns html to load the custinfo section*/
+function loadBookInfo() {    
+    sendReq("/cgi-bin/loadbookforedit.py", function processResponse(response) {
+       $("#bookinfo").append(response); 
+        /*if ($("#updateUserSubmit").length) {       
+        $("#updateUserSubmit").click(function() {
+           submitCustomerInfo();    
+        });
+        $("#newpassword").focus(function () {
+        validateField($(this), "Must be 8 characters or more", 
+                      validatePassword);
+        });            
+        $("#name").focus(function () {
+            validateField($(this), "Alphanumeric characters, spaces, hyphens only", 
+                          validateRealName);
+        });
+         $("#email").focus(function () {
+            validateField($(this), "Must contain an @ character", 
+                          validateEmail);
+        });
+    }*/
+        
+    });
+}
 function submitCustomerInfo() {  
 
     var newpassword = $("#newpassword").val();
@@ -215,7 +239,9 @@ window.onload = function () {
     if ($("#custinfo").length) {
         loadCustomerInfo();
     }
-    
+    if ($("#bookinfo").length) {
+        loadBookInfo();
+    }
     
     //Validates the user's cookies
     validate();
