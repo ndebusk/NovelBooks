@@ -26,6 +26,11 @@ cursor = cnx.cursor()
 cnx2 = mysql.connector.connect(**config)
 cursor2 = cnx2.cursor()
 
+cnx3 = mysql.connector.connect(**config)
+cursor3 = cnx3.cursor()
+cnx4 = mysql.connector.connect(**config)
+cursor4 = cnx4.cursor()
+
 queryStringTest = "SELECT username, email FROM user"
 cursor2.execute(queryStringTest);
 flag = 0
@@ -46,8 +51,21 @@ if flag == 0:
     queryString += valueString
     cursor.execute(queryString)
     print "Account Created. Please login now."
+    cnx.commit()
+    cnx2.commit()
+    cnx.close()
+    cnx2.close()
+    
+    queryStringUserID = "SELECT userID FROM user WHERE username = '" + str(username) + "'"
+    cursor3.execute(queryStringUserID)
+    for item in cursor3:
+        queryStringCreateCart = "INSERT INTO `shoppingcart`(`cartID`, `userID`) VALUES "
+        valueStringCreateCart = "('" + str(item[0]) + "','" + str(item[0]) + "')"
+        queryStringCreateCart += valueStringCreateCart
+        cursor4.execute(queryStringCreateCart)
 
-cnx.commit()
-cnx2.commit()
-cnx.close()
-cnx2.close();
+cnx3.commit()
+cnx4.commit()
+
+cnx3.close()
+cnx4.close();

@@ -74,11 +74,12 @@ for book in cursorBook:
     print '</div></div><div class="col-sm-7"><div class="product-information"><!--/product-information-->'
     print '<h1>%s</h1>' % book[1]
     print '<h2>%s</h2>' % aString
-    print '<input id="isbnVal" type="hidden" name="isbnVal" value="%s"/>' % book[0]
     print '<p>ISBN: %s</p>' % book[0]
     print '<span><span>$ %s</span></span>' % book[3]
     print '<p><b>Availability:</b> %s</p>' % available
-    print '<div><form action="cgi-bin/addItemCart.py" method="get"><fieldset class="group"><ul class="checkbox">'
+    print '<div><form action="/cgi-bin/addItemCart.py" method="get">'
+    print '<input id="isbnVal" type="hidden" name="isbnVal" value="%s"/>' % book[0]
+    print '<fieldset class="group"><ul class="checkbox">'
     if ebookFormat == 1:
         print '<li><input type="checkbox" id="ebook" name="format[]" value="ebook" /><label for="ebook">eBook</label></li>'
     if printFormat == 1:
