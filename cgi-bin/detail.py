@@ -51,8 +51,14 @@ for genre in cursorGenre:
 queryStringFormat = "SELECT format FROM format WHERE isbn = " + isbn
 cursorFormat.execute(queryStringFormat)
 f = []
+ebookFormat = 0
+printFormat = 0
 for formatType in cursorFormat:
     f.append(formatType[0])
+    if formatType[0] == "ebook":
+        ebookFormat = 1
+    elif formatType[0] == "print":
+        printFormat = 1
     
 aString = ", ".join(a)
 gString = ", ".join(g)
@@ -68,10 +74,16 @@ for book in cursorBook:
     print '</div></div><div class="col-sm-7"><div class="product-information"><!--/product-information-->'
     print '<h1>%s</h1>' % book[1]
     print '<h2>%s</h2>' % aString
-    print '<p>ISBN: %s</p><span>' % book[0]
-    print '<span>$ %s</span>' % book[3]
-    print '<button type="button" class="btn btn-default cart"><i class="fa fa-shopping-cart"></i> Add to cart</button></span>'
+    print '<input id="isbnVal" type="hidden" name="isbnVal" value="%s"/>' % book[0]
+    print '<p>ISBN: %s</p>' % book[0]
+    print '<span><span>$ %s</span></span>' % book[3]
     print '<p><b>Availability:</b> %s</p>' % available
+    print '<div><form action="cgi-bin/addItemCart.py" method="get"><fieldset class="group"><ul class="checkbox">'
+    if ebookFormat == 1:
+        print '<li><input type="checkbox" id="ebook" name="format[]" value="ebook" /><label for="ebook">eBook</label></li>'
+    if printFormat == 1:
+        print '<li><input type="checkbox" id="print" name="format[]" value="print" /><label for="print">Print</label></li>'
+    print '</ul></fieldset><button id="addCart" type="submit" class="btn btn-default cart"><i class="fa fa-shopping-cart"></i> Add to cart</button></form></div>'
     print '</div><!--/product-information--></div><div class="col-sm-12"><div class="product-information"><!--/product-information--><h2 class="title text-center">Details</h2>'
     print '<p><b>Publisher:</b> %s</p>' % book[2]
     print '<p><b>Genre:</b> %s</p>' % gString

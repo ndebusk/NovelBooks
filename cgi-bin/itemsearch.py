@@ -37,6 +37,9 @@ if searchtype == "all":
 elif searchtype == "genre":
     queryStringBook = "SELECT title, author, image, book.isbn FROM book, author, genre WHERE book.isbn = author.isbn AND book.isbn = genre.isbn AND genre.genre = '" + searchterm + "'"
     cursor.execute(queryStringBook)
+elif searchtype == "formatType":
+    queryStringBook = "SELECT title, author, image, book.isbn FROM book, author, format WHERE book.isbn = author.isbn AND book.isbn = format.isbn AND format.format = '" + searchterm + "'"
+    cursor.execute(queryStringBook)
 else:
     queryStringBook = "SELECT title, author, image, book.isbn FROM book, author WHERE(" + searchtype + " LIKE '%" + str(searchterm) + "%') AND (book.isbn = author.isbn)"
     cursor.execute(queryStringBook)
