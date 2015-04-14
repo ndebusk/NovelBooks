@@ -74,7 +74,7 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="index.html">Home</a></li>
-								<li><a href="shop.html" class="active">Shop</a></li> 
+                                <li><a href="shop.html" class="active">Shop</a></li>
 								<li><a href="contact-us.html">Contact Us</a></li>
 							</ul>
 						</div>
@@ -99,9 +99,43 @@
 	
 	<section>
 		<div class="container">
-			<div class="row">				
-				<div class="col-sm-12 padding-right">
-					<div id = "searchproducts" class="features_items"><!--features_items-->
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="left-sidebar">
+						<div class="brands_products"><!--genres_products-->
+							<h2>Genre</h2>
+                            <input id="term" type="hidden" name="term" value="romance"/>
+                            <input id="type" type="hidden" name="type" value="genre"/>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+                                    <li><a href="shop.html"> <span class="pull-right"></span>All Products</a></li>
+									<li><a href="art.html"> <span class="pull-right"></span>Art</a></li>
+									<li><a href="biography.html"> <span class="pull-right"></span>Biography</a></li>
+									<li><a href="fiction.html"> <span class="pull-right"></span>Fiction &amp; Literature</a></li>
+                                    <li><a href="suspense.html"> <span class="pull-right"></span>Mystery &amp; Suspense</a></li>
+									<li><a href="nonfiction.html"> <span class="pull-right"></span>Non-Fiction</a></li>
+                                    <li><a href="romance.html" class="active"> <span class="pull-right"></span>Romance</a></li>
+                                    <li><a href="scifi.html"> <span class="pull-right"></span>Science Fiction &amp; Fantasy</a></li>
+                                    <li><a href="technology.html"> <span class="pull-right"></span>Technology</a></li>
+                                </ul>
+							</div>
+						</div><!--/genres_products-->
+						
+						<div class="brands_products"><!--formats_products-->
+							<h2>Format</h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									<li><a href="#"> <span class="pull-right"></span>eBook</a></li>
+									<li><a href="#"> <span class="pull-right"></span>Hardcover</a></li>
+									<li><a href="#"> <span class="pull-right"></span>Paperback</a></li>
+                                </ul>
+							</div>
+						</div><!--/formats_products-->						
+					</div>
+				</div>
+				
+				<div class="col-sm-9 padding-right">
+					<div id = "allproducts" class="features_items"><!--features_items-->
 						
 					</div><!--features_items-->
 				</div>
@@ -124,7 +158,8 @@
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/itemsearch.js"></script>
+    <script src="js/loadBooks.js"></script>
     <script src="js/loadNav.js"></script>
+
 </body>
 </html>
