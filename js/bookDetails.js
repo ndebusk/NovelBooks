@@ -20,6 +20,14 @@ function sendReq(url, callbackFunction) {
     xmlhttp.send();
 }
 
+function addToCart() {
+    data = $("#addToCart").serialize();
+    
+    sendReq("/cgi-bin/addItemCart.py?" + data, function processResponse(response) {
+        window.location.href = 'cart.html';        
+    });
+}
+
 function load() {
     "use strict";
     var parts = window.location.search.substr(1).split("&");

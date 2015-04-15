@@ -21,20 +21,17 @@ function sendReq(url, callbackFunction) {
 }
 
 function load() {
-    "use strict";
-    var parts = window.location.search.substr(1).split("&");
-    var $_GET = {};
-    for (var i = 0; i < parts.length; i++) {
-        var temp = parts[i].split("=");
-        $_GET[decodeURIComponent(temp[0])] = decodeURIComponent(temp[1]);
-    }
-
-    //alert($_GET['isbn']);
+    data = $("#booksubmit").serialize();
     
-    var isbn = $_GET['isbn'];
-    // Request to python
-    sendReq("/cgi-bin/detail.py?isbn=" + isbn, function processResponse(response) {
-        document.getElementById("product").innerHTML = response;
+    sendReq("/cgi-bin/addItemCart.py?" + data + "&mode=update", function processResponse(response) {
+       $("#bookinfo").append(response); 
+       if (response == -1) {
+           $("#bookinfo").append("<p>Sorry, wrong password.</p>");
+       } else {          
+          $("#bookinfo").empty();           
+          loadBookInfo();
+           $("#bookinfo").append("<p>Sucess! Information updated.</p>");          
+       }        
     });
 }
 

@@ -77,14 +77,14 @@ for book in cursorBook:
     print '<p>ISBN: %s</p>' % book[0]
     print '<span><span>$ %s</span></span>' % book[3]
     print '<p><b>Availability:</b> %s</p>' % available
-    print '<div><form action="/cgi-bin/addItemCart.py" method="get">'
+    print '<div><form id="addToCart" method="post">'
     print '<input id="isbnVal" type="hidden" name="isbnVal" value="%s"/>' % book[0]
     print '<fieldset class="group"><ul class="checkbox">'
     if ebookFormat == 1:
         print '<li><input type="checkbox" id="ebook" name="format[]" value="ebook" /><label for="ebook">eBook</label></li>'
     if printFormat == 1:
         print '<li><input type="checkbox" id="print" name="format[]" value="print" /><label for="print">Print</label></li>'
-    print '</ul></fieldset><button id="addCart" type="submit" class="btn btn-default cart"><i class="fa fa-shopping-cart"></i> Add to cart</button></form></div>'
+    print '</ul></fieldset><button id="addCart" onclick="addToCart()" type="button" class="btn btn-default cart"><i class="fa fa-shopping-cart"></i> Add to cart</button></form></div>'
     print '</div><!--/product-information--></div><div class="col-sm-12"><div class="product-information"><!--/product-information--><h2 class="title text-center">Details</h2>'
     print '<p><b>Publisher:</b> %s</p>' % book[2]
     print '<p><b>Genre:</b> %s</p>' % gString
