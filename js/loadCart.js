@@ -26,7 +26,6 @@ function load() {
     // Request to python
     sendReq("/cgi-bin/loadcart.py?", function processResponse(response) {
         document.getElementById("cart_items").innerHTML = response;
-        alert(response);
     });
 }
 

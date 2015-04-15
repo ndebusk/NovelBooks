@@ -69,6 +69,7 @@ for book in cursorBook:
         available = "In Stock"
     else:
         available = "Out of Stock"
+        printFormat = 0
     print '<div class="col-sm-5"><div class="view-product">'
     print '<img src="%s" alt="" />' % book[6]
     print '</div></div><div class="col-sm-7"><div class="product-information"><!--/product-information-->'

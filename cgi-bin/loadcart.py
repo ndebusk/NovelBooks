@@ -24,7 +24,7 @@ config = {
 #Creates the connection and cursor.
 cnx = mysql.connector.connect(**config)
 cursor = cnx.cursor()
-print "test"
+
 #I build the query string in two lines because it's such a long string.
 queryStringBook = "SELECT book.image, book.isbn, book.title, shoppingcartbook.format, book.price FROM book, shoppingcartbook WHERE book.isbn = shoppingcartbook.isbn"
 cursor.execute(queryStringBook)
