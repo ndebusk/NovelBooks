@@ -21,17 +21,12 @@ function sendReq(url, callbackFunction) {
 }
 
 function load() {
-    data = $("#booksubmit").serialize();
-    
-    sendReq("/cgi-bin/addItemCart.py?" + data + "&mode=update", function processResponse(response) {
-       $("#bookinfo").append(response); 
-       if (response == -1) {
-           $("#bookinfo").append("<p>Sorry, wrong password.</p>");
-       } else {          
-          $("#bookinfo").empty();           
-          loadBookInfo();
-           $("#bookinfo").append("<p>Sucess! Information updated.</p>");          
-       }        
+    "use strict";
+
+    // Request to python
+    sendReq("/cgi-bin/loadcart.py?", function processResponse(response) {
+        document.getElementById("cart_items").innerHTML = response;
+        alert(response);
     });
 }
 
