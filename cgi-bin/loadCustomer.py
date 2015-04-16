@@ -45,6 +45,7 @@ for row in cursor:
     print '<p><input id="email" type="text" name="email" value="' + str(row[2]) + '"/></p>'    
 print '<input id="password" type="password" name="password" placeholder="Enter your current password to confirm new changes"/></p>'    
 print '<button id="updateUserSubmit" type="button" class="btn btn-default">Save User Changes</button></p>'
+print '<button id="addAddressSubmit" type="button" class="btn btn-default">Add Address</button></p>'
 print '</form>'
 print '</div></div></div>'
 

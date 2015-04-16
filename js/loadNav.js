@@ -173,6 +173,9 @@ function loadCustomerInfo() {
         $("#updateUserSubmit").click(function() {
            submitCustomerInfo();    
         });
+        $("#addAddressSubmit").click(function() {
+           window.location.href = 'addAddress.html';    
+        });
         $("#newpassword").focus(function () {
         validateField($(this), "Must be 8 characters or more", 
                       validatePassword);
