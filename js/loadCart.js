@@ -20,6 +20,13 @@ function sendReq(url, callbackFunction) {
     xmlhttp.send();
 }
 
+function deleteItem() {
+    data = $("#cartItem").serialize();
+    sendReq("/cgi-bin/deleteCartItem.py?" + data, function processResponse(response) {
+        window.location.href = 'cart.html';  
+    });
+}
+
 function load() {
     "use strict";
 

@@ -45,7 +45,9 @@ for item in cursor:
     print '<td class="cart_description"><h3>%s</h3></td>' % item[2]
     print '<td class="cart_format"><h5>%s</h5></td>' % item[3]
     print '<td class="cart_total"><p class="cart_total_price">$%s</p></td>' % item[4]
-    print '<td class="cart_delete"><a class="cart_quantity_delete" href="cart.html"><i class="fa fa-times"></i></a></td></tr>'
+    print '<td class="cart_delete"><form id="cartItem" method="post">'
+    print '<input id="isbnNum" type="hidden" name="isbnNum" value="%s"/>' % item[1]
+    print '<input id="cartID" type="hidden" name="cartID" value="%s"/><button id="deleteCartItem" onclick="deleteItem()" type="button" class="btn btn-default"><i class="fa fa-times"></i></button></form></td></tr>' % userID
 
 tax = totalPrice * decimal.Decimal(0.0825)
 finalTotal = totalPrice + tax
@@ -55,7 +57,7 @@ print '<li>Cart Sub Total <span>$%s</span></li>' % round(totalPrice, 2)
 print '<li>Tax <span>$%s</span></li>' % round(tax, 2)
 print '<li>Shipping Cost <span>Free</span></li>'
 print '<li>Total <span>$%s</span></li>' % round(finalTotal, 2)
-print '</ul><a class="btn btn-default check_out" href="checkout.html">Check Out</a></div></div></div></div>'
+print '</ul><a class="btn btn-default check_out" href="checkout.html">Check Out</a><a class="btn btn-default check_out" href="shop.html">Continue Shopping</a></div></div></div></div>'
 
 cnx.commit()
 cnx2.commit()
