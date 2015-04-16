@@ -65,7 +65,7 @@ print '<div class="container"><div class="row"><div class="col-sm-12"><h2 class=
 print '<input id="totalVal" type="hidden" name="totalVal" value="%s"/>' % round(finalTotal, 2)
 print '<div class="styled-select2 blue semi-square"><select id="userAddress">'
 for item in cursor3:
-    address = str(item[1] + " " + item[2] + ", " + item[3] + " " + item[4]).replace("'", "''")
+    address = str(item[2] + " " + item[3] + ", " + item[4] + " " + item[5]).replace("'", "''")
     print '<option value="%s">' % address
     print '%s</option>' % address
 

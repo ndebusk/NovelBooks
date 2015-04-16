@@ -54,16 +54,17 @@ for item in cursor:
     orderNum = item[0]
 cnx.commit()
 
-queryStringCart = "SELECT isbn, format FROM shoppingcartbook WHERE cartID = '" + str(userID) + "'"
+queryStringCart = "SELECT book.isbn, format, book.price FROM shoppingcartbook, book WHERE book.isbn = shoppingcartbook.isbn AND cartID = '" + str(userID) + "'"
 cursor.execute(queryStringCart)
 
 quantity = 1
 lineItem = 1
 for item in cursor:
-    queryStringInsertOrder = "INSERT INTO `orderitem`(`isbn`, `orderNum`, `lineItemNum`, `quantity`, `format`) VALUES "
-    valueStringInsertOrder = "('" + str(item[0]) + "','" + str(orderNum) + "','" + str(lineItem) + "','" + str(quantity) + "','" + str(item[1]) +"')"
+    queryStringInsertOrder = "INSERT INTO `orderitem`(`isbn`, `orderNum`, `lineItemNum`, `quantity`, `format`, `itemPrice`) VALUES "
+    valueStringInsertOrder = "('" + str(item[0]) + "','" + str(orderNum) + "','" + str(lineItem) + "','" + str(quantity) + "','" + str(item[1]) + "','" + str(item[2]) + "')"
     queryStringInsertOrder += valueStringInsertOrder
     cursor2.execute(queryStringInsertOrder)
+    lineItem += 1
 
 cnx.commit()
 
