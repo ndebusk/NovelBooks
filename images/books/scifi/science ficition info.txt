@@ -1,11 +1,101 @@
+isbn: 9780345511447 
+title: Star Wars: Lords of the Sith 
+publisher: Random House Publishing Group
+price: $20.93
+pages: 320
+description: When the Emperor and his notorious apprentice, Darth Vader, find themselves stranded in the middle of insurgent action on an inhospitable planet, they must rely on each other, the Force, and their own ruthlessness to prevail.
+format: hardcover
+author: Paul S. Kemp
+genre: Scifi
+
+isbn:  9781451673319 
+title: Fahrenheit 451 
+publisher: Simon & Schuster
+price: $8.92
+pages: 256 
+description: Guy Montag is a fireman. In his world, where television rules and literature is on the brink of extinction, firemen start fires rather than put them out. His job is to destroy the most illegal of commodities, the printed book, along with the houses in which they are hidden.
+format: paperback
+author: Ray Bradbury 
+genre: Scifi
+
+isbn:  9780345434111 
+title: Star Wars Episode I: The Phantom Menace 
+publisher: Random House Publishing Group
+price: $7.99
+pages: 384
+description: A long time ago in a galaxy far, far away, an evil legacy long believed dead is stirring. Now the dark side of the Force threatens to overwhelm the light, and only an ancient Jedi prophecy stands between hope and doom for the entire galaxy.
+format: paperback
+author: Terry Brooks
+genre: Scifi
+
+isbn: 9780439023528
+title: The Hunger Games (Hunger Games Series #1) 
+publisher: Scholastic, Inc.
+price: $7.04
+pages: 384
+description: In the ruins of a place once known as North America lies the nation of Panem, a shining Capitol surrounded by twelve outlying districts. Long ago the districts waged war on the Capitol and were defeated. As part of the surrender terms, each district agreed to send one boy and one girl to appear in an annual televised event called, "The Hunger Games," a fight to the death on live TV. Sixteen-year-old Katniss Everdeen, who lives alone with her mother and younger sister, regards it as a death sentence when she is forced to represent her district in the Games. The terrain, rules, and level of audience participation may change but one thing is constant: kill or be killed.
+format: paperback
+author: Suzanne Collins   
+genre: Scifi
+
+isbn:  9780545582889 
+title:  Harry Potter and the Sorcerer's Stone (Harry Potter #1)
+publisher:  Scholastic, Inc.
+price: $10.55
+pages: 336
+description: Rescued from the outrageous neglect of his aunt and uncle, a young boy with a great destiny proves his worth while attending Hogwarts School for Witchcraft and Wizardry
+format: paperback
+author: J. K. Rowling
+genre: Scifi
+
+isbn: 9780545583008 
+title: Harry Potter and the Deathly Hallows (Harry Potter #7)
+publisher: Scholastic, Inc.
+price: $14.06
+pages: 800
+description: It all comes down to this - a final faceoff between good and evil. You plan to pull out all the stops, but every time you solve one mystery, three more evolve. Do you stay the course you started, despite your lack of progress? Do you detour and follow a new lead that may not help? Do you listen to your instincts, or your friends?
+format: paperback
+author:  J. K. Rowling
+genre: Scifi
+
+isbn: 9781101885208
+title: Uprooted 
+publisher: Random House Publishing Group
+price: $18.75
+pages: 448
+description: “Our Dragon doesn’t eat the girls he takes, no matter what stories they tell outside our valley. We hear them sometimes, from travelers passing through. They talk as though we were doing human sacrifice, and he were a real dragon. Of course that’s not true: he may be a wizard and immortal, but he’s still a man, and our fathers would band together and kill him if he wanted to eat one of us every ten years. He protects us against the Wood, and we’re grateful, but not that grateful.”
+format: hardcover
+author: Naomi Novik   
+genre: Scifi
+
+isbn: 9780345529190 
+title:  A Game of Thrones: The Graphic Novel: Volume Four 
+publisher: Random House Publishing Group
+price: $19.37
+pages: 208
+description: The death of King Robert Baratheon and the imprisonment of his Hand, Lord Eddard Stark of Winterfell, has set the great houses of Westeros at one another’s throats.
+format: hardcover
+author: George R. R. Martin
+genre: Scifi
+
+isbn: 9780547928210
+title: The Fellowship of the Ring: Being the First Part of The Lord of the Rings 
+publisher: Houghton Mifflin Harcourt
+price: $10.74
+pages: 432
+description:  In ancient times the Rings of Power were crafted by the Elven-smiths, and Sauron, the Dark Lord, forged the One Ring, filling it with his own power so that he could rule all others. But the One Ring was taken from him, and though he sought it throughout Middle-earth, it remained lost to him. After many ages it fell into the hands of Bilbo Baggins, as told in The Hobbit. In a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as his elderly cousin Bilbo entrusts the Ring to his care. Frodo must leave his home and make a perilous journey across Middle-earth to the Cracks of Doom, there to destroy the Ring and foil the Dark Lord in his evil purpose.
+format: paperback
+author: J. R. R. Tolkien   
+genre: Scifi
+
 isbn: 
-title: 
+title:  
 publisher: 
 price: 
 pages: 
 description: 
-image: 
-inStock: 
 format: 
 author: 
-genre: 
+genre: Scifi
+
+

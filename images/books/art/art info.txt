@@ -1,11 +1,120 @@
+
+isbn: 9780865478978 
+title: The Animator's Survival Kit--Revised Edition: A Manual of Methods, Principles and Formulas for Classical, Computer, Games, Stop Motion and Interne 
+publisher: Faber and Faber
+price: $27.61
+pages: 392
+description: Animation is one of the hottest areas of filmmaking today--and the master animator who bridges the old generation and the new is Richard Williams. Perhaps even more important, though, has been his dedication in passing along his knowledge to a new generation of animators so that they in turn could push the medium in new directions
+format: paperback 
+author: Richard Williams   
+genre: Art
+
+isbn:  9781585421466
+title: The Artist's Way 
+publisher: Penguin Publishing Group
+price: $11.95
+pages: 272
+description: The Artist’s Way is the seminal book on the subject of creativity. An international bestseller, millions of readers have found it to be an invaluable guide to living the artist’s life. Still as vital today—or perhaps even more so—than it was when it was first published one decade ago, it is a powerfully provocative and inspiring work.
+format: paperback 
+author: Julia Cameron  
+genre: Art
+
+isbn:  9780316227704 
+title: Underwater Dogs 
+publisher: Little, Brown and Company
+price: $15.22
+pages: 144
+description: The exuberant, exhilarating photographs of dogs underwater that have become a sensation. Seth Casteel gives playful and energetic testament to the rough-and-tumble joy that our dogs bring into our lives.
+format: hardcover
+author:  Seth Casteel   
+genre: Art
+
+isbn:  9780316254892
+title: Underwater Puppies 
+publisher: Little, Brown and Company
+price: $15.97
+pages: 128
+description: New York Times bestselling author and photographer Seth Casteel's follow-up to the phenomenal Underwater Dogs — now with puppies. Each vibrant and colorful underwater image shows off the wild and sublime range of emotions of puppies, cute and irresistible to the very last.
+format: hardcover 
+author: Seth Casteel   
+genre: Art
+
+isbn: 9781579128869 
+title: The Louvre: All the Paintings 
+publisher: Black Dog & Leventhal Publishers, Inc
+price: $51.75
+pages: 784
+description: An historic publishing event! Endorsed by the Louvre and for the first time ever, every painting from the world's most popular museum is available in one stunning book. All 3,022 paintings on display in the permanent painting collection of the Louvre are presented in full color in this striking, slipcased book.
+format: hardcover
+author: Erich Lessing (Photographer), Vincent Pomarede (Commentaries by)
+genre: Art
+
+isbn: 9780300179354 
+title: Interaction of Color: 50th Anniversary Edition 
+publisher: Yale University Press
+price: $12.64
+pages: 208
+description: Josef Albers’s Interaction of Color is a masterwork in art education. Conceived as a handbook and teaching aid for artists, instructors, and students, this influential book presents Albers’s singular explanation of complex color theory principles
+format: paperback
+author:Josef Albers   
+genre: Art
+
+isbn: 9780740797712 
+title: Color and Light: A Guide for the Realist Painter 
+publisher:  Andrews McMeel Publishing
+price: $16.88
+pages: 224
+description: Color and Light bridges the gap between abstract theory and practical knowledge. Beginning with a survey of underappreciated masters who perfected the use of color and light, the book examines how light reveals form, the properties of color and pigments, and the wide variety of atmospheric effects. Gurney cuts though the confusing and contradictory dogma about color, testing it in the light of science and observation. A glossary, pigment index, and bibliography complete what will ultimately become an indispensible tool for any artist.
+format: paperback
+author: James Gurney  
+genre: Art
+
+isbn:  9781844485086 
+title: Drawing: A Complete Guide
+publisher: Search Press, Limited
+price: $17.77
+pages: 440
+description: Rather like a 'Greatest Hits' album, this is an amalgamation of seven previous books, each devoted to specific aspects of drawing technique.
+format: paperback
+author: Giovanni Civardi   
+genre: Art
+
+isbn:  9780740785504 
+title: Imaginative Realism: How to Paint What Doesn't Exist
+publisher: Andrews McMeel Publishing
+price: $18.43
+pages: 224
+description: An award-winning fantasy artist and the creator of Dinotopia, James Gurney instructs and inspires in Imaginative Realism: How to Paint What Doesn't Exist. Renowned for his uncanny ability to incorporate amazing detail and imagination into stunningly realistic fantasy settings, James Gurney teaches budding artists and fans of fantasy art step-by-step the techniques that won him worldwide critical acclaim. This groundbreaking work examines the practical methods for creating believable pictures of imaginary subjects, such as dinosaurs, ancient Romans, alien creatures, and distant worlds. 
+format: paperback
+author: James Gurney   
+genre: Art
+
+isbn:  9780062101891 
+title: Harry Potter Page to Screen: The Complete Filmmaking Journey 
+publisher: HarperCollins Publishers
+price: $49.34
+pages: 540
+description: Harry Potter: Page to Screen opens the doors to Hogwarts castle and the wizarding world of Harry Potter to reveal the complete behind-the-scenes secrets, techniques, and over-the-top artistry that brought J.K. Rowling’s acclaimed novels to cinematic life.
+format: hardcover
+author:  Bob McCabe
+genre: Art
+
+isbn: 9780740768729 
+title: The Annotated Mona Lisa: A Crash Course in Art History from Prehistoric to Post-Modern 
+publisher: Andrews McMeel Publishing
+price: $18.15
+pages: 216
+description: The Annotated Mona Lisa provides an engaging, 200-page tour of art from the Paleolithic to the postmodern. An enriching introduction to a subject that can enhance a lifetime. 
+format: paperback
+author: Carol Strickland, John Boswell, Patty Brown (Editor)   
+genre: Art
+
 isbn: 
 title: 
 publisher: 
-price: 
+price: $
 pages: 
 description: 
-image: 
-inStock: 
 format: 
 author: 
-genre: 
+genre: Art

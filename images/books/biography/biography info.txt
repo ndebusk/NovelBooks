@@ -1,11 +1,120 @@
+isbn: 9780553296983 
+title: The Diary of a Young Girl 
+publisher: Random House Publishing Group
+price: $5.99
+pages: 304
+description: The journal of a Jewish girl in her early teens describes both the joys and torments of daily life, as well as typical adolescent thoughts, throughout two years spent in hiding with her family during the Nazi occupation of Holland. 
+format: paperback
+author: Anne Frank, Eleanor Roosevelt (Introduction)
+genre: Biography
+
+isbn: 9781426211560 
+title: The Aviators: Eddie Rickenbacker, Jimmy Doolittle, Charles Lindbergh, and the Epic Age of Flight 
+publisher: National Geographic Society
+price: $24.33
+pages: 464
+description: The Aviators tells the saga of three extraordinary aviators—Charles Lindbergh, Eddie Rickenbacker, and Jimmy Doolittle—and how they redefine heroism through their genius, daring, and uncommon courage
+format: hardcover
+author: Winston Groom   
+genre: Biography
+
+isbn: 9780375405440 
+title: Founding Brothers: The Revolutionary Generation 
+publisher:  Knopf Doubleday Publishing Group
+price: $20.57
+pages: 304
+description: An illuminating study of the intertwined lives of the founders of the American republic -- John Adams, Aaron Burr, Benjamin Franklin, Alexander Hamilton, Thomas Jefferson, James Madison, and George Washington. 
+format: hardcover
+author: Joseph J. Ellis   
+genre: Biography
+
+isbn:  9780743264747
+title: Einstein: His Life and Universe
+publisher: Simon & Schuster
+price: $12.18
+pages: 704
+description: The first full biography of Albert Einstein since all of his papers have become available. His fascinating story is a testament to the connection between creativity and freedom and explores how an imaginative, impertinent patent clerk became the mind reader of the creator of the cosmos, the locksmith of the mysteries of the atom and the universe. His success came from questioning conventional wisdom and marveling at mysteries that struck others as mundane. This led him to embrace a morality and politics based on respect for free minds, free spirits, and free individuals
+format: paperback 
+author: Walter Isaacson  
+genre: Biography
+
+isbn: 9781250040725 
+title: Neil Armstrong: A Life of Flight 
+publisher: St. Martin's Press
+price: $13.76
+pages: 384
+description: Much has been written about Neil Armstrong, America's modern hero and history's most famous space traveler. Yet shy of fame and never one to steal the spotlight Armstrong was always reluctant to discuss his personal side of events. Here for the first time is the definitive story of Neil's life of flight he shared for five decades with a trusted friend.
+format: paperback
+author: Jay Barbree   
+genre: Biography
+
+isbn: 9780300126891 
+title:  Caesar: Life of a Colossus  
+publisher: Yale University Press
+price: $15.21
+pages: 608
+description: Tracing the extraordinary trajectory of the great Roman emperor’s life, Goldsworthy covers not only the great Roman emperor’s accomplishments as charismatic orator, conquering general, and powerful dictator but also lesser-known chapters during which he was high priest of an exotic cult, captive of pirates, seducer not only of Cleopatra but also of the wives of his two main political rivals, and rebel condemned by his own country. Ultimately, Goldsworthy realizes the full complexity of Caesar’s character and shows why his political and military leadership continues to resonate some two thousand years later. 
+format: paperback
+author: Adrian Goldsworthy  
+genre: Biography
+
+isbn: 9781400069699 
+title: A Lucky Life Interrupted: A Memoir of Hope 
+publisher:  Random House Publishing Group
+price: $17.84
+pages: 240
+description: A moving personal memoir of the year spent battling multiple myeloma, the medical quest, the life lessons learned, reflections on the major news events Brokaw covered for NBC, and more.
+format: hardcover
+author: Tom Brokaw   
+genre: Biography
+
+isbn:  9781560252139 
+title: Robin Williams: A Biography 
+publisher: Da Capo Press
+price: $50.00
+pages: 312
+description: Named the Funniest Person Alive by Entertainment Weekly in 1997, Robin Williams is one of the most popular screen actors today. This biography provides a detailed look at the comedian's life and career, from his poor-little-rich-kid childhood to his first big break to his battle with substance abuse to his recent successes.
+format: hardcover
+author: Andy Dougan   
+genre: Biography
+
+isbn: 9781618930965 
+title: Pete Rose: An American Dilemma 
+publisher: Time Home Entertainment, Inc
+price: $20.29
+pages: 352
+description: Pete Rose played baseball with a singular and headfirst abandon that endeared him to fans and peers, even as it riled others—a figure at once magnetic, beloved and polarizing. Rose has more base hits than anyone in history, yet he is not in the Hall of Fame. Twenty-five years ago he was banished from baseball for gambling, then ruled ineligible for Cooperstown; today, the question "Does Pete Rose belong in the Hall of Fame?" has evolved into perhaps the most provocative in sports, a layered, slippery and ever-relevant moral conundrum.
+format: hardcover
+author: Kostya Kennedy   
+genre: Biography
+
+isbn:  9781886947405 
+title: A Champion in a Man's World: The Biography of Marion Hollins 
+publisher: Clock Tower Press, LLC
+price: $128.16
+pages: 209
+description: The sportswoman of the century,Marion Hollins was the United States Women's Amateur Golf Champion, won the Metropolitan Gold Championship three times, the Long Island Championship twice, and the Pebble Beach Championship an unequalled eight times. She was captain of the first U.S. Curtis Cup team, and let it to a strategic upset victory over Joyce Wethered's British team. She helped Baby Didrickson and other champions with their nascent games. Yet, although she filled the newspapers and magazines of her day, her record of amazing accomplishments is not well known today
+format: hardcover
+author: David E. Outerbridge, Sleeping Bear  
+genre: Biography
+
+isbn:  9780815411833
+title: Marilyn Monroe: The Biography 
+publisher:  Rowman & Littlefield Publishers, Inc.
+price: $21.04
+pages: 752
+description: Spoto's biography of Hollywood icon Marilyn Monroe makes use of over 150 interviews and more than 35,000 pages of previously sealed files, including Monroe's diaries, letters, and other personal and revealing documents. The book reveals new details of every aspect of her life, from her guarded childhood, and her relationships with men and marriages, to her mysterious death. Spoto comments on previous books about Marilyn, and puts to rest questions regarding Monroe's connection with the Kennedys. 
+format: paperback 
+author: Donald Spoto  
+genre: Biography
+
 isbn: 
 title: 
 publisher: 
-price: 
+price: $
 pages: 
 description: 
-image: 
-inStock: 
 format: 
 author: 
-genre: 
+genre: Biography
+

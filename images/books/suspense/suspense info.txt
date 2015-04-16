@@ -1,11 +1,119 @@
+isbn: 9781455515875 
+title: Burn (Michael Bennett Series #7)
+publisher: Grand Central Publishing
+price: $13.27
+pages: 448
+description: Detective Michael Bennett finally returns to New York City—and to the most unsettling, horrific case of his career
+format: paperback 
+author: James Patterson, Michael Ledwidge
+genre: Suspense
+
+isbn:  9780451468383 
+title: Murder, She Wrote: Killer in the Kitchen 
+publisher:  Penguin Publishing Group
+price: $18.31
+pages: 272
+description:  Jessica may not know everything about food, but she knows what she likes—and she definitely likes the Leg & Claw restaurant. Opened last summer by young couple Brad and Marcie, the Leg & Claw is their dream come true, combining Marcie’s sunny personality with Brad’s deft hand in the kitchen. But now their dream is turning into a nightmare.
+format: hardcover
+author: Jessica Fletcher, Donald Bain    
+genre: Suspense
+
+isbn:  9781476754475 
+title: Mr. Mercedes 
+publisher:  Gallery Books
+price: $13.68
+pages: 448
+description: In the frigid pre-dawn hours, in a distressed Midwestern city, desperate unemployed folks are lined up for a spot at a job fair. Without warning, a lone driver plows through the crowd in a stolen Mercedes, running over the innocent, backing up, and charging again. Eight people are killed; fifteen are wounded. The killer escapes.
+format: paperback
+author: Stephen King   
+genre: Suspense
+
+isbn: 9781455511464 
+title: 10th Anniversary (Women's Murder Club Series #10) 
+publisher: Grand Central Publishing
+price: $8.84
+pages: 400
+description: Detective Lindsay Boxer's long-awaited wedding celebration becomes a distant memory when she is called to investigate a horrendous crime: a badly injured teenage girl is left for dead, and her newborn baby is nowhere to be found. Lindsay discovers that not only is there no trace of the criminals--but that the victim may be keeping secrets as well. 
+format: paperback
+author:  James Patterson, Maxine Paetro
+genre: Suspense
+
+isbn:  9780316407038 
+title: Alert  
+publisher: Little, Brown and Company
+price: $20.72
+pages: 400
+description: New Yorkers aren't easily intimidated, but someone is doing their best to scare them, badly: why? After two inexplicable high-tech attacks, the city that never sleeps is on edge. Detective Michael Bennett, along with his old pal, the FBI's Emily Parker, have to catch the shadowy criminals who claim responsibility--but they're as good at concealing their identities as they are at wreaking havoc.
+format: hardcover
+author: James Patterson, Michael Ledwidge   
+genre: Suspense
+
+isbn:  9780399103421
+title: The Godfather 
+publisher: Penguin Publishing Group
+price: $17.64
+pages: 448
+description: More than thirty years ago, a classic was born. A searing novel of the Mafia underworld, The Godfather introduced readers to the first family of American crime fiction, the Corleones-and became the definitive novel of the virile, violent subculture that remains steeped in intrigue, in controversy, and in our collective consciousness
+format: hardcover
+author: Mario Puzo   
+genre: Suspense
+
+isbn:  9780525953500 
+title: The Stranger 
+publisher:  Penguin Publishing Group
+price: $16.83
+pages: 400
+description: The Stranger appears out of nowhere, perhaps in a bar, or a parking lot, or at the grocery store. His identity is unknown. His motives are unclear. His information is undeniable. Then he whispers a few words in your ear and disappears, leaving you picking up the pieces of your shattered world.
+format: hardcover
+author: Harlan Coben
+genre: Suspense
+
+isbn:  9781594633669 
+title: The Girl on the Train 
+publisher: Penguin Publishing Group
+price: $18.71
+pages: 336
+description: A debut psychological thriller that will forever change the way you look at other people's lives.
+format: hardcover
+author: Paula Hawkins   
+genre: Suspense
+
+isbn: 9781455559824
+title: Memory Man
+publisher: Grand Central Publishing
+price: $16.46
+pages: 416
+description: The first time was on the gridiron. A big, towering athlete, he was the only person from his hometown of Burlington ever to go pro. But his career ended before it had a chance to begin. On his very first play, a violent helmet-to-helmet collision knocked him off the field for good, and left him with an improbable side effect--he can never forget anything.
+format: hardcover
+author:  David Baldacci   
+genre: Suspense
+
+isbn: 9781455524198 
+title: The Burning Room (Harry Bosch Series #19)
+publisher: Grand Central Publishing
+price: $13.22
+pages: 400
+description: In the LAPD's Open-Unsolved Unit, not many murder victims die almost a decade after the crime. So when a man succumbs to complications from being shot by a stray bullet nine years earlier, Bosch catches a case in which the body is still fresh, but all other evidence is virtually nonexistent.
+format: paperback
+author: Michael Connelly   
+genre: Suspense
+
+isbn: 9781476749082 
+title: I've Got You Under My Skin 
+publisher: Pocket Books
+price: $7.99
+pages: 400
+description: When Laurie Moran’s husband was brutally murdered, only three-year-old Timmy saw the face of his father’s killer. Five years later his piercing blue eyes still haunt Timmy’s dreams. Laurie is haunted by more—the killer’s threat to her son as he fled the scene: “Tell your mother she’s next, then it’s your turn…”
+format: paperback
+author: Mary Higgins Clark   
+genre: Suspense
+
 isbn: 
 title: 
 publisher: 
 price: 
 pages: 
 description: 
-image: 
-inStock: 
 format: 
 author: 
-genre: 
+genre: Suspense

@@ -4,8 +4,6 @@ publisher: Random House Publishing Group
 price: $26.00
 pages: 336
 description: Debbie Macomber, author of the Blossom Street and Cedar Cove series, delivers an inspiring new stand-alone novel about the enduring bond between sisters, the power of forgiveness, and a second chance at love.
-image: 
-inStock: 
 format: hardcover
 author: Debbie Macomber
 genre: fiction, romance
@@ -16,20 +14,106 @@ publisher: Alma Books
 price: $7.95
 pages: 340
 description: In telling the story of Mr. and Mrs. Bennett and their five daughters, Jane Austen creates a miniature of her world, where social grace and the nuances of behavior predominate in the making of a great love story. At the turn of eighteenth-century England, spirited Elizabeth Bennet copes with the suit of the snobbish Mr. Darcy while trying to sort out the romantic entanglements of two of her sisters, sweet and beautiful Jane and scatterbrained Lydia.
-image: 
-inStock: 
 format: paperback
 author: Jane Austen
 genre: fiction, romance
 
-isbn: 
+isbn:  9780778315674 
+title: The Shop on Blossom Street
+publisher: Harlequin
+price: $11.71
+pages: 400
+description:  There's a little yarn store in Seattle called A Good Yarn. It's owned by Lydia Hoffman, and it represents her dream of a new beginning, a life free from cancer. A life that offers a chance at love...
+format: paperback
+author: Debbie Macomber
+genre: Fiction,Romance
+
+isbn:  9780399170867
+title: The Liar
+publisher: Penguin Publishing Group
+price: $17.91
+pages: 512
+description:  The man who took her from Tennessee to an exclusive Philadelphia suburb left her in crippling debt. He was an adulterer and a liar, and when Shelby tracks down his safe-deposit box, she finds multiple IDs. The man she loved wasn’t just dead. He never really existed.
+format: hardcover
+author: Nora Roberts
+genre: Fiction,Romance
+
+isbn:  9781455557103 
+title: The Royal We 
+publisher: Grand Central Publishing
+price: $12.99
+pages: 464
+description: American Rebecca Porter was never one for fairy tales. Her twin sister, Lacey, has always been the romantic who fantasized about glamour and royalty, fame and fortune. Yet it's Bex who seeks adventure at Oxford and finds herself living down the hall from Prince Nicholas, Great Britain's future king. And when Bex can't resist falling for Nick, the person behind the prince, it propels her into a world she did not expect to inhabit, under a spotlight she is not prepared to face. 
+format: hardcover
+author: Heather Cocks and Jessica Morgan 
+genre: Fiction,Romance
+
+isbn: 9780373779338 
+title: The Marriage Season 
+publisher: Harlequin
+price: $7.99
+pages: 304
+description:  Since Hadleigh, Melody and Bex—the best of best friends—entered into a marriage pact, two of them have found (and married) the men of their hearts. But Bex doesn't think she'll be as fortunate as the others. Her own first love died years ago in a faraway war, and Bex has lost hope for a happy marriage of her own. She concentrates on her business, a successful chain of fitness clubs, instead.
+format: paperback
+author: Linda Lael Miller
+genre Fiction,Romance
+
+isbn:  9780385340397 
+title: A Breath of Snow and Ashes 
+publisher: Random House Publishing Group
+price: $15.35
+pages: 1008
+description: With chaos brewing, the governor calls upon Jamie Fraser to unite the backcountry and safeguard the colony for King and Crown. But from his wife Jamie knows that three years hence the shot heard round the world will be fired, and the result will be independence -- with those loyal to the King either dead or in exile. And there is also the matter of a tiny clipping from The Wilmington Gazette, dated 1776, which reports Jamie’s death, along with his kin. For once, he hopes, his time-traveling family may be wrong about the future.  
+format: paperback
+author: Diana Gabaldon 
+genre: Fiction,Romance
+
+isbn:  9780425270189 
+title: Still the One
+publisher: Penguin Publishing Group
+price: $7.99
+pages:320
+description:  Darcy Stone is game for anything—except sexy Navy vet and physical therapist AJ Colten, the guy who’d rejected her when she’d needed him most. Now the shoe is on the other foot and he needs her to play nice and help him secure grants for his patients. Unfortunately Darcy can’t refuse. She needs the money to fund her passion project: rescuing S&R dogs and placing them with emotionally wounded soldiers.
+format: paperback
+author: Jill Shalvis
+genre Fiction,Romance
+
+isbn:  9781492602026
+title: A Desperate Fortune 
+publisher: Sourcebooks
+price: $13.86
+pages: 528
+description: For nearly three hundred years, the cryptic journal of Mary Dundas has kept its secrets. Now, amateur codebreaker Sara Thomas travels to Paris to crack the cipher.
+format: paperback
+author: Susanna Kearsley   
+genre: Fiction,Romance
+
+isbn: 9781502541857 
+title: Beautiful Redemption 
+publisher: CreateSpace Publishing
+price: $13.69
+pages: 268
+description: No-nonsense Liis Lindy is an agent of the FBI. Deciding she is married only to her job, she breaks off her engagement and transfers from Chicago to the field office in San Diego. She loves her desk. She is committed to her laptop. She dreams of promotions and shaking hands with the director after cracking an impossible case.
+format: paperback
+author: Jamie McGuire    
+genre: Fiction,Romance
+
+isbn:  9780143127529 
+title: The Book of Life (All Souls Trilogy #3) 
+publisher: Penguin Publishing Group
+price:$13.87
+pages: 576
+description: Diana and Matthew time-travel back from Elizabethan London to make a dramatic return to the present—facing new crises and old enemies. At Matthew’s ancestral home, Sept-Tours, they reunite with the beloved cast of characters from A Discovery of Witches—with one significant exception. But the real threat to their future has yet to be revealed, and when it is, the search for Ashmole 782 and its missing pages takes on even more urgency
+format: paperback
+author: Deborah Harkness      
+genre: Fiction, Romance
+
+isbn:  
 title: 
 publisher: 
-price: 
-pages: 
+price:
+pages:
 description: 
-image: 
-inStock: 
-format: 
+format:
 author: 
-genre: 
+genre
