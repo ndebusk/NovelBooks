@@ -1,11 +1,15 @@
 #!/Applications/MAMP/Library/bin/python2.7
-import mysql.connector
-import cgi
+print ("Content-Type: text/html\n\n")
 
-print "Content-Type: text/html"
-print 
-print "<html>\
-<head><title>Results</title></head><body>"
+import mysql.connector, cgi, Cookie, cookielib, os, decimal
+import urllib
+import urllib2
+
+if os.environ.has_key("HTTP_COOKIE"):
+    C= Cookie.SimpleCookie(os.environ.get("HTTP_COOKIE",""))
+    user = C['userID'].value
+else:
+    user = ''
 
 form = cgi.FieldStorage()
 
@@ -59,6 +63,9 @@ for formatType in cursorFormat:
         ebookFormat = 1
     elif formatType[0] == "print":
         printFormat = 1
+loggedIn = 1
+if user == '':
+    loggedIn = 0
     
 aString = ", ".join(a)
 gString = ", ".join(g)
@@ -85,8 +92,12 @@ for book in cursorBook:
         print '<li><input type="checkbox" id="ebook" name="format[]" value="ebook" /><label for="ebook">eBook</label></li>'
     if printFormat == 1:
         print '<li><input type="checkbox" id="print" name="format[]" value="print" /><label for="print">Print</label></li>'
-    print '</ul></fieldset><button id="addCart" onclick="addToCart()" type="button" class="btn btn-default cart"><i class="fa fa-shopping-cart"></i> Add to cart</button></form></div>'
-    print '</div><!--/product-information--></div><div class="col-sm-12"><div class="product-information"><!--/product-information--><h2 class="title text-center">Details</h2>'
+    print '</ul></fieldset>'
+    if loggedIn == 0:
+        print "<p>Please login to add items.</p>"
+    else:
+        print '<button id="addCart" onclick="addToCart()" type="button" class="btn btn-default cart"><i class="fa fa-shopping-cart"></i> Add to cart</button>'
+    print '</form></div></div><!--/product-information--></div><div class="col-sm-12"><div class="product-information"><!--/product-information--><h2 class="title text-center">Details</h2>'
     print '<p><b>Publisher:</b> %s</p>' % book[2]
     print '<p><b>Genre:</b> %s</p>' % gString
     print '<p><b>Pages:</b> %s</p>' % book[4]
