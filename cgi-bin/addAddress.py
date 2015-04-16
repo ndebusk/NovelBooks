@@ -49,4 +49,6 @@ cursor.execute(queryString)
 print "<p>Address Saved!</p>"
     
 cnx.commit()
-cnx.close();
+cnx.close()
+cnx2.commit()
+cnx2.close();

@@ -113,7 +113,9 @@ $(document).ready(function () {
         addBox($(this));  
     });
     
-    
+$("#editBookSubmit").click(function() {
+           window.location.href = 'editbook.html';    
+        });    
     
 /*    $("#newPassword").focus(function () {
         validateField($(this), "Must be 8 characters or more", 

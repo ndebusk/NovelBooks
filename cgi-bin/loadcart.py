@@ -24,9 +24,15 @@ config = {
 #Creates the connection and cursor.
 cnx = mysql.connector.connect(**config)
 cursor = cnx.cursor()
+cnx2 = mysql.connector.connect(**config)
+cursor2 = cnx2.cursor()
 
+queryStringID = "SELECT userID FROM user WHERE username = '" + str(user) + "'"
+cursor2.execute(queryStringID)
+for item in cursor2:
+    userID = item[0]
 #I build the query string in two lines because it's such a long string.
-queryStringBook = "SELECT book.image, book.isbn, book.title, shoppingcartbook.format, book.price FROM book, shoppingcartbook WHERE book.isbn = shoppingcartbook.isbn"
+queryStringBook = "SELECT book.image, book.isbn, book.title, shoppingcartbook.format, book.price FROM book, shoppingcartbook WHERE book.isbn = shoppingcartbook.isbn AND shoppingcartbook.cartID = '" + str(userID) + "'"
 cursor.execute(queryStringBook)
 
 totalPrice = 0
@@ -49,7 +55,9 @@ print '<li>Cart Sub Total <span>$%s</span></li>' % round(totalPrice, 2)
 print '<li>Tax <span>$%s</span></li>' % round(tax, 2)
 print '<li>Shipping Cost <span>Free</span></li>'
 print '<li>Total <span>$%s</span></li>' % round(finalTotal, 2)
-print '</ul><a class="btn btn-default check_out" href="">Check Out</a></div></div></div></div>'
+print '</ul><a class="btn btn-default check_out" href="checkout.html">Check Out</a></div></div></div></div>'
 
 cnx.commit()
-cnx.close();
+cnx2.commit()
+cnx.close()
+cnx2.close();
