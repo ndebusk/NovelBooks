@@ -23,8 +23,8 @@ function addToOrder() {
     var total = $("#totalVal").val(), address = $("#userAddress").val()
     
     sendReq("/cgi-bin/createOrder.py?total=" + total + "&address=" + address, function processResponse(response) {
-        //window.location.href = 'cart.html';
-        alert("success");
+        window.location.href = 'orderconfirm.html';
+        
     });
 }
 

@@ -274,6 +274,13 @@ function deleteBookInfo() {
     });
 }
 
+function loadOrderInfo() {    
+    sendReq("/cgi-bin/latestorder.py", function processResponse(response) {
+        alert("Response!");
+       $("#orderinfo").append("<p>Thank you! Order #" + response + " has been completed! Expect any physical books to be delivered within 3 to 5 business days.</p>");        
+        $("#orderinfo").append("<p>Please refer to this order number if you contact us with any issues.</p>");
+    });
+}
 window.onload = function () {
     
     if ($("#custinfo").length) {
@@ -285,7 +292,9 @@ window.onload = function () {
             loadBookInfo($("#editsearch").val());   
         });
     }
-    
+    if ($("#orderinfo").length) {        
+        loadOrderInfo();
+    }
     //Validates the user's cookies
     validate();
 };
