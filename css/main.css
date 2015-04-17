@@ -765,6 +765,7 @@ h2.title:before{
   border: 1px solid #F7F7F0;
   padding-bottom: 20px;
   padding-top: 15px;
+    margin-bottom: 25px;
 }
 
 
@@ -940,8 +941,6 @@ h2.title {
   color: #fff;
 }
 
-
-
 .add-to-cart {
   background:#F5F5ED;
   border: 0 none;
@@ -1086,7 +1085,6 @@ h2.title {
 *******Shop CSS******
 **************************/
 
-
 #advertisement {
   padding-bottom: 45px;
 }
@@ -1139,8 +1137,6 @@ h2.title {
 	color:#fff;
 }
 
-
-
 /*************************
 *******Product Details CSS******
 **************************/
@@ -1166,8 +1162,6 @@ h2.title {
   margin-top: 10px;
 }
 
-
-
 .view-product {
   position: relative;
 }
@@ -1178,7 +1172,6 @@ h2.title {
     display: block;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .view-product h3 {
@@ -1230,7 +1223,7 @@ h2.title {
 .newarrival{
 	position:absolute;
 	top:0;
-	left:0
+	left:0;
 }
 
 .product-information h2 {
@@ -1309,7 +1302,6 @@ h2.title {
 	padding-right: 0;
 }
 
-
 #reviews ul {
   background: #FFFFFF;
   border: 0 none;
@@ -1385,7 +1377,6 @@ h2.title {
   font-size: 14px;
 }
 
-
 /*************************
 *******404 CSS******
 **************************/
@@ -1423,7 +1414,6 @@ h2.title {
   font-weight: 300;
   padding: 8px 40px;
 }
-
 
 /*************************
 *******login page CSS******
@@ -1501,7 +1491,6 @@ h2.title {
 
 }
 
-
 .login-form label input {
   border: medium none;
   display: inline-block;
@@ -1510,7 +1499,6 @@ h2.title {
   outline: medium none;
   padding-left: 0;
 }
-
 
 .or{
 	background: #70DBDB;
@@ -1524,7 +1512,6 @@ h2.title {
 	text-align: center;
 	width: 50px;
 }
-
 
 /*************************
 *******Cart CSS******
@@ -1569,7 +1556,7 @@ h2.title {
 
 #cart_items .cart_info {
   border: 1px solid #E6E4DF;
-  margin-bottom: 50px
+  margin-bottom: 50px;
 }
 
 
@@ -1583,54 +1570,62 @@ h2.title {
 
 #cart_items .cart_info .table.table-condensed thead tr {
   height: 51px;
+    font-size: 20px;
 }
 
-
 #cart_items .cart_info .table.table-condensed tr {
-  border-bottom: 1px solid#F7F7F0
+  border-bottom: 1px solid#F7F7F0;
 }
 
 #cart_items .cart_info .table.table-condensed tr:last-child {
-  border-bottom: 0
+  border-bottom: 0;
 }
 
 .cart_info table tr td {
-  border-top: 0 none;
-  vertical-align: inherit;
+    border-top: 0 none;
+    vertical-align: middle;
+    padding: 25px;
 }
-
 
 #cart_items .cart_info .image {
   padding-left: 30px;
 }
 
-
 #cart_items .cart_info .cart_description h4 {
-  margin-bottom: 0
+
 }
 
 #cart_items .cart_info .cart_description h4 a {
   color: #363432;
-  font-family: 'Roboto',sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: normal;
 
 }
 
 #cart_items .cart_info .cart_description p {
-  color:#696763
+  color:#696763;
 }
 
 
 #cart_items .cart_info .cart_price p {
   color:#696763;
-  font-size: 18px
+  font-size: 18px;
 }
 
 
 #cart_items .cart_info .cart_total_price {
   color: #70DBDB;
-  font-size: 24px;
+  font-size: 30px;
+}
+
+#cart_items .cart_info .item {
+  color: #696763;
+  font-size: 50px;
+}
+
+#cart_items .cart_info .item td {
+  padding: 25px;
 }
 
 .cart_product {
@@ -1650,7 +1645,6 @@ h2.title {
   float: left;
 }
 
-
 .cart_quantity_input {
   color: #696763;
   float: left;
@@ -1659,7 +1653,6 @@ h2.title {
   font-family: 'Roboto',sans-serif;
   
 }
-
 
 .cart_delete  {
   display: block;
@@ -1672,11 +1665,11 @@ h2.title {
   background:#F0F0E9;
   color: #FFFFFF;
   padding: 5px 7px;
-  font-size: 16px
+  font-size: 16px;
 }
 
 .cart_delete a:hover {
-  background:#70DBDB
+  background:#70DBDB;
 }
 
 
@@ -1745,17 +1738,17 @@ h2.title {
 }
 
 .user_info .single_field {
-  width: 31%
+  width: 31%;
 }
 
 .user_info .single_field.zip-field input {
   background: transparent;
-  border: 1px solid#F0F0E9
+  border: 1px solid#F0F0E9;
 }
 
 .user_info > li {
   float: left;
-  margin-right: 10px
+  margin-right: 10px;
 }
 
 .user_info > li > span {
@@ -1768,11 +1761,11 @@ h2.title {
   padding: 5px;
   width: 100%;
   border-radius: 0;
-  resize: none
+  resize: none;
 }
 
 .user_info select:focus {
-  border: 0
+  border: 0;
 }
 
 
@@ -1793,17 +1786,15 @@ h2.title {
 }
 
 .check_out {
-  margin-left: 20px
+  margin-left: 20px;
 }
-
-
 
 /*************************
 *******checkout CSS******
 **************************/
 
 .step-one {
-  margin-bottom: -10px
+  margin-bottom: -10px;
 }
 
 .register-req, .step-one .heading {
@@ -1816,9 +1807,8 @@ h2.title {
 }
 
 .checkout-options {
-  padding-left: 20px
+  padding-left: 20px;
 }
-
 
 .checkout-options h3 {
   color: #363432;
@@ -1851,7 +1841,7 @@ h2.title {
   color: #70DBDB;
   font-size: 18px;
   font-weight: normal;
-  padding: 0
+  padding: 0;
 }
 
 .checkout-options .nav li a:hover {
@@ -1868,7 +1858,6 @@ h2.title {
   padding: 2px 3px;
 }
 
-
 .register-req  {
   font-size: 14px;
   font-weight: 300;
@@ -1878,19 +1867,16 @@ h2.title {
 }
 
 .register-req p {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
-
-
 
 .shopper-info p, 
 .bill-to p, 
 .order-message p {
   color: #696763;
   font-size: 20px;
-  font-weight: 300
+  font-weight: 300;
 }
-
 
 .shopper-info .btn-primary {
   background: #70DBDB;
@@ -1900,12 +1886,10 @@ h2.title {
   margin-top: 20px;
 }
 
-
 .form-two, .form-one {
   float: left;
-  width: 47%
+  width: 47%;
 }
-
 
 .shopper-info > form > input, 
 .form-two > form > select, 
@@ -1916,15 +1900,15 @@ h2.title {
   margin-bottom:10px;
   padding: 10px;
   width: 100%;
-  font-weight: 300
+  font-weight: 300;
 }
 
 .form-two > form > select {
-  padding:10px 5px
+  padding:10px 5px;
 }
 
 .form-two {
-  margin-left: 5%
+  margin-left: 5%;
 }
 
 
@@ -1940,21 +1924,20 @@ h2.title {
   color: #696763;
   font-family: 'Roboto', sans-serif;
   margin-left: 10px;
-  font-size: 14px
+  font-size: 14px;
 }
-
 
 .review-payment h2 {
   color: #696763;
   font-size: 20px;
   font-weight: 300;
   margin-top: 45px;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .payment-options {
   margin-bottom:125px;
-  margin-top: -25px
+  margin-top: -25px;
 }
 
 .payment-options span label {
@@ -1968,19 +1951,19 @@ h2.title {
 .table.table-condensed.total-result {
   margin-bottom: 10px;
   margin-top: 35px;
-  color: #696763
+  color: #696763;
 }
 
 #cart_items .cart_info 
 .table.table-condensed.total-result tr {
-  border-bottom: 0
+  border-bottom: 0;
 }
 
 #cart_items .cart_info 
 .table.table-condensed.total-result span {
   color: #70DBDB;
   font-weight: 700;
-  font-size: 16px
+  font-size: 16px;
 }
 
 #cart_items .cart_info 
@@ -1989,14 +1972,9 @@ h2.title {
   border-bottom: 1px solid #F7F7F0;
 }
 
-
-
-
 /*************************
 *******Blog CSS******
 **************************/
-
-
 
 .blog-post-area 
 .single-blog-post h3 {
@@ -2015,12 +1993,12 @@ h2.title {
 .single-blog-post a img {
   border: 1px solid #F7F7F0;
   width: 100%;
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
 .blog-post-area  
 .single-blog-post p {
-  color: #363432
+  color: #363432;
 }
 
 .blog-post-area 
@@ -2067,13 +2045,13 @@ h2.title {
   border-width:4px;
   border-style: solid;
   top:6px;
-  left:24px
+  left:24px;
 }
 
 .blog-post-area 
 .post-meta ul span {
   float: right;
-  color: #70DBDB
+  color: #70DBDB;
 }
 
 .post-meta span{
@@ -2081,9 +2059,8 @@ h2.title {
 }
 
 .post-meta span i{
-  color: #70DBDB
+  color: #70DBDB;
 }
-
 
 .blog-post-area  
 .single-blog-post 
@@ -2095,10 +2072,9 @@ h2.title {
   margin-top: 17px;
 }
 
-
 .pagination-area {
   margin-bottom:45px;
-  margin-top:45px
+  margin-top:45px;
 }
 
 .pagination-area 
@@ -2116,10 +2092,8 @@ h2.title {
 .pagination-area 
 .pagination li .active {
   background:#70DBDB;
-  color: #fff
+  color: #fff;
 }
-
-
 
 /*************************
 *******Blog Single CSS******
@@ -2144,7 +2118,7 @@ h2.title {
 .pager-area 
 .pager li a:hover {
   background: #70DBDB;
-  color: #fff
+  color: #fff;
 }
 
 .rating-area {
@@ -2156,19 +2130,18 @@ h2.title {
 .rating-area ul li {
   float: left;
   padding: 5px;
-  font-size: 12px
+  font-size: 12px;
 }
 
 .rating-area .ratings {
   float: left;
   padding-left: 0;
-  margin-bottom: 0
+  margin-bottom: 0;
 }
-
 
 .rating-area 
 .ratings li i {
-  color:#CCCCCC
+  color:#CCCCCC;
 }
 
 .rating-area .rate-this {
@@ -2184,7 +2157,6 @@ h2.title {
   color: #70DBDB
 }
 
-
 .rating-area .tag {
   float: right;
   margin-bottom: 0;
@@ -2198,12 +2170,10 @@ h2.title {
   color: #363432;
 }
 
-
 .socials-share {
   margin-bottom: 30px;
   margin-top: 18px;
 }
-
 
 .commnets 
 .media-object {
@@ -2214,17 +2184,17 @@ h2.title {
 .commnets {
   border: 1px solid #F7F7F0;
   padding: 18px 18px 18px 0;
-  margin-bottom: 50px
+  margin-bottom: 50px;
 }
 
 .commnets .pull-left {
-  margin-right: 22px
+  margin-right: 22px;
 }
 
 .commnets p, 
 .response-area p, 
 .replay-box p {
-  font-size: 12px
+  font-size: 12px;
 }
 
 .media-heading {
@@ -2251,7 +2221,6 @@ h2.title {
 }
 
 .blog-socials ul li {
-  
   float: left;
   height: 17px;
   margin-right: 5px;
@@ -2270,7 +2239,7 @@ h2.title {
 
 .blog-socials ul li a:hover {
   color: #fff;
-  background:#70DBDB
+  background:#70DBDB;
 }
 
 
@@ -2295,7 +2264,7 @@ h2.title {
 .response-area .media {
   border: 1px solid #F7F7F0;
   padding: 18px 18px 18px 0;
-  margin-bottom: 27px
+  margin-bottom: 27px;
 }
 
 .response-area .media img{
@@ -2304,7 +2273,7 @@ h2.title {
 }
 
 .response-area .media .pull-left {
-  margin-right: 25px
+  margin-right: 25px;
 }
 
 .response-area .second-media {
@@ -2312,14 +2281,11 @@ h2.title {
   width: 95%;
 }
 
-
 .sinlge-post-meta {
   overflow: hidden;
   padding-left: 0;
-  margin-bottom: 15px
+  margin-bottom: 15px;
 }
-
-
 
 .sinlge-post-meta li {
   background:#F0F0E9;
@@ -2346,7 +2312,6 @@ h2.title {
   left: 27px;
 }
 
-
 .replay-box {
   margin-bottom: 107px;
   margin-top: 55px;
@@ -2357,7 +2322,7 @@ h2.title {
   font-size: 20px;
   color: #363432;
   margin-top: 0;
-  margin-bottom: 45px
+  margin-bottom: 45px;
 }
 
 .replay-box label {
@@ -2396,7 +2361,7 @@ h2.title {
 
 .text-area textarea {
   background: transparent;
-  border: 1px solid#F7F7F0
+  border: 1px solid#F7F7F0;
 }
 
 .btn.btn-primary {
@@ -2419,10 +2384,8 @@ h2.title {
   border-width: 8px;
   border-color:#70DBDB transparent transparent transparent;
   top: 25px;
-  left: 5px
+  left: 5px;
 } 
-
-
 
 /*************************
 ******* Contact CSS ********
@@ -2431,7 +2394,7 @@ h2.title {
 .contact-map {
   width: 100%;
   height: 385px;
-  margin-bottom: 70px
+  margin-bottom: 70px;
 }
 
 .contact-info .heading, 
@@ -2551,7 +2514,7 @@ h2.title {
     padding: 5px;
     width: 100%;
     border-radius: 0;
-    resize: none
+    resize: none;
 }
 
 .user-changes form {

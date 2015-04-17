@@ -42,13 +42,13 @@ cursor.execute(queryStringBook)
 
 totalPrice = 0
 
-print '<div class="table-responsive cart_info"><table class="table table-condensed"><thead><tr class="cart_menu"><td class="image">Item</td><td class="isbn">ISBN</td><td class="description">Description</td><td class="quantity">Format</td><td class="total">Total</td></tr></thead><tbody>'
+print '<div class="table-responsive cart_info"><table class="table table-condensed"><thead><tr class="cart_menu"><td class="image">Item</td><td class="isbn">ISBN</td><td class="description">Description</td><td class="format">Format</td><td class="total">Total</td></tr></thead><tbody>'
 for item in cursor:
     totalPrice += item[4]
     print '<tr><td class="cart_product"><img src="%s" alt="" id="checkoutImage"></td>' % item[0]
-    print '<td class="cart_isbn"><h5>%s</h5></td>' % item[1]
-    print '<td class="cart_description"><h3>%s</h3></td>' % item[2]
-    print '<td class="cart_format"><h5>%s</h5></td>' % item[3]
+    print '<td class="cart_isbn"><h4>%s</h4></td>' % item[1]
+    print '<td class="cart_description"><h4>%s</h4></td>' % item[2]
+    print '<td class="cart_format"><h4>%s</h4></td>' % item[3]
     print '<td class="cart_total"><p class="cart_total_price">$%s</p></td></tr>' % item[4]
 
 tax = totalPrice * decimal.Decimal(0.0825)
@@ -59,7 +59,7 @@ print '<tr><td>Cart Sub Total</td><td>$%s</td></tr>' % round(totalPrice, 2)
 print '<tr><td>Tax</td><td>$%s</td></tr>' % round(tax, 2)
 print '<tr class="shipping-cost"><td>Shipping Cost</td><td>Free</td></tr>'
 print '<tr><td>Total</td><td><span>$%s</span></td></tr>' % round(finalTotal, 2)
-print '</table></td></tr></tbody></table></div></div>'
+print '</table></td></tr></tbody></table></div>'
 
 print '<div class="container"><div class="row"><div class="col-sm-12"><h2 class="title text-center">Shipping Address</h2><div class="col-sm-6"><form id="addToOrder" method="post">'
 print '<input id="totalVal" type="hidden" name="totalVal" value="%s"/>' % round(finalTotal, 2)
