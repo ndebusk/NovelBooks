@@ -2559,6 +2559,12 @@ h2.title {
    width: 600px;
 }
 
+.styled-select3 {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 300px;
+}
 .styled-select2 select {
    background: transparent;
    border: none;
@@ -2567,7 +2573,14 @@ h2.title {
    padding: 5px; /* If you add too much padding here, the options won't show in IE */
    width: 650px;
 }
-
+.styled-select3 select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 350px;
+}
 .blue    { background-color: #70DBDB; }
 
 .blue select    { color: #fff; }

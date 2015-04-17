@@ -273,12 +273,26 @@ function deleteBookInfo() {
 
 function loadOrderInfo() {    
     sendReq("/cgi-bin/latestorder.py", function processResponse(response) {
-        alert("Response!");
+        
        $("#orderinfo").append("<p>Thank you! Order #" + response + " has been completed! Expect any physical books to be delivered within 3 to 5 business days.</p>");        
         $("#orderinfo").append("<p>Please refer to this order number if you contact us with any issues.</p>");
          $("#orderinfo").append('<a class="btn btn-default cart" href="history.html">Order History</a>');
         $("#orderinfo").append('<a class="btn btn-default cart" href="shop.html">Continue Shopping</a>');
     });
+}
+
+function loadAddressSelection() { 
+    
+    sendReq("/cgi-bin/loadaddresses.py", function processResponse(response) {        
+       $("#editheader").after(response);       
+    });
+}
+function populateAddress() {
+    sendReq("/cgi-bin/getsingleaddress.py", function processResponse(response) {        
+       var split = response.split(',');
+        //Here I'll get the address pieces and put them in the fields.
+    });
+    
 }
 window.onload = function () {
     
@@ -293,6 +307,9 @@ window.onload = function () {
     }
     if ($("#orderinfo").length) {        
         loadOrderInfo();
+    }
+    if ($("#editaddress").length) {        
+        loadAddressSelection();
     }
     //Validates the user's cookies
     validate();
