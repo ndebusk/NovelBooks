@@ -144,23 +144,20 @@ function validate() {
     sendReq("/cgi-bin/testCookies.py", function processResponse(response) { 
         
         if (response == 0) {//The needed cookie was found; alters navbar
-            //alert("Success!");
             document.getElementById("navbar").innerHTML = "<ul class='nav navbar-nav'>" + 
                 "<li><a href='itementry.html'><i class='fa fa-shield'></i> Admin</a></li>" + 
-                "<li><a href='customerinfo.html'><i class='fa fa-user'></i> Account</a></li>" + 
-                "<li><a href='checkout.html'><i class='fa fa-crosshairs'></i> Checkout</a></li>" + 
+                "<li><a href='customerinfo.html'><i class='fa fa-user'></i> Account</a></li>" +     
                 "<li><a href='cart.html'><i class='fa fa-shopping-cart'></i> Cart</a></li>" + 
+                "<li><a href='checkout.html'><i class='fa fa-crosshairs'></i> Checkout</a></li>" + 
                 "<li><a href='#' class='active'><i class='fa fa-lock'></i> Logout</a></li></ul>";
             
             // change to home screen on successful login attempt
             // window.location = 'index.html';
         } else if (response == 1) { //The needed cookie wasn't found
-            //alert("It didn't work!");
-            //Do nothing
             document.getElementById("navbar").innerHTML = "<ul class='nav navbar-nav'>" + 
                 "<li><a href='customerinfo.html'><i class='fa fa-user'></i> Account</a></li>" + 
-                "<li><a href='checkout.html'><i class='fa fa-crosshairs'></i> Checkout</a></li>" + 
                 "<li><a href='cart.html'><i class='fa fa-shopping-cart'></i> Cart</a></li>" + 
+                "<li><a href='checkout.html'><i class='fa fa-crosshairs'></i> Checkout</a></li>" + 
                 "<li><a href='#' class='active'><i class='fa fa-lock'></i> Logout</a></li></ul>";
         }
     });
@@ -279,6 +276,8 @@ function loadOrderInfo() {
         alert("Response!");
        $("#orderinfo").append("<p>Thank you! Order #" + response + " has been completed! Expect any physical books to be delivered within 3 to 5 business days.</p>");        
         $("#orderinfo").append("<p>Please refer to this order number if you contact us with any issues.</p>");
+         $("#orderinfo").append('<a class="btn btn-default cart" href="history.html">Order History</a>');
+        $("#orderinfo").append('<a class="btn btn-default cart" href="shop.html">Continue Shopping</a>');
     });
 }
 window.onload = function () {

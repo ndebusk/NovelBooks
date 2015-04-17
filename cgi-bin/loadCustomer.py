@@ -44,8 +44,9 @@ for row in cursor:
     print '<p><input id="name" type="text" name="name" value="' + str(row[1]) + '"/></p>'
     print '<p><input id="email" type="text" name="email" value="' + str(row[2]) + '"/></p>'    
 print '<input id="password" type="password" name="password" placeholder="Enter your current password to confirm new changes"/></p>'    
-print '<button id="updateUserSubmit" type="button" class="btn btn-default">Save User Changes</button></p>'
-print '<button id="addAddressSubmit" type="button" class="btn btn-default">Add Address</button></p>'
+print '<button id="updateUserSubmit" type="button" class="btn btn-default cart">Save User Changes</button></p>'
+print '<button id="addAddressSubmit" type="button" class="btn btn-default cart">Manage Addresses</button></p>'
+print '<a class="btn btn-default cart" href="history.html">Order History</a></p>'
 print '</form>'
 print '</div></div></div>'
 
