@@ -149,7 +149,7 @@ function validate() {
                 "<li><a href='customerinfo.html'><i class='fa fa-user'></i> Account</a></li>" +     
                 "<li><a href='cart.html'><i class='fa fa-shopping-cart'></i> Cart</a></li>" + 
                 "<li><a href='checkout.html'><i class='fa fa-crosshairs'></i> Checkout</a></li>" + 
-                "<li><a href='#' class='active'><i class='fa fa-lock'></i> Logout</a></li></ul>";
+                "<li><a href='#' id='logout' class='active'><i class='fa fa-lock'></i> Logout</a></li></ul>";
             
             // change to home screen on successful login attempt
             // window.location = 'index.html';
@@ -158,10 +158,20 @@ function validate() {
                 "<li><a href='customerinfo.html'><i class='fa fa-user'></i> Account</a></li>" + 
                 "<li><a href='cart.html'><i class='fa fa-shopping-cart'></i> Cart</a></li>" + 
                 "<li><a href='checkout.html'><i class='fa fa-crosshairs'></i> Checkout</a></li>" + 
-                "<li><a href='#' class='active'><i class='fa fa-lock'></i> Logout</a></li></ul>";
+                "<li><a href='#' id='logout' class='active'><i class='fa fa-lock'></i> Logout</a></li></ul>";
         }
+        $("#logout").click(function() {
+               logout();
+        });
     });
 }
+/*Calls the remove cookies function, then redirects to the homepage*/          
+function logout() {
+     sendReq("/cgi-bin/removecookies.py?", function processResponse(response) {
+         window.location.href = 'index.html';
+    });   
+}
+
 /*For the customerinfo.html page. The script returns html to load the custinfo section*/
 function loadCustomerInfo() {    
     sendReq("/cgi-bin/loadCustomer.py", function processResponse(response) {
