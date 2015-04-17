@@ -283,14 +283,43 @@ function loadOrderInfo() {
 
 function loadAddressSelection() { 
     
-    sendReq("/cgi-bin/loadaddresses.py", function processResponse(response) {        
-       $("#editheader").after(response);       
+    sendReq("/cgi-bin/loadaddresses.py", function processResponse(response) {  
+       $("#editheader").after(response);                
+        populateAddress($("#userAddress option:first").val());
+       $("#userAddress").on('change', function(e) {           
+           var valueSelected = this.value;
+           populateAddress(valueSelected);           
+       });
+       $("#target option:first").attr('selected','selected');
     });
 }
-function populateAddress() {
-    sendReq("/cgi-bin/getsingleaddress.py", function processResponse(response) {        
-       var split = response.split(',');
-        //Here I'll get the address pieces and put them in the fields.
+
+function populateAddress(addressString) {      
+    sendReq("/cgi-bin/getaddressid.py?address=" + addressString, function processResponse(response) {            
+        var split = response.split(',');
+        id = split[0];
+        street = split[1];
+        city = split[2];
+        state = split[3]
+        zip = split[4];
+        $("#editstreet").val(street);
+        $("#editcity").val(city);
+        $("#editstate").val(state);
+        $("#editzip").val(zip);
+        $("#editsubmit").click(function() {
+            editAddress(id, $("#editstreet").val(), $("#editcity").val(), $("#editstate").val(), $("#editzip").val(), true);
+        });
+        $("#deleteaddress").click(function() {
+            editAddress(id, $("#editstreet").val(), $("#editcity").val(), $("#editstate").val(), $("#editzip").val(), false);
+        });
+        
+    });
+    
+}
+function editAddress(id, street, city, state, zip, keepAddress) {
+   form = "id=" + id + "&keep=" + keepAddress + "&street=" + street + "&city=" + city + "&state=" + state + "&zip=" + zip;
+    sendReq("/cgi-bin/editaddress.py?" + form, function processResponse(response) { 
+        window.location.href = 'addresses.html';
     });
     
 }
@@ -308,8 +337,8 @@ window.onload = function () {
     if ($("#orderinfo").length) {        
         loadOrderInfo();
     }
-    if ($("#editaddress").length) {        
-        loadAddressSelection();
+    if ($("#editaddress").length) {  
+        loadAddressSelection();        
     }
     //Validates the user's cookies
     validate();

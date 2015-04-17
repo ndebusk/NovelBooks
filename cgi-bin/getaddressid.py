@@ -14,7 +14,8 @@ if (C.has_key("access") and C["access"].value == "admin"):
 user = C['userID'].value
 form = cgi.FieldStorage()
 
-
+formAddress = form.getvalue("address")
+#formAddress = "Test Test Test Test, TX 75061"
 print ("Content-Type: text/html\n\n")
 
 #Sets my config for accessing the database. MAMP gave two different
@@ -40,10 +41,11 @@ for row in cursor:
 queryStringAddress = "SELECT * FROM address WHERE userID = '" + str(userID) + "'"
 cursor.execute(queryStringAddress)
 
-print '<div class="styled-select3 blue semi-square"><select id="userAddress">'
+
 for row in cursor:
     address = str(row[2] + " " + row[3] + ", " + row[4] + " " + row[5]).replace("'", "''")
-    print '<option value="%s">' % address
-    print '%s</option>' % address
-print '</div>'
+    
+    if (address == formAddress):        
+        print str(row[0]) + "," + str(row[2] + "," + row[3] + "," + row[4] + "," + row[5]).replace("'", "''")
+    
 cnx.close();

@@ -14,6 +14,12 @@ if (C.has_key("access") and C["access"].value == "admin"):
 user = C['userID'].value
 form = cgi.FieldStorage()
 
+addressID = form.getvalue("id")
+keep = form.getvalue("keep")
+street = form.getvalue("street")
+city = form.getvalue("city")
+state = form.getvalue("state")
+zipCode = form.getvalue("zip")
 
 print ("Content-Type: text/html\n\n")
 
@@ -31,19 +37,10 @@ config = {
 #Creates the connection and cursor.
 cnx = mysql.connector.connect(**config)
 cursor = cnx.cursor()
-queryStringUser = "SELECT userID FROM user WHERE username='" + str(user) + "'"
-cursor.execute(queryStringUser)
-userID = -1
-for row in cursor:
-    userID = row[0]
-    
-queryStringAddress = "SELECT * FROM address WHERE userID = '" + str(userID) + "'"
-cursor.execute(queryStringAddress)
-
-print '<div class="styled-select3 blue semi-square"><select id="userAddress">'
-for row in cursor:
-    address = str(row[2] + " " + row[3] + ", " + row[4] + " " + row[5]).replace("'", "''")
-    print '<option value="%s">' % address
-    print '%s</option>' % address
-print '</div>'
-cnx.close();
+queryString = "UPDATE `address` SET street='" + str(street) + "', city='" + str(city) + "', state='" + str(state) + "', zip='" + str(zipCode) + "' WHERE addressID ='" + str(addressID) + "'"
+if (keep == "false"):    
+    queryString = "DELETE FROM address WHERE addressID='" + str(addressID) + "'"
+print queryString    
+cursor.execute(queryString)
+cnx.commit()
+cnx.close()
