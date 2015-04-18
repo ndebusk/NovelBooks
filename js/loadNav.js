@@ -348,9 +348,7 @@ function loadCheckoutInfo() {
 
     // Request to python
     sendReq("/cgi-bin/checkout.py?", function processResponse(response) {
-        $("#checkoutItems").append(response);
-        //document.getElementById("checkoutItems").innerHTML = response;        
-        alert($("#userAddress option").size());
+        $("#checkoutItems").append(response);                       
         if ($("#userAddress option").size() == 0) {            
             $("#submitOrder").attr("disabled", true);
             $("#submitOrder").before("<p>Please go to Manage Addresses and add an address before completing your order, then reload this screen.</p>");
