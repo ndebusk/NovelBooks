@@ -21,6 +21,9 @@ inStock = form.getvalue("inStock")
 authors = form.getlist("author[]")
 genres = form.getlist("genre[]")
 formats = form.getlist("format[]")
+
+if inStock == "None":
+    inStock == 0;
     
 #Sets my config for accessing the database. MAMP gave two different
 #ways for accessing the database, but I seemed to have trouble
