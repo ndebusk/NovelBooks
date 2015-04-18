@@ -27,7 +27,19 @@ function addToCart() {
         window.location.href = 'cart.html';        
     });
 }
-
+function ensureFormatChecked() {    
+    var atLeastOneIsChecked = $('input[name="format[]"]:checked').length > 0;   
+    return atLeastOneIsChecked;
+}
+function enableAddToCart(boxChecked) {    
+    $("#addCart").attr("disabled", !boxChecked);
+    if (!boxChecked) {
+      $("#addCart").after("<p id='hint'>Select one or more formats to be able to add to the cart</p>");    
+    } else {
+      $("#hint").remove();
+    }
+    
+}
 function load() {
     "use strict";
     var parts = window.location.search.substr(1).split("&");
@@ -43,7 +55,12 @@ function load() {
     // Request to python
     sendReq("/cgi-bin/detail.py?isbn=" + isbn, function processResponse(response) {
         document.getElementById("product").innerHTML = response;
+        enableAddToCart(ensureFormatChecked());
+        $('input[type=checkbox]').on("click", function() {
+            enableAddToCart(ensureFormatChecked());
+        });
     });
+
 }
 
 load();
