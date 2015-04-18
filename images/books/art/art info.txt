@@ -1,6 +1,6 @@
 
 isbn: 9780865478978 
-title: The Animator's Survival Kit--Revised Edition: A Manual of Methods, Principles and Formulas for Classical, Computer, Games, Stop Motion and Interne 
+title: The Animator's Survival Kit--Revised Edition: A Manual of Methods, Principles and Formulas for Classical, Computer, Games, Stop Motion and Internet 
 publisher: Faber and Faber
 price: $27.61
 pages: 392
@@ -64,7 +64,7 @@ title: Color and Light: A Guide for the Realist Painter
 publisher:  Andrews McMeel Publishing
 price: $16.88
 pages: 224
-description: Color and Light bridges the gap between abstract theory and practical knowledge. Beginning with a survey of underappreciated masters who perfected the use of color and light, the book examines how light reveals form, the properties of color and pigments, and the wide variety of atmospheric effects. Gurney cuts though the confusing and contradictory dogma about color, testing it in the light of science and observation. A glossary, pigment index, and bibliography complete what will ultimately become an indispensible tool for any artist.
+description: Color and Light bridges the gap between abstract theory and practical knowledge. Beginning with a survey of under appreciated masters who perfected the use of color and light, the book examines how light reveals form, the properties of color and pigments, and the wide variety of atmospheric effects. Gurney cuts though the confusing and contradictory dogma about color, testing it in the light of science and observation. A glossary, pigment index, and bibliography complete what will ultimately become an indispensable tool for any artist.
 format: paperback
 author: James Gurney  
 genre: Art

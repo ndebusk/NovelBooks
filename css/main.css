@@ -890,6 +890,7 @@ h2.title {
 
 .productinfo{
  position:relative;
+    height: 600px;
 }
 
 .product-overlay {
