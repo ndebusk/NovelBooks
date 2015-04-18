@@ -333,6 +333,30 @@ function editAddress(id, street, city, state, zip, keepAddress) {
     });
     
 }
+
+function addToOrder() {
+    var total = $("#totalVal").val(), address = $("#userAddress").val()
+    
+    sendReq("/cgi-bin/createOrder.py?total=" + total + "&address=" + address, function processResponse(response) {
+        window.location.href = 'orderconfirm.html';
+        
+    });
+}
+
+function loadCheckoutInfo() {
+    "use strict";
+
+    // Request to python
+    sendReq("/cgi-bin/checkout.py?", function processResponse(response) {
+        $("#checkoutItems").append(response);
+        //document.getElementById("checkoutItems").innerHTML = response;        
+        alert($("#userAddress option").size());
+        if ($("#userAddress option").size() == 0) {            
+            $("#submitOrder").attr("disabled", true);
+            $("#submitOrder").before("<p>Please go to Manage Addresses and add an address before completing your order, then reload this screen.</p>");
+        }
+    });
+}
 window.onload = function () {
     
     if ($("#custinfo").length) {
@@ -349,6 +373,9 @@ window.onload = function () {
     }
     if ($("#editaddress").length) {  
         loadAddressSelection();        
+    }
+    if ($("#checkoutItems").length) {
+        loadCheckoutInfo();   
     }
     //Validates the user's cookies
     validate();

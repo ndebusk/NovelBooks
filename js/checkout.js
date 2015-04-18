@@ -33,7 +33,12 @@ function load() {
 
     // Request to python
     sendReq("/cgi-bin/checkout.py?", function processResponse(response) {
-        document.getElementById("checkoutItems").innerHTML = response;
+        document.getElementById("checkoutItems").innerHTML = response;  
+        alert($("#useraddress option").size());
+        if ($("#useraddress option").size() == 0) {            
+            $("#submitOrder").attr("disabled", true);
+            $("#submitOrder").before("<p>Please go to Manage Addresses and add an address before completing your order, then reload this screen.</p>");
+        }
     });
 }
 

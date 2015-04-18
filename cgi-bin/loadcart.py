@@ -44,7 +44,7 @@ for item in cursor:
     print '<td class="cart_isbn"><h4>%s</h4></td>' % item[1]
     print '<td class="cart_description"><h4>%s</h4></td>' % item[2]
     print '<td class="cart_format"><h4>%s</h4></td>' % item[3]
-    print '<td class="cart_total"><p class="cart_total_price">$%s</p></td>' % item[4]
+    print '<td class="cart_total"><p class="cart_total_price">$%s</p></td>' % "%0.2f" % item[4]
     print '<td class="cart_delete"><form id="cartItem" method="post">'
     print '<input id="isbnNum" type="hidden" name="isbnNum" value="%s"/>' % item[1]
     print '<input id="cartID" type="hidden" name="cartID" value="%s"/><button id="deleteCartItem" onclick="deleteItem()" type="button" class="btn btn-default"><i class="fa fa-times"></i></button></form></td></tr>' % userID
@@ -53,10 +53,10 @@ tax = totalPrice * decimal.Decimal(0.0825)
 finalTotal = totalPrice + tax
 print '</tbody></table></div></div><div class="container"><div class="row"><div class="col-sm-6"><div class="chose_area"><img src="images/home/book1.jpg" class="slideImage img-responsive" alt="" /></div></div>'
 print '<div class="col-sm-6"><div class="total_area"><ul>'
-print '<li>Cart Sub Total <span>$%s</span></li>' % round(totalPrice, 2)
-print '<li>Tax <span>$%s</span></li>' % round(tax, 2)
+print '<li>Cart Sub Total <span>$%s</span></li>' % "%0.2f" % round(totalPrice, 2)
+print '<li>Tax <span>$%s</span></li>' % "%0.2f" % round(tax, 2)
 print '<li>Shipping Cost <span>Free</span></li>'
-print '<li>Total <span>$%s</span></li>' % round(finalTotal, 2)
+print '<li>Total <span>$%s</span></li>' % "%0.2f" % round(finalTotal, 2)
 print '</ul><a class="btn btn-default check_out" href="checkout.html">Check Out</a><a class="btn btn-default check_out" href="shop.html">Continue Shopping</a></div></div></div></div>'
 
 cnx.commit()
