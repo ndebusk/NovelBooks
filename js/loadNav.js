@@ -181,7 +181,7 @@ function loadCustomerInfo() {
            submitCustomerInfo();    
         });
         $("#addAddressSubmit").click(function() {
-           window.location.href = 'addAddress.html';    
+           window.location.href = 'addresses.html';    
         });
         $("#newpassword").focus(function () {
         validateField($(this), "Must be 8 characters or more", 
@@ -203,7 +203,7 @@ function submitCustomerInfo() {
     data = $("#customerform").serialize();
     
     sendReq("/cgi-bin/updateCustomer.py?" + data, function processResponse(response) {
-       $("#custinfo").append(response); 
+       //$("#custinfo").append(response); 
        if (response == -1) {
            $("#custinfo").append("<p>Sorry, wrong password.</p>");
        } else {          
@@ -223,7 +223,10 @@ function loadBookInfo(isbn) {
             $("#bookinfo").empty();
            $("#bookinfo").append("<p>Sorry, item not found.</p>");
        } else {          
-            $("#bookinfo").append(response); 
+            $("#bookinfo").append(response);
+           $(".expanderbutton").click(function () {        
+                addBox($(this));  
+            });
             oldisbn = $("#isbn").val();            
             if ($("#updateBookSubmit").length) {       
                 $("#updateBookSubmit").click(function() {            
@@ -242,8 +245,7 @@ function loadBookInfo(isbn) {
 }
 function submitBookInfo(oldisbn) {  
 
-   data = $("#booksubmit").serialize();    
-    //alert(data);    
+   data = $("#booksubmit").serialize();        
     var isbn = $("#isbn").val(), 
         title = $("#newtitle").val(), 
         publisher = $("#newpublisher").val(), 
@@ -253,13 +255,8 @@ function submitBookInfo(oldisbn) {
         image = $("#newimage").val(), 
         authors = document.getElementsByName('author[]'), 
         formats = document.getElementsByName('format[]'), 
-        genres = document.getElementsByName('genre[]'),
-        inStock = $("#inStock").val();
-    if (inStock != 1 || inStock != 0) {
-        alert("In the if!");
-        inStock = 0;   
-    }
-    alert(inStock);
+        genres = document.getElementsByName('genre[]');
+
     var error = 0;      
     if (isbn == '' || isbn.length != 13 || isNaN(isbn)){
         $("#booksubmit").append("ISBN error, must be 13-digits!");
@@ -303,7 +300,7 @@ function submitBookInfo(oldisbn) {
     }
     if (error == 0){
     // Request to python
-        sendReq("/cgi-bin/updatebook.py?" + data + "&inStock=" + inStock + "&mode=update&oldisbn=" + oldisbn, function processResponse(response) {
+        sendReq("/cgi-bin/updatebook.py?" + data + "&mode=update&oldisbn=" + oldisbn, function processResponse(response) {
            $("#bookinfo").append(response); 
            if (response == -1) {
                $("#bookinfo").append("<p>Sorry, wrong password.</p>");
@@ -433,6 +430,10 @@ function addAddress() {
         });
     }
 }
+var addBox = function(fieldElem) {
+  var newBox = fieldElem.prevAll("input").first().clone();
+  fieldElem.before(newBox);
+};
 window.onload = function () {
     
     if ($("#custinfo").length) {
@@ -456,7 +457,6 @@ window.onload = function () {
     if ($("#checkoutItems").length) {
         loadCheckoutInfo();   
     }
-
     
     //Validates the user's cookies
     validate();

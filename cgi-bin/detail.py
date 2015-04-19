@@ -81,7 +81,7 @@ for book in cursorBook:
     print '<img src="%s" alt="" />' % book[6]
     print '</div></div><div class="col-sm-7"><div class="product-information"><!--/product-information-->'
     print '<h1>%s</h1>' % book[1]
-    print '<h2>%s</h2>' % aString
+    print '<h2>%s</h2>' % aString.replace("'", "&#8217")
     print '<p>ISBN: %s</p>' % book[0]
     print '<span><span>$ %s</span></span>' % book[3]
     print '<p><b>Availability:</b> %s</p>' % available
@@ -98,11 +98,11 @@ for book in cursorBook:
     else:
         print '<button id="addCart" onclick="addToCart()" type="button" class="btn btn-default cart"><i class="fa fa-shopping-cart"></i> Add to cart</button>'
     print '</form></div></div><!--/product-information--></div><div class="col-sm-12"><div class="product-information"><!--/product-information--><h2 class="title text-center">Details</h2>'
-    print '<p><b>Publisher:</b> %s</p>' % book[2]
+    print '<p><b>Publisher:</b> %s</p>' % book[2].replace("'", "&#8217")
     print '<p><b>Genre:</b> %s</p>' % gString
     print '<p><b>Pages:</b> %s</p>' % book[4]
     print '<p><b>Format:</b> %s</p>' % fString
-    print "<p><b>Description:</b> %s</p>" % book[5]
+    print "<p><b>Description:</b> %s</p>" % book[5].replace("'", "&#8217")
     print '</div><!--/product-information--></div>'
 
 cnxb.commit()

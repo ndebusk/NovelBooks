@@ -35,7 +35,7 @@ cursor.execute(queryStringID)
 for item in cursor:
     userID = item[0]
 
-queryStringOrder = "SELECT * FROM novelbooks.`order` WHERE userID = '" + str(userID) + "'"
+queryStringOrder = "SELECT * FROM novelbooks.`order` WHERE userID = '" + str(userID) + "' ORDER BY orderNum DESC"
 cursor2.execute(queryStringOrder)
 
 for order in cursor2:

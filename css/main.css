@@ -2443,6 +2443,8 @@ h2.title {
 
 #contact-page .contact-info {
   padding: 0 20px;
+    margin-bottom: 100px;
+    margin-top: 100px;
 }
 
 #contact-page .contact-info address {
@@ -2678,4 +2680,9 @@ ul.checkbox li.focus  {
 #orderinfo {
     margin-bottom: 50px;
     margin-top: 50px;
+}
+
+#goedit {
+    height: 30px;
+    width: 50px;
 }

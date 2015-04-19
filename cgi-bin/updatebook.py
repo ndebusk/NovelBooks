@@ -31,6 +31,9 @@ formats = form.getlist("format[]")
 mode = form.getvalue("mode")
 oldisbn = form.getvalue("oldisbn")
 
+if inStock != '1':
+    inStock = '0';
+
 #Keeps the password for being overwritten if the user does not put anything in
 #that field
 

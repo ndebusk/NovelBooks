@@ -11,7 +11,7 @@ if os.environ.has_key("HTTP_COOKIE"):
 flag = 1
 if (C.has_key("access") and C["access"].value == "admin"):
     flag = 0
-isbn = "0756404746"
+
 form = cgi.FieldStorage()
 
 isbn = form.getvalue("isbn")
@@ -37,29 +37,26 @@ if (flag == 0):
     queryStringBook = "SELECT title, publisher, price, pages, description, image, instock FROM book WHERE isbn='" + str(isbn) + "'"
     queryStringAuthor = "SELECT author FROM author WHERE isbn='" + str(isbn) + "'"
     queryStringGenre = "SELECT genre FROM genre WHERE isbn='" + str(isbn) + "'"
-    queryStringFormat = "SELECT DISTINCT format FROM format"
+    queryStringFormat = "SELECT format FROM format WHERE isbn='" + str(isbn) + "'"
 
     cursor.execute(queryStringBook)
     
     for row in cursor:
         found = 1
+        inStockVal = row[6]
         print '<h2 class="title text-center">Edit Book Info</h2>'
         print '<div class="row">'
         print '<div class="col-sm-8">'
         print '<div class="item-entry">'
         print '<p>Click on a box to edit that value.</p>'
-        print '<p><form id="booksubmit" action="/cgi-bin/updateBook.py" method="post"></p>'
+        print '<p><form id="booksubmit" method="post"></p>'
         print '<p><input id="isbn" type="text" name="isbn" value="' + str(isbn) + '"/></p>'
         print '<p><input id="newtitle" type="text" name="newtitle" value="' + str(row[0]).replace("'", "&#8217") + '"/></p>'
         print '<p><input id="newpublisher" type="text" name="newpublisher" value="' + str(row[1]).replace("'", "&#8217") + '"/></p>'
         print '<p><input id="newprice" type="text" name="newprice" value="' + str(row[2]) + '"/></p>'
         print '<p><input id="newpages" type="text" name="newpages" value="' + str(row[3]) + '"/></p>'
         print '<p><input id="newdesc" type="text" name="newdesc" value="' + str(row[4]).replace("'", "&#8217") + '"/></p>'
-        print '<p><input id="newimage" type="text" name="newimage" value="' + str(row[5]) + '"/></p>'    
-        print '<span id="stockspan">'
-        print '<input id="instock" type="checkbox" name="inStock" class="checkbox" value="' + str(row[6]) + '">'
-        print 'Check if book is now in stock.</br>'
-        print '</span>'
+        print '<p><input id="newimage" type="text" name="newimage" value="' + str(row[5]) + '"/></p>'
     if (found == 1):
         cursor.execute(queryStringAuthor)
         for row in cursor:
@@ -72,19 +69,28 @@ if (flag == 0):
         print '<button class="expanderbutton" type="button" class="btn btn-default">Add Another Genre</button></br>'
 
         cursor.execute(queryStringFormat)
-        print '<span id="formatspan">'
-        print 'Check each available book format: <br/>'
-
-
+        inStock = ''
+        if inStockVal == 1:
+            inStock = "checked"
+        ebook = ''
+        printFormat = ''
+        print '<span id="formatspan"><h5>In Stock Options: <h5></span><fieldset class="group"><ul class="checkbox">'
         for row in cursor:
-            print row[0] + '<input type="checkbox" name="format[]" value="' + row[0] + '" /><br/>'
+            if row[0] == "ebook":
+                ebook = "checked"
+            if row[0] == "print":
+                printFormat = "checked"
 
-        print '</span>'
-        print '<button id="updateBookSubmit" type="button" class="btn btn-default">Save Book Changes</button>'
-        print '<button id="deleteBookSubmit" type="button" class="btn btn-default">Delete Book From Database</button>'
+        print '<li><input type="checkbox" id="ebook" name="format[]" value="ebook" ' +ebook+ ' /><label for="ebook">eBook</label></li>'
+        print '<li><input type="checkbox" id="print" name="format[]" value="print" ' +printFormat+ ' /><label for="ebook">Print</label></li>'
+        print '<li><input type="checkbox" id="instock" name="inStock" class="checkbox" value="1" ' +inStock+ '/><label for="instock">In Stock</label></li></ul></fieldset>'
+        
+        print '<button id="updateBookSubmit" type="button" class="btn btn-default">Save Book Changes</button></br>'
+        print '<button id="deleteBookSubmit" type="button" class="btn btn-default">Delete Book From Database</button></br>'
         print '</form>'
         print '</div></div></div>'
     else:
         print 0
+
 cnx.commit()
 cnx.close();
