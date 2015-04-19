@@ -17,7 +17,7 @@ state = form.getvalue("state")
 street = form.getvalue("street")
 zipcode = form.getvalue("zip")
 
-    
+
 #Sets my config for accessing the database. MAMP gave two different
 #ways for accessing the database, but I seemed to have trouble
 #connecting without using the UNIX socket.
@@ -40,6 +40,7 @@ queryStringID = "SELECT userID FROM user WHERE username = '" + str(user) + "'"
 cursor2.execute(queryStringID)
 for item in cursor2:
     userID = item[0]
+
 #I build the query string in two lines because it's such a long string.
 queryString = "INSERT INTO `address`(`userID`, `street`, `city`, `state`, `zip`) VALUES "
 valueString = "('" + str(userID) + "','" + str(street) + "','" + str(city) + "','" + str(state) + "','" + str(zipcode) + "')"

@@ -69,7 +69,7 @@ for item in cursor3:
     print '<option value="%s">' % address
     print '%s</option>' % address
 
-print '</select></div><a class="btn btn-default check_out" href="addaddress.html">Manage Addresses</a>'
+print '</select></div><a class="btn btn-default check_out" href="addresses.html">Manage Addresses</a>'
 print '<button id="submitOrder" onclick="addToOrder()" type="button" class="btn btn-default check_out">Submit Order</button></form></div></div></div></div>'
 
 cnx.commit()

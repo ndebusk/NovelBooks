@@ -404,6 +404,35 @@ function loadCheckoutInfo() {
         }
     });
 }
+function testZip(input) { // validation function for username
+    var regex = /^\d{5}$/;
+    return regex.test(input);
+}
+function addAddress() {
+    "use strict";
+    
+    var state = $("#state").val(), street = $("#street").val(), city = $("#city").val(), zip = $("#zip").val();
+    var error = 0;
+    
+    if (street == ''){
+        document.getElementById("addressForm").innerHTML ="Street error!";
+        error = 1;
+    }
+    else if (city == ''){
+        document.getElementById("addressForm").innerHTML ="City error!";
+        error = 1;
+    }
+    else if (!testZip(zip)){
+        document.getElementById("addressForm").innerHTML ="Zip code error!";
+        error = 1;
+    }    
+    if (error == 0){
+    // Request to python
+        sendReq("/cgi-bin/addAddress.py?street=" + street + "&state=" + state + "&city=" + city + "&zip=" + zip, function processResponse(response) {
+           document.getElementById("addressForm").innerHTML = response;
+        });
+    }
+}
 window.onload = function () {
     
     if ($("#custinfo").length) {
@@ -418,12 +447,17 @@ window.onload = function () {
     if ($("#orderinfo").length) {        
         loadOrderInfo();
     }
-    if ($("#editaddress").length) {  
+    if ($("#editaddress").length) { 
+        $("#submitAddress").click(function() {
+            addAddress(); 
+        });
         loadAddressSelection();        
     }
     if ($("#checkoutItems").length) {
         loadCheckoutInfo();   
     }
+
+    
     //Validates the user's cookies
     validate();
 };
