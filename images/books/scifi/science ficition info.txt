@@ -3,7 +3,7 @@ title: Star Wars: Lords of the Sith
 publisher: Random House Publishing Group
 price: $20.93
 pages: 320
-description: When the Emperor and his notorious apprentice, Darth Vader, find themselves stranded in the middle of insurgent action on an inhospitable planet, they must rely on each other, the Force, and their own ruthlessness to prevail.
+description: When the Emperor and his notorious apprentice, Darth Vader, find themselves stranded in the middle of insurgent action on a'n inhospitable planet, they must rely on each other, the Force, and their own ruthlessness to prevail.
 format: hardcover
 author: Paul S. Kemp
 genre: Scifi
@@ -63,7 +63,7 @@ title: Uprooted
 publisher: Random House Publishing Group
 price: $18.75
 pages: 448
-description: “Our Dragon doesn’t eat the girls he takes, no matter what stories they tell outside our valley. We hear them sometimes, from travelers passing through. They talk as though we were doing human sacrifice, and he were a real dragon. Of course that’s not true: he may be a wizard and immortal, but he’s still a man, and our fathers would band together and kill him if he wanted to eat one of us every ten years. He protects us against the Wood, and we’re grateful, but not that grateful.”
+description: “Our Dragon doesn't eat the girls he takes, no matter what stories they tell outside our valley. We hear them sometimes, from travelers passing through. They talk as though we were doing human sacrifice, and he were a real dragon. Of course that's not true: he may be a wizard and immortal, but he's still a man, and our fathers would band together and kill him if he wanted to eat one of us every ten years. He protects us against the Wood, and we're grateful, but not that grateful.”
 format: hardcover
 author: Naomi Novik   
 genre: Scifi
@@ -73,7 +73,7 @@ title:  A Game of Thrones: The Graphic Novel: Volume Four
 publisher: Random House Publishing Group
 price: $19.37
 pages: 208
-description: The death of King Robert Baratheon and the imprisonment of his Hand, Lord Eddard Stark of Winterfell, has set the great houses of Westeros at one another’s throats.
+description: The death of King Robert Baratheon and the imprisonment of his Hand, Lord Eddard Stark of Winterfell, has set the great houses of Westeros at one another's throats.
 format: hardcover
 author: George R. R. Martin
 genre: Scifi

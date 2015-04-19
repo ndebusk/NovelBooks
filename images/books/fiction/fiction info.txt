@@ -3,7 +3,7 @@ title: The Children's Crusade: A Novel
 publisher: Scribner
 price: $26.99
 pages: 448
-description: From the New York Times bestselling, award-winning author of The Dive From Clausen’s Pier, a sweeping, masterful new novel that explores the secrets and desires, the remnant wounds and saving graces of one California family, over the course of five decades.
+description: From the New York Times bestselling, award-winning author of The Dive From Clausen's Pier, a sweeping, masterful new novel that explores the secrets and desires, the remnant wounds and saving graces of one California family, over the course of five decades.
 image: 
 inStock: 
 format: hardcover
@@ -64,7 +64,7 @@ title: At the Water's Edge
 publisher: Random House Publishing Group
 price: $28.00
 pages: 368
-description: In this thrilling new novel from the author of Water for Elephants, Sara Gruen again demonstrates her talent for creating spellbinding period pieces. At the Water’s Edge is a gripping and poignant love story about a privileged young woman’s awakening as she experiences the devastation of World War II in a tiny village in the Scottish Highlands.
+description: In this thrilling new novel from the author of Water for Elephants, Sara Gruen again demonstrates her talent for creating spellbinding period pieces. At the Water's Edge is a gripping and poignant love story about a privileged young woman's awakening as she experiences the devastation of World War II in a tiny village in the Scottish Highlands.
 image: 
 inStock: 
 format: hardcover

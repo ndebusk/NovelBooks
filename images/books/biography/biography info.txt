@@ -53,7 +53,7 @@ title:  Caesar: Life of a Colossus
 publisher: Yale University Press
 price: $15.21
 pages: 608
-description: Tracing the extraordinary trajectory of the great Roman emperor’s life, Goldsworthy covers not only the great Roman emperor’s accomplishments as charismatic orator, conquering general, and powerful dictator but also lesser-known chapters during which he was high priest of an exotic cult, captive of pirates, seducer not only of Cleopatra but also of the wives of his two main political rivals, and rebel condemned by his own country. Ultimately, Goldsworthy realizes the full complexity of Caesar’s character and shows why his political and military leadership continues to resonate some two thousand years later. 
+description: Tracing the extraordinary trajectory of the great Roman emperor's life, Goldsworthy covers not only the great Roman emperor's accomplishments as charismatic orator, conquering general, and powerful dictator but also lesser-known chapters during which he was high priest of an exotic cult, captive of pirates, seducer not only of Cleopatra but also of the wives of his two main political rivals, and rebel condemned by his own country. Ultimately, Goldsworthy realizes the full complexity of Caesar's character and shows why his political and military leadership continues to resonate some two thousand years later. 
 format: paperback
 author: Adrian Goldsworthy  
 genre: Biography

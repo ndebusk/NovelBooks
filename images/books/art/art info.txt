@@ -14,7 +14,7 @@ title: The Artist's Way
 publisher: Penguin Publishing Group
 price: $11.95
 pages: 272
-description: The Artist’s Way is the seminal book on the subject of creativity. An international bestseller, millions of readers have found it to be an invaluable guide to living the artist’s life. Still as vital today—or perhaps even more so—than it was when it was first published one decade ago, it is a powerfully provocative and inspiring work.
+description: The Artist's Way is the seminal book on the subject of creativity. An international bestseller, millions of readers have found it to be an invaluable guide to living the artist's life. Still as vital today—or perhaps even more so—than it was when it was first published one decade ago, it is a powerfully provocative and inspiring work.
 format: paperback 
 author: Julia Cameron  
 genre: Art
@@ -54,7 +54,7 @@ title: Interaction of Color: 50th Anniversary Edition
 publisher: Yale University Press
 price: $12.64
 pages: 208
-description: Josef Albers’s Interaction of Color is a masterwork in art education. Conceived as a handbook and teaching aid for artists, instructors, and students, this influential book presents Albers’s singular explanation of complex color theory principles
+description: Josef Albers's Interaction of Color is a masterwork in art education. Conceived as a handbook and teaching aid for artists, instructors, and students, this influential book presents Albers's singular explanation of complex color theory principles
 format: paperback
 author:Josef Albers   
 genre: Art
@@ -94,7 +94,7 @@ title: Harry Potter Page to Screen: The Complete Filmmaking Journey
 publisher: HarperCollins Publishers
 price: $49.34
 pages: 540
-description: Harry Potter: Page to Screen opens the doors to Hogwarts castle and the wizarding world of Harry Potter to reveal the complete behind-the-scenes secrets, techniques, and over-the-top artistry that brought J.K. Rowling’s acclaimed novels to cinematic life.
+description: Harry Potter: Page to Screen opens the doors to Hogwarts castle and the wizarding world of Harry Potter to reveal the complete behind-the-scenes secrets, techniques, and over-the-top artistry that brought J.K. Rowling's acclaimed novels to cinematic life.
 format: hardcover
 author:  Bob McCabe
 genre: Art

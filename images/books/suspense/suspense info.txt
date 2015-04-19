@@ -1,4 +1,4 @@
-isbn: 9781455515875 
+'isbn: 9781455515875 
 title: Burn (Michael Bennett Series #7)
 publisher: Grand Central Publishing
 price: $13.27
@@ -13,7 +13,7 @@ title: Murder, She Wrote: Killer in the Kitchen
 publisher:  Penguin Publishing Group
 price: $18.31
 pages: 272
-description:  Jessica may not know everything about food, but she knows what she likes—and she definitely likes the Leg & Claw restaurant. Opened last summer by young couple Brad and Marcie, the Leg & Claw is their dream come true, combining Marcie’s sunny personality with Brad’s deft hand in the kitchen. But now their dream is turning into a nightmare.
+description:  Jessica may not know everything about food, but she knows what she likes—and she definitely likes the Leg & Claw restaurant. Opened last summer by young couple Brad and Marcie, the Leg & Claw is their dream come true, combining Marcie's sunny personality with Brad's deft hand in the kitchen. But now their dream is turning into a nightmare.
 format: hardcover
 author: Jessica Fletcher, Donald Bain    
 genre: Suspense
@@ -103,7 +103,7 @@ title: I've Got You Under My Skin
 publisher: Pocket Books
 price: $7.99
 pages: 400
-description: When Laurie Moran’s husband was brutally murdered, only three-year-old Timmy saw the face of his father’s killer. Five years later his piercing blue eyes still haunt Timmy’s dreams. Laurie is haunted by more—the killer’s threat to her son as he fled the scene: “Tell your mother she’s next, then it’s your turn…”
+description: When Laurie Moran's husband was brutally murdered, only three-year-old Timmy saw the face of his father's killer. Five years later his piercing blue eyes still haunt Timmy's dreams. Laurie is haunted by more—the killer's threat to her son as he fled the scene: “Tell your mother she's next, then it's your turn…”
 format: paperback
 author: Mary Higgins Clark   
 genre: Suspense
