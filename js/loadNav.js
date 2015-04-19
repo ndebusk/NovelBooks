@@ -138,7 +138,7 @@ var validatePassword = function(passwordString) {
     return (passwordString.length == 0 || passwordString.length >= 8);
     
 };
-
+/*Validates the user cookies and allows links to login and other user-specific links*/
 function validate() {    
     // Request to python
     sendReq("/cgi-bin/testCookies.py", function processResponse(response) { 
