@@ -55,10 +55,10 @@ tax = totalPrice * decimal.Decimal(0.0825)
 finalTotal = totalPrice + tax
 
 print '<tr><td colspan="4">&nbsp;</td><td colspan="2"><table class="table table-condensed total-result">'
-print '<tr><td>Cart Sub Total</td><td>$%s</td></tr>' % round(totalPrice, 2)
-print '<tr><td>Tax</td><td>$%s</td></tr>' % round(tax, 2)
+print '<tr><td>Cart Sub Total</td><td>$%s</td></tr>' % "%0.2f" % round(totalPrice, 2)
+print '<tr><td>Tax</td><td>$%s</td></tr>' % "%0.2f" % round(tax, 2)
 print '<tr class="shipping-cost"><td>Shipping Cost</td><td>Free</td></tr>'
-print '<tr><td>Total</td><td><span>$%s</span></td></tr>' % round(finalTotal, 2)
+print '<tr><td>Total</td><td><span>$%s</span></td></tr>' % "%0.2f" % round(finalTotal, 2)
 print '</table></td></tr></tbody></table></div>'
 
 print '<div class="container"><div class="row"><div class="col-sm-12"><h2 class="title text-center">Shipping Address</h2><div class="col-sm-6"><form id="addToOrder" method="post">'

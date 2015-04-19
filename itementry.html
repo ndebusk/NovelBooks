@@ -112,7 +112,7 @@
 					<div class="item-entry"><!--item entry form-->
 						<h2 class="title text-center">New Book Details</h2>
 						<div class="col-sm-8">
-                            <form action="/cgi-bin/itementry.py" method="post">
+                            <form id="itemForm" method="post">
                                 <!--Edits on 4/2 sdyer. Added ids to new user boxes
                                 to support validation javascript-->
                                 <input id="isbn" type="text" name="isbn" placeholder="ISBN"/>
@@ -137,8 +137,11 @@
                                           <li><input type="checkbox" id="instock" name="inStock" class="checkbox" value="1"><label for="instock">In Stock</label></li>
                                         </ul> 
                                 </fieldset>
-                                <p><button id="newUserSubmit" type="submit" class="btn btn-default">Save Book to Database</button></p>   
+                                <p><button id="saveBook" type="button" class="btn btn-default">Save Book to Database</button></p>   
                             </form>
+                            <div id="newItemForm">
+                                
+                            </div>
                             <p><button id="editBookSubmit" type="button" class="btn btn-default">Manage Inventory</button></p>
                         </div>
 					</div><!--/login form-->

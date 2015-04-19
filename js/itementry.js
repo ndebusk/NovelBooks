@@ -1,134 +1,104 @@
-var email;
-var username;
-var testclicking;
-
-var validateField = function(fieldElem, infoMessage, validateFn) {
-	//The span message that will be inserted.    
-    var spanMsg = "<span>" + infoMessage + "</span>";
-    //alert(fieldElem.next().is("input"));
-    //The span is only inserted if it hasn't been before.
-    if (fieldElem.next().is("input") || fieldElem.next().is("button")) {
-        fieldElem.after(spanMsg);
-        fieldElem.next().addClass("info");
+function sendReq(url, callbackFunction) {
+    "use strict";
+    var xmlhttp, ActiveXObject;
+    if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    /*
-        Hides the span if: 1) It was just created, or
-        2) There's nothing in it.
-    */
-    if (fieldElem.val() === undefined || fieldElem.val().length === 0) {
-        fieldElem.next().hide();
-    } 
-        
-    /*
-        Once the user starts to edit the field,
-        I show the info span. To handle the case
-        where the user is returning to edit after
-        an error or even a correct entry, I remove
-        classes to return to the default info class.
-    */
-    fieldElem.on('input', function () {
-        fieldElem.next().removeClass();
-        fieldElem.next().text(infoMessage);
-        fieldElem.next().addClass("info");        
-        fieldElem.next().show();
-        if (this.value.length > 0) {
-            fieldElem.next().show();   
+
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+            if (callbackFunction) { callbackFunction(xmlhttp.responseText); }
         }
-    });
-    
-    /*
-        Adjusts the span based on whether input
-        was correct or not. Here is where I 
-        actually call the validate function. Just
-        as when editing, I remove all classes before
-        inserting the new class, as a precaution.
-    */
-    fieldElem.focusout(function() {  
-        if (validateFn(fieldElem.val()) === true) {
-            fieldElem.css({
-	           background: "#cfc"	
-                });
-            fieldElem.next().hide();
-            fieldElem.next().text("OK");
-            fieldElem.next().removeClass();
-            fieldElem.next().addClass("ok");
-        } else {
-            fieldElem.css({
-	           background: "#fcc"	
-                });
-            fieldElem.addClass("error");
-            fieldElem.next().text("Error: " + infoMessage );
-            fieldElem.next().removeClass();
-            fieldElem.next().addClass("error");
-            fieldElem.next().show();
-        }
-        /*
-            Handles the special case where there's nothing
-            in the box, where the info span should
-            be hidden.
-        */
-        if (fieldElem.val() === undefined || fieldElem.val().length === 0) {
-            fieldElem.next().hide();
-        }
-    });    
-};
+    };
 
-/*
-    Validates the username. Validates only alphanumeric
-    characters. Due to the way the regex workds, '_' is
-    allowed, but I decided that this is in line with what
-    constitutes a valid username anywhere I've seen.
-*/
-var validateUsername = function (text) {    
-    var re = /^\w+$/;
-    return re.test(text);
-    //Username should only be alphabetical or numeric
-    //password should be @least 8 chars long
-    //email address should contain a @ character
-};
+    xmlhttp.open("POST", url, true);
+    xmlhttp.send();
+}
 
-/*
-  Per assignment instructions, checks for an "@" sign
-*/
-var validateEmail = function(text) {    
-    var re = /@/;
-    return re.test(text);
-};
+function testZip(input) { // validation function for username
+    var regex = /^\d{5}$/;
+    return regex.test(input);
+}
 
-/*
-    Tests on the length of the password string.    
-*/
-var validatePassword = function(passwordString) {
-    
-    return (passwordString.length >8);
-    
-};
-
+function add() {
+    "use strict";
+    var data = $("#itemForm").serialize();
+    var isbn = $("#isbn").val(), 
+        title = $("#booktitle").val(), 
+        publisher = $("#publisher").val(), 
+        price = $("#price").val(), 
+        pages = $("#pagenum").val(), 
+        description = $("#description").val(), 
+        image = $("#bookimage").val(), 
+        authors = document.getElementsByName('author[]'), 
+        formats = document.getElementsByName('format[]'), 
+        genres = document.getElementsByName('genre[]'),
+        inStock = $("#inStock").val();
+    var error = 0;
+    if (isbn == '' || isbn.length != 13 || isNaN(isbn)){
+        document.getElementById("newItemForm").innerHTML ="ISBN error, must be 13-digits!";
+        error = 1;
+    }
+    else if (title == ''){
+        document.getElementById("newItemForm").innerHTML ="Title blank!";
+        error = 1;
+    }
+    else if (publisher == ''){
+        document.getElementById("newItemForm").innerHTML ="Publisher blank!";
+        error = 1;
+    }
+    else if (price == '' || isNaN(price)){
+        document.getElementById("newItemForm").innerHTML ="Price error!";
+        error = 1;
+    }
+    else if (pages == '' || isNaN(pages)){
+        document.getElementById("newItemForm").innerHTML ="Pages error!";
+        error = 1;
+    }
+    else if (description == ''){
+        document.getElementById("newItemForm").innerHTML ="Description blank!";
+        error = 1;
+    }
+    else if (image == ''){
+        document.getElementById("newItemForm").innerHTML ="Provide Image file path!";
+        error = 1;
+    }
+    else if (authors[0].value == ''){
+        document.getElementById("newItemForm").innerHTML ="Author blank!";
+        error = 1;
+    }
+    else if (!formats[0].checked && !formats[1].checked){
+        document.getElementById("newItemForm").innerHTML ="Format blank!";
+        error = 1;
+    }
+    else if (genres[0].value == ''){
+        document.getElementById("newItemForm").innerHTML ="Genre blank!";
+        error = 1;
+    }
+    if (error == 0){
+    // Request to python
+        sendReq("/cgi-bin/itementry.py?" + data, function processResponse(response) {
+            document.getElementById("newItemForm").innerHTML = response;
+        });
+    }
+}
 var addBox = function(fieldElem) {
   var newBox = fieldElem.prevAll("input").first().clone();
   fieldElem.before(newBox);
 };
+
 $(document).ready(function () {    
     $(".expanderbutton").click(function () {        
         addBox($(this));  
     });
-    
+
+$("#saveBook").click(function() { add(); });    
+
 $("#editBookSubmit").click(function() {
            window.location.href = 'editbook.html';    
-        });    
-    
-/*    $("#newPassword").focus(function () {
-        validateField($(this), "Must be 8 characters or more", 
-                      validatePassword);
-    });
-    
-    $("#newUser").focus(function () {
-        validateField($(this), "Alphanumeric characters only", 
-                      validateUsername);
-    });
-    
-     $("#newEmail").focus(function () {
-        validateField($(this), "Must contain an @ character", 
-                      validateEmail);
-    });   */ 
+        });     
 });

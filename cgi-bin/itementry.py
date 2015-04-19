@@ -3,10 +3,6 @@ print ("Content-Type: text/html\n\n")
 
 import mysql.connector, cgi
 
-print "<html>\
-<head><title>Add Book</title></head><body>"
-print "<p>Test</p>"
-
 form = cgi.FieldStorage()
 
 isbn = form.getvalue("isbn")
@@ -22,8 +18,8 @@ authors = form.getlist("author[]")
 genres = form.getlist("genre[]")
 formats = form.getlist("format[]")
 
-if inStock == "None":
-    inStock == 0;
+if inStock != '1':
+    inStock = '0';
     
 #Sets my config for accessing the database. MAMP gave two different
 #ways for accessing the database, but I seemed to have trouble
@@ -39,30 +35,44 @@ config = {
 #Creates the connection and cursor.
 cnx = mysql.connector.connect(**config)
 cursor = cnx.cursor()
+cnx2 = mysql.connector.connect(**config)
+cursor2 = cnx2.cursor()
+flag = 0
+queryString = "SELECT isbn FROM book"
+cursor2.execute(queryString);
+for item in cursor2:
+    if isbn == item[0]:
+        print "Duplicate ISBN numbers found. Please correct your ISBN number."
+        flag = 1
 
-#I build the query string in two lines because it's such a long string.
-queryStringBook = "INSERT INTO `book`(`isbn`, `title`, `publisher`, `price`, `pages`, `description`, `image`, `inStock`) VALUES "
-valueStringBook = "('" + str(isbn) + "','" + str(title).replace("'", "''") + "','" + str(publisher).replace("'", "''") + "','" + str(price) + "','" + str(pages) + "','" + str(description).replace("'", "''") + "','" + str(image) + "','" + str(inStock) + "')"
-queryStringBook += valueStringBook
-cursor.execute(queryStringBook)
+if flag == 0:
+    #I build the query string in two lines because it's such a long string.
+    queryStringBook = "INSERT INTO `book`(`isbn`, `title`, `publisher`, `price`, `pages`, `description`, `image`, `inStock`) VALUES "
+    valueStringBook = "('" + str(isbn) + "','" + str(title).replace("'", "''") + "','" + str(publisher).replace("'", "''") + "','" + str(price) + "','" + str(pages) + "','" + str(description).replace("'", "''") + "','" + str(image) + "','" + str(inStock) + "')"
+    queryStringBook += valueStringBook
+    cursor.execute(queryStringBook)
 
-for author in authors:
-    queryStringAuthor = "INSERT INTO `author`(`author`, `isbn`) VALUES "
-    valueStringAuthor = "('" + str(author) + "','" + str(isbn) + "')"
-    queryStringAuthor += valueStringAuthor
-    cursor.execute(queryStringAuthor)
+    for author in authors:
+        queryStringAuthor = "INSERT INTO `author`(`author`, `isbn`) VALUES "
+        valueStringAuthor = "('" + str(author) + "','" + str(isbn) + "')"
+        queryStringAuthor += valueStringAuthor
+        cursor.execute(queryStringAuthor)
 
-for genre in genres:
-    queryStringGenre = "INSERT INTO `genre`(`genre`, `isbn`) VALUES "
-    valueStringGenre = "('" + str(genre) + "','" + str(isbn) + "')"
-    queryStringGenre += valueStringGenre
-    cursor.execute(queryStringGenre)
-    
-for formatType in formats:
-    queryStringFormat = "INSERT INTO `format`(`format`, `isbn`) VALUES "
-    valueStringFormat = "('" + str(formatType) + "','" + str(isbn) + "')"
-    queryStringFormat += valueStringFormat
-    cursor.execute(queryStringFormat)
-    
+    for genre in genres:
+        queryStringGenre = "INSERT INTO `genre`(`genre`, `isbn`) VALUES "
+        valueStringGenre = "('" + str(genre) + "','" + str(isbn) + "')"
+        queryStringGenre += valueStringGenre
+        cursor.execute(queryStringGenre)
+
+    for formatType in formats:
+        queryStringFormat = "INSERT INTO `format`(`format`, `isbn`) VALUES "
+        valueStringFormat = "('" + str(formatType) + "','" + str(isbn) + "')"
+        queryStringFormat += valueStringFormat
+        cursor.execute(queryStringFormat)
+
+    print "Item successfully added!"
+
 cnx.commit()
-cnx.close();
+cnx2.commit()
+cnx.close()
+cnx2.close();
