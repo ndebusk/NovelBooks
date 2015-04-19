@@ -29,6 +29,7 @@ authors = form.getlist("author[]")
 genres = form.getlist("genre[]")
 formats = form.getlist("format[]")
 mode = form.getvalue("mode")
+oldisbn = form.getvalue("oldisbn")
 
 #Keeps the password for being overwritten if the user does not put anything in
 #that field
@@ -48,22 +49,21 @@ config = {
 cnx = mysql.connector.connect(**config)
 cursor = cnx.cursor()
 
-deleteString = "DELETE FROM author WHERE isbn='" + str(isbn) + "'"
+deleteString = "DELETE FROM author WHERE isbn='" + str(oldisbn) + "'"
 cursor.execute(deleteString)
 cnx.commit()
 
-deleteString = "DELETE FROM genre WHERE isbn='" + str(isbn) + "'"
+deleteString = "DELETE FROM genre WHERE isbn='" + str(oldisbn) + "'"
 cursor.execute(deleteString)
 cnx.commit()
-deleteString = "DELETE FROM format WHERE isbn='" + str(isbn) + "'"
+deleteString = "DELETE FROM format WHERE isbn='" + str(oldisbn) + "'"
 cursor.execute(deleteString)
 cnx.commit()
-deleteString = "DELETE FROM book WHERE isbn='" + str(isbn) + "'"
+deleteString = "DELETE FROM book WHERE isbn='" + str(oldisbn) + "'"
 cursor.execute(deleteString)
 cnx.commit()
 ##I build the query string in two lines because it's such a long string.
-if (mode == "update"):
-    print "<p>Test</p>"
+if (mode == "update"):    
     queryStringBook = "INSERT INTO `book`(`isbn`, `title`, `publisher`, `price`, `pages`, `description`, `image`, `inStock`) VALUES "
     valueStringBook = "('" + str(isbn) + "','" + str(title).replace("'", "''") + "','" + str(publisher).replace("'", "''") + "','" + str(price) + "','" + str(pages) + "','" + str(description).replace("'", "''") + "','" + str(image) + "','" + str(inStock) + "')"
     queryStringBook += valueStringBook

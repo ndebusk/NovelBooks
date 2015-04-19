@@ -219,57 +219,106 @@ function submitCustomerInfo() {
 function loadBookInfo(isbn) {     
     $("#bookinfo").empty();
     sendReq("/cgi-bin/loadbookforedit.py?isbn=" + isbn, function processResponse(response) {
-        if (response == -1) {
+        if (response == 0) {
             $("#bookinfo").empty();
            $("#bookinfo").append("<p>Sorry, item not found.</p>");
        } else {          
             $("#bookinfo").append(response); 
+            oldisbn = $("#isbn").val();            
             if ($("#updateBookSubmit").length) {       
                 $("#updateBookSubmit").click(function() {            
-                   submitBookInfo();    
+                   submitBookInfo(oldisbn);    
             });
             }
             if ($("#deleteBookSubmit").length) {
                 $("#deleteBookSubmit").click(function() {
-                    deleteBookInfo();   
+                    deleteBookInfo(oldisbn);   
                 });
             }     
        }
        
-/*        $("#newpassword").focus(function () {
-        validateField($(this), "Must be 8 characters or more", 
-                      validatePassword);
-        });            
-        $("#name").focus(function () {
-            validateField($(this), "Alphanumeric characters, spaces, hyphens only", 
-                          validateRealName);
-        });
-         $("#email").focus(function () {
-            validateField($(this), "Must contain an @ character", 
-                          validateEmail);
-        });*/
             
     });
 }
-function submitBookInfo() {  
+function submitBookInfo(oldisbn) {  
 
-   data = $("#booksubmit").serialize();
+   data = $("#booksubmit").serialize();    
+    //alert(data);    
+    var isbn = $("#isbn").val(), 
+        title = $("#newtitle").val(), 
+        publisher = $("#newpublisher").val(), 
+        price = $("#newprice").val(), 
+        pages = $("#newpages").val(), 
+        description = $("#newdesc").val(), 
+        image = $("#newimage").val(), 
+        authors = document.getElementsByName('author[]'), 
+        formats = document.getElementsByName('format[]'), 
+        genres = document.getElementsByName('genre[]'),
+        inStock = $("#inStock").val();
+    if (inStock != 1 || inStock != 0) {
+        alert("In the if!");
+        inStock = 0;   
+    }
+    alert(inStock);
+    var error = 0;      
+    if (isbn == '' || isbn.length != 13 || isNaN(isbn)){
+        $("#booksubmit").append("ISBN error, must be 13-digits!");
+        error = 1;
+    }
+    else if (title == ''){
+        $("#booksubmit").append("Title blank!");
+        error = 1;
+    }
+    else if (publisher == ''){
+        $("#booksubmit").append("Publisher blank!");
+        error = 1;
+    }
+    else if (price == '' || isNaN(price)){
+        $("#booksubmit").append("Price error!");
+        error = 1;
+    }
+    else if (pages == '' || isNaN(pages)){
+        $("#booksubmit").append("Pages error!");
+        error = 1;
+    }
+    else if (description == ''){
+        $("#booksubmit").append("Description blank!");
+        error = 1;
+    }
+    else if (image == ''){
+        $("#booksubmit").append("Provide Image file path!");
+        error = 1;
+    }
+    else if (authors[0].value == ''){
+        $("#booksubmit").append("Author blank!");
+        error = 1;
+    }
+    else if (!formats[0].checked && !formats[1].checked){
+        $("#booksubmit").append("Format blank!");
+        error = 1;
+    }
+    else if (genres[0].value == ''){
+        $("#booksubmit").append("Genre blank!");
+        error = 1;
+    }
+    if (error == 0){
+    // Request to python
+        sendReq("/cgi-bin/updatebook.py?" + data + "&inStock=" + inStock + "&mode=update&oldisbn=" + oldisbn, function processResponse(response) {
+           $("#bookinfo").append(response); 
+           if (response == -1) {
+               $("#bookinfo").append("<p>Sorry, wrong password.</p>");
+           } else {          
+              $("#bookinfo").empty();                         
+              $("#bookinfo").append("<p>Sucess! Information updated.</p>");          
+           }        
+        });
+    }
     
-    sendReq("/cgi-bin/updatebook.py?" + data + "&mode=update", function processResponse(response) {
-       $("#bookinfo").append(response); 
-       if (response == -1) {
-           $("#bookinfo").append("<p>Sorry, wrong password.</p>");
-       } else {          
-          $("#bookinfo").empty();           
-          loadBookInfo();
-           $("#bookinfo").append("<p>Sucess! Information updated.</p>");          
-       }        
-    });
 }
-function deleteBookInfo() {  
+function deleteBookInfo(oldisbn) {  
    data = $("#booksubmit").serialize();
     
-    sendReq("/cgi-bin/updatebook.py?" + data, function processResponse(response) {
+    sendReq("/cgi-bin/updatebook.py?" + data + "&oldisbn=" + oldisbn, function processResponse(response) {
        $("#bookinfo").append(response); 
        if (response == -1) {
            $("#bookinfo").append("<p>Sorry, wrong password.</p>");

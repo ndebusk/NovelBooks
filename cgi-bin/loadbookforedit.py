@@ -31,17 +31,18 @@ config = {
 #Creates the connection and cursor.
 cnx = mysql.connector.connect(**config)
 cursor = cnx.cursor()
+found = 0
 if (flag == 0):
     #I build the query string in two lines because it's such a long string.
     queryStringBook = "SELECT title, publisher, price, pages, description, image, instock FROM book WHERE isbn='" + str(isbn) + "'"
     queryStringAuthor = "SELECT author FROM author WHERE isbn='" + str(isbn) + "'"
     queryStringGenre = "SELECT genre FROM genre WHERE isbn='" + str(isbn) + "'"
-    queryStringFormat = "SELECT format FROM format WHERE isbn='" + str(isbn) + "'"
+    queryStringFormat = "SELECT DISTINCT format FROM format"
 
     cursor.execute(queryStringBook)
     
     for row in cursor:
-        #found = 1
+        found = 1
         print '<h2 class="title text-center">Edit Book Info</h2>'
         print '<div class="row">'
         print '<div class="col-sm-8">'
@@ -59,29 +60,31 @@ if (flag == 0):
         print '<input id="instock" type="checkbox" name="inStock" class="checkbox" value="' + str(row[6]) + '">'
         print 'Check if book is now in stock.</br>'
         print '</span>'
-    
-    cursor.execute(queryStringAuthor)
-    for row in cursor:
-        print '<input type="text" name="author[]" value="' + row[0] + '" />'
-    print '<button class="expanderbutton" type="button" class="btn btn-default">Add Another Author</button></br>'
+    if (found == 1):
+        cursor.execute(queryStringAuthor)
+        for row in cursor:
+            print '<input type="text" name="author[]" value="' + row[0] + '" />'
+        print '<button class="expanderbutton" type="button" class="btn btn-default">Add Another Author</button></br>'
 
-    cursor.execute(queryStringGenre)
-    for row in cursor:
-        print '<input type="text" name="genre[]" value="' + row[0] + '"/>'
-    print '<button class="expanderbutton" type="button" class="btn btn-default">Add Another Genre</button></br>'
+        cursor.execute(queryStringGenre)
+        for row in cursor:
+            print '<input type="text" name="genre[]" value="' + row[0] + '"/>'
+        print '<button class="expanderbutton" type="button" class="btn btn-default">Add Another Genre</button></br>'
 
-    cursor.execute(queryStringFormat)
-    print '<span id="formatspan">'
-    print 'Check each available book format: <br/>'
+        cursor.execute(queryStringFormat)
+        print '<span id="formatspan">'
+        print 'Check each available book format: <br/>'
 
 
-    for row in cursor:
-        print row[0] + '<input type="checkbox" name="format[]" value="' + row[0] + '" /><br/>'
+        for row in cursor:
+            print row[0] + '<input type="checkbox" name="format[]" value="' + row[0] + '" /><br/>'
 
-    print '</span>'
-    print '<button id="updateBookSubmit" type="button" class="btn btn-default">Save Book Changes</button>'
-    print '<button id="deleteBookSubmit" type="button" class="btn btn-default">Delete Book From Database</button>'
-    print '</form>'
-    print '</div></div></div>'
-    cnx.commit()
+        print '</span>'
+        print '<button id="updateBookSubmit" type="button" class="btn btn-default">Save Book Changes</button>'
+        print '<button id="deleteBookSubmit" type="button" class="btn btn-default">Delete Book From Database</button>'
+        print '</form>'
+        print '</div></div></div>'
+    else:
+        print 0
+cnx.commit()
 cnx.close();

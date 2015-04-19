@@ -25,6 +25,7 @@ function testZip(input) { // validation function for username
 }
 
 function add() {
+    alert("In add!")
     "use strict";
     var data = $("#itemForm").serialize();
     var isbn = $("#isbn").val(), 
@@ -39,6 +40,7 @@ function add() {
         genres = document.getElementsByName('genre[]'),
         inStock = $("#inStock").val();
     var error = 0;
+    alert(isbn);
     if (isbn == '' || isbn.length != 13 || isNaN(isbn)){
         document.getElementById("newItemForm").innerHTML ="ISBN error, must be 13-digits!";
         error = 1;
