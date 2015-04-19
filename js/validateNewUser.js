@@ -138,7 +138,7 @@ var validateUsername = function (text) {
   Per assignment instructions, checks for an "@" sign
 */
 var validateEmail = function(text) {    
-    var re = /@/;
+    var re = /([\w\-]+\@[\w\-]+\.[\w\-]+)/;
     if(text){
         empty = 1;
     }
@@ -149,16 +149,17 @@ var validateEmail = function(text) {
     Tests on the length of the password string.    
 */
 var validatePassword = function(passwordString) {
+    var re = /(?=^.{8,}$)(?=.*\d)(?=.*[!@#$%^&*]+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
     if(passwordString){
         empty = 1;
     }
-    return (passwordString.length >= 8);
+    return re.test(passwordString);
     
 };
 
 window.onload = function () {
     $("#newPassword").focus(function () {
-        validateField($(this), "Must be 8 characters or more", 
+        validateField($(this), "Must be at least 8 characters and contain at least one each: uppercase letter, lowercase letter, number, and special character !@#$%^&*", 
                       validatePassword);
     });
     
