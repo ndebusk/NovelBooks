@@ -885,12 +885,12 @@ h2.title {
 }
 
 .productinfo img{
-  width: 100%;
+  width: 80%;
 }
 
 .productinfo{
  position:relative;
-    height: 600px;
+    height: 550px;
 }
 
 .product-overlay {

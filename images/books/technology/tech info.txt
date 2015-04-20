@@ -10,7 +10,7 @@ genre: Technology, biography
 
 isbn: 9781442242579 
 title: Privacy in the Age of Big Data: Recognizing Threats, Defending Your Rights, and Protecting Your Family 
-publisher: Rowman & Littlefield Publishers, Inc.
+publisher: Rowman and Littlefield Publishers, Inc.
 price: $14.59
 pages: 328
 description: Digital data collection and surveillance gets more pervasive and invasive by the day; but the best ways to protect yourself and your data are all steps you can take yourself. The devices we use to get just-in-time coupons, directions when we're lost, and maintain connections with loved ones no matter how far away they are, also invade our privacy in ways we might not even be aware of. Our devices send and collect data about us whenever we use them, but that data is not safeguarded the way we assume it would be.
@@ -23,7 +23,7 @@ title: Head First JavaScript Programming
 publisher: O'Reilly Media, Incorporated
 price: $36.96
 pages: 704
-description: This brain-friendly guide teaches you everything from JavaScript language fundamentals to advanced topics, including objects, functions, and the browser's document object model. You won't just be reading—you'll be playing games, solving puzzles, pondering mysteries, and interacting with JavaScript in ways you never imagined. And you'll write real code, lots of it, so you can start building your own web applications. Prepare to open your mind as you learn (and nail) key topics including:
+description: This brain-friendly guide teaches you everything from JavaScript language fundamentals to advanced topics, including objects, functions, and the browser's document object model. You won't just be reading-you'll be playing games, solving puzzles, pondering mysteries, and interacting with JavaScript in ways you never imagined. And you'll write real code, lots of it, so you can start building your own web applications.
 format: paperback
 author:   Eric T. Freeman, Elisabeth Robson  
 genre: Technology
@@ -33,7 +33,7 @@ title: JavaScript: The Definitive Guide: Activate Your Web Pages
 publisher:  O'Reilly Media, Incorporated
 price: $33.76
 pages: 1096
-description: Since 1996, JavaScript: The Definitive Guide has been the bible for JavaScript programmers—a programmer's guide and comprehensive reference to the core language and to the client-side JavaScript APIs defined by web browsers.
+description: Since 1996, JavaScript: The Definitive Guide has been the bible for JavaScript programmers-a programmer's guide and comprehensive reference to the core language and to the client-side JavaScript APIs defined by web browsers.
 format: paperback
 author:  David Flanagan  
 genre: Technology
@@ -63,7 +63,7 @@ title: Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability
 publisher: New Riders
 price: $30.32
 pages: 216 
-description:   Web designers and developers have relied on usability guru Steve Krug's guide to help them understand the principles of intuitive navigation and information design. Witty, commonsensical, and eminently practical, it's one of the best-loved and most recommended books on the subject
+description:   Web designers and developers have relied on usability guru Steve Krug's guide to help them understand the principles of intuitive navigation and information design. Witty, commonsensical, and eminently practical, it's one of the best-loved and most recommended books on the subject.
 format: paperback
 author:  Steve Krug   
 genre: Technology
@@ -80,7 +80,7 @@ genre: Technology
 
 isbn:    9781476708690 
 title: The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution 
-publisher: Simon & Schuster
+publisher: Simon and Schuster
 price: $22.59
 pages: 560
 description: Following his blockbuster biography of Steve Jobs, The Innovators is Walter Isaacson's revealing story of the people who created the computer and the Internet. It is destined to be the standard history of the digital revolution and an indispensable guide to how innovation really happens.
@@ -92,14 +92,14 @@ isbn:   9781491903995
 title: Effective Modern C++: 42 Specific Ways to Improve Your Use of C++11 and C++14 
 publisher: O'Reilly Media, Incorporated
 price: $42.16
-pages: 336
-description: Coming to grips with C++11 and C++14 is more than a matter of familiarizing yourself with the features they introduce (e.g., auto type declarations, move semantics, lambda expressions, and concurrency support). The challenge is learning to use those features effectively—so that your software is correct, efficient, maintainable, and portable. That's where this practical book comes in. It describes how to write truly great software using C++11 and C++14—i.e. using modern C++.
+pages: 336 
+description: Coming to grips with C++11 and C++14 is more than a matter of familiarizing yourself with the features they introduce (e.g., auto type declarations, move semantics, lambda expressions, and concurrency support). The challenge is learning to use those features effectively-so that your software is correct, efficient, maintainable, and portable. That's where this practical book comes in. It describes how to write truly great software using C++11 and C++14-i.e. using modern C++.
 format: paperback
 author:  Scott Meyers   
 genre: Technology
 
 isbn: 9781118008188  
-title: HTML & CSS: Design and Build Web Sites 
+title: HTML and CSS: Design and Build Web Sites 
 publisher: Wiley
 price: $17.65
 pages: 512

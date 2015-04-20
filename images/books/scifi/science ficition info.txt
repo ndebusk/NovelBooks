@@ -3,14 +3,14 @@ title: Star Wars: Lords of the Sith
 publisher: Random House Publishing Group
 price: $20.93
 pages: 320
-description: When the Emperor and his notorious apprentice, Darth Vader, find themselves stranded in the middle of insurgent action on a'n inhospitable planet, they must rely on each other, the Force, and their own ruthlessness to prevail.
+description: When the Emperor and his notorious apprentice, Darth Vader, find themselves stranded in the middle of insurgent action on an inhospitable planet, they must rely on each other, the Force, and their own ruthlessness to prevail.
 format: hardcover
 author: Paul S. Kemp
 genre: Scifi
 
 isbn:  9781451673319 
 title: Fahrenheit 451 
-publisher: Simon & Schuster
+publisher: Simon and Schuster
 price: $8.92
 pages: 256 
 description: Guy Montag is a fireman. In his world, where television rules and literature is on the brink of extinction, firemen start fires rather than put them out. His job is to destroy the most illegal of commodities, the printed book, along with the houses in which they are hidden.
@@ -43,7 +43,7 @@ title:  Harry Potter and the Sorcerer's Stone (Harry Potter #1)
 publisher:  Scholastic, Inc.
 price: $10.55
 pages: 336
-description: Rescued from the outrageous neglect of his aunt and uncle, a young boy with a great destiny proves his worth while attending Hogwarts School for Witchcraft and Wizardry
+description: Rescued from the outrageous neglect of his aunt and uncle, a young boy with a great destiny proves his worth while attending Hogwarts School for Witchcraft and Wizardry.
 format: paperback
 author: J. K. Rowling
 genre: Scifi
@@ -62,7 +62,7 @@ isbn: 9781101885208
 title: Uprooted 
 publisher: Random House Publishing Group
 price: $18.75
-pages: 448
+pages: 448  
 description: “Our Dragon doesn't eat the girls he takes, no matter what stories they tell outside our valley. We hear them sometimes, from travelers passing through. They talk as though we were doing human sacrifice, and he were a real dragon. Of course that's not true: he may be a wizard and immortal, but he's still a man, and our fathers would band together and kill him if he wanted to eat one of us every ten years. He protects us against the Wood, and we're grateful, but not that grateful.”
 format: hardcover
 author: Naomi Novik   

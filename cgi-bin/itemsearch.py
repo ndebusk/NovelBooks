@@ -46,7 +46,7 @@ elif searchtype == "formatType":
     cursor.execute(queryStringBook)
     
 else:
-    queryStringBook = "SELECT book.isbn, title, image, price FROM book WHERE (" + searchtype + " LIKE '%" + str(searchterm) + "%')"
+    queryStringBook = "SELECT book.isbn, title, image, price FROM book, author WHERE (" + searchtype + " LIKE '%" + str(searchterm) + "%') AND (book.isbn = author.isbn)"
     cursor.execute(queryStringBook)
 
 print '<h2 class="title text-center">%s</h2>' % searchterm

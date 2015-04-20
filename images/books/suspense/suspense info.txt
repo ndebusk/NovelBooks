@@ -1,9 +1,9 @@
-'isbn: 9781455515875 
-title: Burn (Michael Bennett Series #7)
+isbn: 9781455515875 
+title: Burn
 publisher: Grand Central Publishing
 price: $13.27
 pages: 448
-description: Detective Michael Bennett finally returns to New York City—and to the most unsettling, horrific case of his career
+description: Detective Michael Bennett finally returns to New York City-and to the most unsettling, horrific case of his career.
 format: paperback 
 author: James Patterson, Michael Ledwidge
 genre: Suspense
@@ -13,7 +13,7 @@ title: Murder, She Wrote: Killer in the Kitchen
 publisher:  Penguin Publishing Group
 price: $18.31
 pages: 272
-description:  Jessica may not know everything about food, but she knows what she likes—and she definitely likes the Leg & Claw restaurant. Opened last summer by young couple Brad and Marcie, the Leg & Claw is their dream come true, combining Marcie's sunny personality with Brad's deft hand in the kitchen. But now their dream is turning into a nightmare.
+description:  Jessica may not know everything about food, but she knows what she likes-and she definitely likes the Leg and Claw restaurant. Opened last summer by young couple Brad and Marcie, the Leg and Claw is their dream come true, combining Marcie's sunny personality with Brad's deft hand in the kitchen. But now their dream is turning into a nightmare.
 format: hardcover
 author: Jessica Fletcher, Donald Bain    
 genre: Suspense
@@ -33,7 +33,7 @@ title: 10th Anniversary (Women's Murder Club Series #10)
 publisher: Grand Central Publishing
 price: $8.84
 pages: 400
-description: Detective Lindsay Boxer's long-awaited wedding celebration becomes a distant memory when she is called to investigate a horrendous crime: a badly injured teenage girl is left for dead, and her newborn baby is nowhere to be found. Lindsay discovers that not only is there no trace of the criminals--but that the victim may be keeping secrets as well. 
+description: Detective Lindsay Boxer's long-awaited wedding celebration becomes a distant memory when she is called to investigate a horrendous crime: a badly injured teenage girl is left for dead, and her newborn baby is nowhere to be found. Lindsay discovers that not only is there no trace of the criminals-but that the victim may be keeping secrets as well. 
 format: paperback
 author:  James Patterson, Maxine Paetro
 genre: Suspense
@@ -43,7 +43,7 @@ title: Alert
 publisher: Little, Brown and Company
 price: $20.72
 pages: 400
-description: New Yorkers aren't easily intimidated, but someone is doing their best to scare them, badly: why? After two inexplicable high-tech attacks, the city that never sleeps is on edge. Detective Michael Bennett, along with his old pal, the FBI's Emily Parker, have to catch the shadowy criminals who claim responsibility--but they're as good at concealing their identities as they are at wreaking havoc.
+description: New Yorkers aren't easily intimidated, but someone is doing their best to scare them, badly: why? After two inexplicable high-tech attacks, the city that never sleeps is on edge. Detective Michael Bennett, along with his old pal, the FBI's Emily Parker, have to catch the shadowy criminals who claim responsibility-but they're as good at concealing their identities as they are at wreaking havoc.
 format: hardcover
 author: James Patterson, Michael Ledwidge   
 genre: Suspense
@@ -53,7 +53,7 @@ title: The Godfather
 publisher: Penguin Publishing Group
 price: $17.64
 pages: 448
-description: More than thirty years ago, a classic was born. A searing novel of the Mafia underworld, The Godfather introduced readers to the first family of American crime fiction, the Corleones-and became the definitive novel of the virile, violent subculture that remains steeped in intrigue, in controversy, and in our collective consciousness
+description: More than thirty years ago, a classic was born. A searing novel of the Mafia underworld, The Godfather introduced readers to the first family of American crime fiction, the Corleones and became the definitive novel of the virile, violent subculture that remains steeped in intrigue, in controversy, and in our collective consciousness.
 format: hardcover
 author: Mario Puzo   
 genre: Suspense
@@ -83,7 +83,7 @@ title: Memory Man
 publisher: Grand Central Publishing
 price: $16.46
 pages: 416
-description: The first time was on the gridiron. A big, towering athlete, he was the only person from his hometown of Burlington ever to go pro. But his career ended before it had a chance to begin. On his very first play, a violent helmet-to-helmet collision knocked him off the field for good, and left him with an improbable side effect--he can never forget anything.
+description: The first time was on the gridiron. A big, towering athlete, he was the only person from his hometown of Burlington ever to go pro. But his career ended before it had a chance to begin. On his very first play, a violent helmet-to-helmet collision knocked him off the field for good, and left him with an improbable side effect-he can never forget anything.
 format: hardcover
 author:  David Baldacci   
 genre: Suspense
@@ -103,7 +103,7 @@ title: I've Got You Under My Skin
 publisher: Pocket Books
 price: $7.99
 pages: 400
-description: When Laurie Moran's husband was brutally murdered, only three-year-old Timmy saw the face of his father's killer. Five years later his piercing blue eyes still haunt Timmy's dreams. Laurie is haunted by more—the killer's threat to her son as he fled the scene: “Tell your mother she's next, then it's your turn…”
+description: When Laurie Moran's husband was brutally murdered, only three-year-old Timmy saw the face of his father's killer. Five years later his piercing blue eyes still haunt Timmy's dreams. Laurie is haunted by more-the killer's threat to her son as he fled the scene: “Tell your mother she's next, then it's your turn.”
 format: paperback
 author: Mary Higgins Clark   
 genre: Suspense

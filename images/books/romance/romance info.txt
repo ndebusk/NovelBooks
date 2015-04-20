@@ -2,7 +2,7 @@ isbn: 9780553391886
 title: Last One Home
 publisher: Random House Publishing Group
 price: $26.00
-pages: 336'
+pages: 336
 description: Debbie Macomber, author of the Blossom Street and Cedar Cove series, delivers an inspiring new stand-alone novel about the enduring bond between sisters, the power of forgiveness, and a second chance at love.
 format: hardcover
 author: Debbie Macomber
@@ -23,7 +23,7 @@ title: The Shop on Blossom Street
 publisher: Harlequin
 price: $11.71
 pages: 400
-description:  There's a little yarn store in Seattle called A Good Yarn. It's owned by Lydia Hoffman, and it represents her dream of a new beginning, a life free from cancer. A life that offers a chance at love...
+description:  There's a little yarn store in Seattle called A Good Yarn. It's owned by Lydia Hoffman, and it represents her dream of a new beginning, a life free from cancer. A life that offers a chance at love…
 format: paperback
 author: Debbie Macomber
 genre: Fiction,Romance
@@ -53,7 +53,7 @@ title: The Marriage Season
 publisher: Harlequin
 price: $7.99
 pages: 304
-description:  Since Hadleigh, Melody and Bex—the best of best friends—entered into a marriage pact, two of them have found (and married) the men of their hearts. But Bex doesn't think she'll be as fortunate as the others. Her own first love died years ago in a faraway war, and Bex has lost hope for a happy marriage of her own. She concentrates on her business, a successful chain of fitness clubs, instead.
+description:  Since Hadleigh, Melody and Bex-the best of best friends-entered into a marriage pact, two of them have found (and married) the men of their hearts. But Bex doesn't think she'll be as fortunate as the others. Her own first love died years ago in a faraway war, and Bex has lost hope for a happy marriage of her own. She concentrates on her business, a successful chain of fitness clubs, instead.
 format: paperback
 author: Linda Lael Miller
 genre Fiction,Romance
@@ -63,7 +63,7 @@ title: A Breath of Snow and Ashes
 publisher: Random House Publishing Group
 price: $15.35
 pages: 1008
-description: With chaos brewing, the governor calls upon Jamie Fraser to unite the backcountry and safeguard the colony for King and Crown. But from his wife Jamie knows that three years hence the shot heard round the world will be fired, and the result will be independence -- with those loyal to the King either dead or in exile. And there is also the matter of a tiny clipping from The Wilmington Gazette, dated 1776, which reports Jamie's death, along with his kin. For once, he hopes, his time-traveling family may be wrong about the future.  
+description: With chaos brewing, the governor calls upon Jamie Fraser to unite the backcountry and safeguard the colony for King and Crown. But from his wife Jamie knows that three years hence the shot heard round the world will be fired, and the result will be independence with those loyal to the King either dead or in exile. And there is also the matter of a tiny clipping from The Wilmington Gazette, dated 1776, which reports Jamie's death, along with his kin. For once, he hopes, his time-traveling family may be wrong about the future.  
 format: paperback
 author: Diana Gabaldon 
 genre: Fiction,Romance
@@ -73,7 +73,7 @@ title: Still the One
 publisher: Penguin Publishing Group
 price: $7.99
 pages:320
-description:  Darcy Stone is game for anything—except sexy Navy vet and physical therapist AJ Colten, the guy who'd rejected her when she'd needed him most. Now the shoe is on the other foot and he needs her to play nice and help him secure grants for his patients. Unfortunately Darcy can't refuse. She needs the money to fund her passion project: rescuing S&R dogs and placing them with emotionally wounded soldiers.
+description:  Darcy Stone is game for anything-except sexy Navy vet and physical therapist AJ Colten, the guy who'd rejected her when she'd needed him most. Now the shoe is on the other foot and he needs her to play nice and help him secure grants for his patients. Unfortunately Darcy can't refuse. She needs the money to fund her passion project: rescuing S&R dogs and placing them with emotionally wounded soldiers.
 format: paperback
 author: Jill Shalvis
 genre Fiction,Romance
@@ -99,11 +99,11 @@ author: Jamie McGuire
 genre: Fiction,Romance
 
 isbn:  9780143127529 
-title: The Book of Life (All Souls Trilogy #3) 
+title: The Book of Life 
 publisher: Penguin Publishing Group
 price:$13.87
 pages: 576
-description: Diana and Matthew time-travel back from Elizabethan London to make a dramatic return to the present—facing new crises and old enemies. At Matthew's ancestral home, Sept-Tours, they reunite with the beloved cast of characters from A Discovery of Witches—with one significant exception. But the real threat to their future has yet to be revealed, and when it is, the search for Ashmole 782 and its missing pages takes on even more urgency
+description: Diana and Matthew time-travel back from Elizabethan London to make a dramatic return to the present—facing new crises and old enemies. At Matthew's ancestral home, Sept-Tours, they reunite with the beloved cast of characters from A Discovery of Witches-with one significant exception. But the real threat to their future has yet to be revealed, and when it is, the search for Ashmole 782 and its missing pages takes on even more urgency.
 format: paperback
 author: Deborah Harkness      
 genre: Fiction, Romance
