@@ -1170,10 +1170,10 @@ h2.title {
 
 .view-product img {
   border: 1px solid #F7F7F0;
-  height: 500px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 80%;
 }
 
 .view-product h3 {
