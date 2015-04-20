@@ -851,6 +851,7 @@ h2.title {
 	border:1px solid #F7F7F5;
 	overflow: hidden;
 	margin-bottom:30px;
+    width: 275px;
 }
 
 .single-products {
@@ -890,7 +891,7 @@ h2.title {
 
 .productinfo{
  position:relative;
-    height: 550px;
+    height: 600px;
 }
 
 .product-overlay {
@@ -2661,9 +2662,9 @@ ul.checkbox li.focus  {
 }
 
 #state {
-    margin-bottom: 20px;
-    margin-top: 15px;
-    height: 50px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    height: 40px;
 }
 
 #editsearch {
@@ -2685,4 +2686,20 @@ ul.checkbox li.focus  {
 #goedit {
     height: 30px;
     width: 50px;
+}
+
+#editstate {
+    margin-bottom: 15px;
+    margin-top: 5px;
+    height: 40px;
+}
+
+#editstreet {
+    margin-top: 10px;
+}
+
+.center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
 }
