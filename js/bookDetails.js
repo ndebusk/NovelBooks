@@ -34,7 +34,7 @@ function ensureFormatChecked() {
 function enableAddToCart(boxChecked) {    
     $("#addCart").attr("disabled", !boxChecked);
     if (!boxChecked) {
-      $("#addCart").after("<p id='hint'>Select one or more formats to be able to add to the cart</p>");    
+      $("#addCart").after("<p id='hint'>Select one or more formats to be able to add to the cart.</p>");    
     } else {
       $("#hint").remove();
     }

@@ -20,9 +20,11 @@ function sendReq(url, callbackFunction) {
     xmlhttp.send();
 }
 
-function deleteItem() {
-    data = $("#cartItem").serialize();
-    sendReq("/cgi-bin/deleteCartItem.py?" + data, function processResponse(response) {
+function deleteItem(itemNum) {
+    var isbnInputString = "#isbnNum" + itemNum
+    var isbn = $(isbnInputString).val(), cartID = $("#cartID").val()
+    //data = $("#cartItem").serialize();
+    sendReq("/cgi-bin/deleteCartItem.py?isbn=" + isbn + "&cartID=" + cartID, function processResponse(response) {
         window.location.href = 'cart.html';  
     });
 }

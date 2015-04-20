@@ -10,7 +10,7 @@ print ("Content-Type: text/html\n\n")
 
 form = cgi.FieldStorage()
  
-isbn = form.getvalue("isbnNum")
+isbn = form.getvalue("isbn")
 cartID = form.getvalue("cartID")
 
 #Keeps the password for being overwritten if the user does not put anything in

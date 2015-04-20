@@ -36,7 +36,7 @@ queryStringBook = "SELECT book.image, book.isbn, book.title, shoppingcartbook.fo
 cursor.execute(queryStringBook)
 
 totalPrice = 0
-
+itemNum = 1
 print '<div class="container"><h2 class="title text-center">Shopping Cart</h2><div class="table-responsive cart_info"><table class="table table-condensed"><thead><tr class="cart_menu"><td class="image">Item</td><td class="isbn">ISBN</td><td class="description">Description</td><td class="format">Format</td><td class="total">Total</td><td></td></tr></thead><tbody>'
 for item in cursor:
     totalPrice += item[4]
@@ -46,8 +46,10 @@ for item in cursor:
     print '<td class="cart_format"><h4>%s</h4></td>' % item[3]
     print '<td class="cart_total"><p class="cart_total_price">$%s</p></td>' % "%0.2f" % item[4]
     print '<td class="cart_delete"><form id="cartItem" method="post">'
-    print '<input id="isbnNum" type="hidden" name="isbnNum" value="%s"/>' % item[1]
-    print '<input id="cartID" type="hidden" name="cartID" value="%s"/><button id="deleteCartItem" onclick="deleteItem()" type="button" class="btn btn-default"><i class="fa fa-times"></i></button></form></td></tr>' % userID
+    print '<input id="isbnNum'+str(itemNum)+'" type="hidden" name="isbnNum'+str(itemNum)+'" value="%s"/>' % item[1]
+    print '<input id="cartID" type="hidden" name="cartID" value="%s"/>' % userID
+    print '<button id="deleteCartItem" onclick="deleteItem('+str(itemNum)+')" type="button" class="btn btn-default"><i class="fa fa-times"></i></button></form></td></tr>'
+    itemNum += 1
 
 tax = totalPrice * decimal.Decimal(0.0825)
 finalTotal = totalPrice + tax
