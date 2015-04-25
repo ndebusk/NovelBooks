@@ -23,16 +23,13 @@ price = form.getvalue("newprice")
 pages = form.getvalue("newpages")
 description = form.getvalue("newdesc")
 image = form.getvalue("newimage")
-inStock = form.getvalue("inStock")
+inStock = form.getvalue("instock")
 
 authors = form.getlist("author[]")
 genres = form.getlist("genre[]")
 formats = form.getlist("format[]")
 mode = form.getvalue("mode")
 oldisbn = form.getvalue("oldisbn")
-
-if inStock != '1':
-    inStock = '0';
 
 #Keeps the password for being overwritten if the user does not put anything in
 #that field

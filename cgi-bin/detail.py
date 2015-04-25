@@ -72,7 +72,7 @@ gString = ", ".join(g)
 fString = ", ".join(f)
 
 for book in cursorBook:
-    if book[7] > 0:
+    if book[7] > 0 and printFormat == 1:
         available = "In Stock"
     else:
         available = "Out of Stock"

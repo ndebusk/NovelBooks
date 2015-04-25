@@ -255,8 +255,8 @@ function submitBookInfo(oldisbn) {
         image = $("#newimage").val(), 
         authors = document.getElementsByName('author[]'), 
         formats = document.getElementsByName('format[]'), 
-        genres = document.getElementsByName('genre[]');
-
+        genres = document.getElementsByName('genre[]'),
+        inStock = $("#instock").val();
     var error = 0;      
     if (isbn == '' || isbn.length != 13 || isNaN(isbn)){
         $("#booksubmit").append("ISBN error, must be 13-digits!");
@@ -290,12 +290,16 @@ function submitBookInfo(oldisbn) {
         $("#booksubmit").append("Author blank!");
         error = 1;
     }
-    else if (!formats[0].checked && !formats[1].checked){
-        $("#booksubmit").append("Format blank!");
+    else if (genres[0].value == ''){
+        document.getElementById("newItemForm").innerHTML ="Genre blank!";
         error = 1;
     }
-    else if (genres[0].value == ''){
-        $("#booksubmit").append("Genre blank!");
+    else if (inStock == '' || isNaN(inStock)){
+        document.getElementById("newItemForm").innerHTML ="In-Print Stock error!";
+        error = 1;
+    }
+    else if (!formats[0].checked && !formats[1].checked){
+        $("#booksubmit").append("Format blank!");
         error = 1;
     }
     if (error == 0){
@@ -306,7 +310,7 @@ function submitBookInfo(oldisbn) {
                $("#bookinfo").append("<p>Sorry, wrong password.</p>");
            } else {          
               $("#bookinfo").empty();                         
-              $("#bookinfo").append("<p>Sucess! Information updated.</p>");          
+              $("#bookinfo").append("<p>Success! Information updated.</p>");          
            }        
         });
     }
@@ -322,7 +326,7 @@ function deleteBookInfo(oldisbn) {
        } else {          
           $("#bookinfo").empty();           
           
-           $("#bookinfo").append("<p>Sucess! Book deleted.</p>");          
+           $("#bookinfo").append("<p>Success! Book deleted.</p>");          
        }        
     });
 }

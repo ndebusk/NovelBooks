@@ -1,4 +1,5 @@
 var empty = 0;
+var password;
 function sendReq(url, callbackFunction) {
     "use strict";
     var xmlhttp, ActiveXObject;
@@ -153,7 +154,18 @@ var validatePassword = function(passwordString) {
     if(passwordString){
         empty = 1;
     }
+    password = passwordString;
     return re.test(passwordString);
+};
+
+var confirmPassword = function(passwordString) {
+    if(passwordString){
+        empty = 1;
+    }
+    if(passwordString === password) {
+        return true;
+    }
+    return false;
     
 };
 
@@ -161,6 +173,11 @@ window.onload = function () {
     $("#newPassword").focus(function () {
         validateField($(this), "Must be at least 8 characters and contain at least one each: uppercase letter, lowercase letter, number, and special character !@#$%^&*", 
                       validatePassword);
+    });
+    
+    $("#confirmPassword").focus(function () {
+        validateField($(this), "Match password to confirm.", 
+                      confirmPassword);
     });
     
     $("#newUser").focus(function () {

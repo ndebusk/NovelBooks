@@ -64,6 +64,10 @@ for item in cursor:
     valueStringInsertOrder = "('" + str(item[0]) + "','" + str(orderNum) + "','" + str(lineItem) + "','" + str(quantity) + "','" + str(item[1]) + "','" + str(item[2]) + "')"
     queryStringInsertOrder += valueStringInsertOrder
     cursor2.execute(queryStringInsertOrder)
+    cnx2.commit()
+    updateStockString = "UPDATE book SET inStock = inStock - 1 WHERE isbn = '" +str(item[0])+ "'"
+    cursor2.execute(updateStockString)
+    cnx2.commit()
     lineItem += 1
 
 cnx.commit()

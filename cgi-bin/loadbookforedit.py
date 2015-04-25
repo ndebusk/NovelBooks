@@ -43,7 +43,7 @@ if (flag == 0):
     
     for row in cursor:
         found = 1
-        inStockVal = row[6]
+        inStock = row[6]
         print '<h2 class="title text-center">Edit Book Info</h2>'
         print '<div class="row">'
         print '<div class="col-sm-8">'
@@ -51,11 +51,11 @@ if (flag == 0):
         print '<p>Click on a box to edit that value.</p>'
         print '<p><form id="booksubmit" method="post"></p>'
         print '<p><input id="isbn" type="text" name="isbn" value="' + str(isbn) + '"/></p>'
-        print '<p><input id="newtitle" type="text" name="newtitle" value="' + str(row[0]).replace("'", "&#8217") + '"/></p>'
-        print '<p><input id="newpublisher" type="text" name="newpublisher" value="' + str(row[1]).replace("'", "&#8217") + '"/></p>'
+        print '<p><input id="newtitle" type="text" name="newtitle" value="' + str(row[0]) + '"/></p>'
+        print '<p><input id="newpublisher" type="text" name="newpublisher" value="' + str(row[1]) + '"/></p>'
         print '<p><input id="newprice" type="text" name="newprice" value="' + str(row[2]) + '"/></p>'
         print '<p><input id="newpages" type="text" name="newpages" value="' + str(row[3]) + '"/></p>'
-        print '<p><input id="newdesc" type="text" name="newdesc" value="' + str(row[4]).replace("'", "&#8217") + '"/></p>'
+        print '<p><input id="newdesc" type="text" name="newdesc" value="' + str(row[4]) + '"/></p>'
         print '<p><input id="newimage" type="text" name="newimage" value="' + str(row[5]) + '"/></p>'
     if (found == 1):
         cursor.execute(queryStringAuthor)
@@ -67,11 +67,10 @@ if (flag == 0):
         for row in cursor:
             print '<input type="text" name="genre[]" value="' + row[0] + '"/>'
         print '<button class="expanderbutton" type="button" class="btn btn-default">Add Another Genre</button></br>'
-
+        
+        print '<input type="text" id="instock" name="instock" value="' + str(inStock) + '"/></p>'
+        
         cursor.execute(queryStringFormat)
-        inStock = ''
-        if inStockVal == 1:
-            inStock = "checked"
         ebook = ''
         printFormat = ''
         print '<span id="formatspan"><h5>In Stock Options: <h5></span><fieldset class="group"><ul class="checkbox">'
@@ -82,8 +81,7 @@ if (flag == 0):
                 printFormat = "checked"
 
         print '<li><input type="checkbox" id="ebook" name="format[]" value="ebook" ' +ebook+ ' /><label for="ebook">eBook</label></li>'
-        print '<li><input type="checkbox" id="print" name="format[]" value="print" ' +printFormat+ ' /><label for="ebook">Print</label></li>'
-        print '<li><input type="checkbox" id="instock" name="inStock" class="checkbox" value="1" ' +inStock+ '/><label for="instock">In Stock</label></li></ul></fieldset>'
+        print '<li><input type="checkbox" id="print" name="format[]" value="print" ' +printFormat+ ' /><label for="ebook">Print</label></li></ul></fieldset>'
         
         print '<button id="updateBookSubmit" type="button" class="btn btn-default">Save Book Changes</button></br>'
         print '<button id="deleteBookSubmit" type="button" class="btn btn-default">Delete Book From Database</button></br>'

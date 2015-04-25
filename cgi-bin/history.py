@@ -46,7 +46,8 @@ for order in cursor2:
     print '<td class="heading">%s</td>' % formatDate
     print '<td class="heading">%s</td>' % order[3]
     print '<td class="heading">$%s</td>' % order[2]
-    print '<td class="heading">Status: %s</td></tr></thead><tbody>' % order[4]
+    #print '<td class="heading">Status: %s</td></tr></thead><tbody>' % order[4]
+    print '<td></td></tr></thead><tbody>'
     queryStringItem = "SELECT lineItemNum, isbn, quantity, format, itemPrice FROM orderitem WHERE orderitem.orderNum = '" + str(order[0]) + "'"
     cursor3.execute(queryStringItem)
     for item in cursor3:

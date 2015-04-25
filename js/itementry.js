@@ -33,7 +33,7 @@ function add() {
         authors = document.getElementsByName('author[]'), 
         formats = document.getElementsByName('format[]'), 
         genres = document.getElementsByName('genre[]'),
-        inStock = $("#inStock").val();
+        inStock = $("#instock").val();
     var error = 0;
     if (isbn == '' || isbn.length != 13 || isNaN(isbn)){
         document.getElementById("newItemForm").innerHTML ="ISBN error, must be 13-digits!";
@@ -67,14 +67,19 @@ function add() {
         document.getElementById("newItemForm").innerHTML ="Author blank!";
         error = 1;
     }
-    else if (!formats[0].checked && !formats[1].checked){
-        document.getElementById("newItemForm").innerHTML ="Format blank!";
-        error = 1;
-    }
     else if (genres[0].value == ''){
         document.getElementById("newItemForm").innerHTML ="Genre blank!";
         error = 1;
     }
+    else if (inStock == '' || isNaN(inStock)){
+        document.getElementById("newItemForm").innerHTML ="In-Print Stock error!";
+        error = 1;
+    }
+    else if (!formats[0].checked && !formats[1].checked){
+        document.getElementById("newItemForm").innerHTML ="Format blank!";
+        error = 1;
+    }
+    
     if (error == 0){
     // Request to python
         sendReq("/cgi-bin/itementry.py?" + data, function processResponse(response) {

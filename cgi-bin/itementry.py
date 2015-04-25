@@ -12,14 +12,11 @@ price = form.getvalue("price")
 pages = form.getvalue("pagenum")
 description = form.getvalue("description")
 image = form.getvalue("bookimage")
-inStock = form.getvalue("inStock")
+inStock = form.getvalue("instock")
 
 authors = form.getlist("author[]")
 genres = form.getlist("genre[]")
 formats = form.getlist("format[]")
-
-if inStock != '1':
-    inStock = '0';
     
 #Sets my config for accessing the database. MAMP gave two different
 #ways for accessing the database, but I seemed to have trouble
