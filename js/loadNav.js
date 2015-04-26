@@ -199,6 +199,7 @@ function loadCustomerInfo() {
         
     });
 }
+/*Updates a customer's details on the account page*/
 function submitCustomerInfo() {  
     data = $("#customerform").serialize();
     
@@ -243,6 +244,7 @@ function loadBookInfo(isbn) {
             
     });
 }
+/*Validates an edited book and submits the new data if the validation checks out*/
 function submitBookInfo(oldisbn) {  
 
    data = $("#booksubmit").serialize();        
@@ -316,6 +318,7 @@ function submitBookInfo(oldisbn) {
     }
     
 }
+/*Deletes a book from the database*/
 function deleteBookInfo(oldisbn) {  
    data = $("#booksubmit").serialize();
     
@@ -330,7 +333,9 @@ function deleteBookInfo(oldisbn) {
        }        
     });
 }
-
+/*Loads the order info for the order confirmation page. This is simply the
+latest order the customer has placed (since this page comes up right after
+clicking the send order button*/
 function loadOrderInfo() {    
     sendReq("/cgi-bin/latestorder.py", function processResponse(response) {
         
@@ -340,7 +345,8 @@ function loadOrderInfo() {
         $("#orderinfo").append('<a class="btn btn-default cart" href="shop.html">Continue Shopping</a>');
     });
 }
-
+/*Loads a selected address on the manage addresses page (auto-populates the address form with
+data base on the current active choice in the select query*/
 function loadAddressSelection() { 
     
     sendReq("/cgi-bin/loadaddresses.py", function processResponse(response) {  
@@ -353,7 +359,7 @@ function loadAddressSelection() {
        $("#target option:first").attr('selected','selected');
     });
 }
-
+/*Populates the addresses on the manage addresses page with the customer's currently stored addresses*/
 function populateAddress(addressString) {      
     sendReq("/cgi-bin/getaddressid.py?address=" + addressString, function processResponse(response) {            
         var split = response.split(',');
@@ -376,6 +382,8 @@ function populateAddress(addressString) {
     });
     
 }
+/*Updates the user's address. The keepAddress is true when the user clicks edit Address on the manage addresses
+page, and false when they click delete address*/
 function editAddress(id, street, city, state, zip, keepAddress) {
    form = "id=" + id + "&keep=" + keepAddress + "&street=" + street + "&city=" + city + "&state=" + state + "&zip=" + zip;
     sendReq("/cgi-bin/editaddress.py?" + form, function processResponse(response) { 
@@ -383,7 +391,7 @@ function editAddress(id, street, city, state, zip, keepAddress) {
     });
     
 }
-
+/*Adds to the user's order*/
 function addToOrder() {
     var total = $("#totalVal").val(), address = $("#userAddress").val()
     
@@ -392,7 +400,7 @@ function addToOrder() {
         
     });
 }
-
+/*Loads the cart items and user addresses for checkout*/
 function loadCheckoutInfo() {
     "use strict";
 
@@ -405,10 +413,12 @@ function loadCheckoutInfo() {
         }
     });
 }
+/*Checks for a valid zip code (5-digit)*/
 function testZip(input) { // validation function for username
     var regex = /^\d{5}$/;
     return regex.test(input);
 }
+/*Used when user clicks on add address on the manage address page*/
 function addAddress() {
     "use strict";
     
@@ -434,10 +444,14 @@ function addAddress() {
         });
     }
 }
+/*Clones a text input, such as for authors or genres. Used when inputting or editing books*/
 var addBox = function(fieldElem) {
   var newBox = fieldElem.prevAll("input").first().clone();
   fieldElem.before(newBox);
 };
+
+/*Checks to see which content divs exist on a particular page.
+    The functions called depends on the existing content dvs*/
 window.onload = function () {
     
     if ($("#custinfo").length) {
